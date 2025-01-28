@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "MTB Ginetto 1000",
+      "price": 1999.99,
+      "image": "/assets/images/mtb-rockrider.jpg",
+      "category": "MTB",
+      "type": "Muscolare",
+      "wheelSize": 29,
+      "suspension": "Full"
+    },
+    {
+      "id": 2,
+      "name": "Bici da Corsa Scott Addict RC",
+      "price": 3499.00,
+      "image": "/assets/images/scott-addict.jpg",
+      "category": "Corsa",
+      "type": "Muscolare",
+      "wheelSize": 28,
+      "suspension": "Rigida"
+    },
+    {
+      "id": 3,
+      "name": "E-MTB Specialized Turbo Levo",
+      "price": 6999.00,
+      "image": "/assets/images/specialized-levo.jpg",
+      "category": "MTB",
+      "type": "Elettrica",
+      "wheelSize": 29,
+      "suspension": "Full"
+    }
+  ]
+  
