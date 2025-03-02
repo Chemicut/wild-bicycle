@@ -1,59 +1,64 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "../components/home/HeroSection";
 import BrandCarousel from "../components/shared/carousels/BrandCarousel";
-import homeImage from "../assets/images/home.jpg";
 import bannerImage from "../assets/images/banner-shop.jpg";
+import ProductCarousel from "../components/shared/carousels/ProductCarousel";
+import { fetchProductsByIds } from "../services/api"; // Funzione che recupera i prodotti dal DB
+
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const selectedIds = ["id1", "id2", "id3", "id4", "id5", "id6", "id7", "id8"];
+    fetchProductsByIds(selectedIds).then(setProducts);
+  }, []);
+  
   return (
-    <main>
+    <main className="bg-background">
       <HeroSection />
 
       {/* Sezione introduttiva del negozio */}
-      <section className="container-padding flex flex-col md:flex-row-reverse items-center gap-8 md:justify-center bg-background">
-        <div className="w-full md:w-2/5 lg:w-3/5 text-center md:text-left">
-          <p className="mt-4 text-secondary text-lg md:text-xl lg:text-2xl">
-            <b className="text-primary">Wild Bicycle</b> è una realtà di Roma Nord che spazia dal ciclismo su strada fino al gravity.
-            Da anni offriamo le migliori biciclette e accessori per ciclisti di tutti i livelli. <br className="block md:hidden" />
-            <br className="hidden md:block" />
-            Il nostro team è sempre pronto ad aiutarti con riparazioni, consigli e nuove attrezzature
+        <div className="w-full md:w-[90%] lg:w-[85%] mx-auto text-center my-4 px-4">
+          <h3 className="text-secondary font-secondary text-xl lg:text-2xl xl:text-3xl">
+            Dal 2013 <b className="text-primary">Wild Bicycle</b> è una realtà di Roma Nord che spazia dal ciclismo su strada fino al gravity. <br className="hidden xl:block" />
+            Da anni offriamo le migliori biciclette e accessori per ciclisti di tutti i livelli.<br className="hidden xl:block" /> Il nostro team è sempre pronto ad aiutarti con riparazioni, consigli e nuove attrezzature
             per soddisfare le tue necessità.
-          </p>
+          </h3>
         </div>
-        <div className="w-full md:w-1/3 lg:w-2/5 flex justify-center md:justify-end px-12">
-          <img 
-            src={homeImage}
-            alt="Wild Bicycle" 
-            className="w-64 max-w-xs md:max-w-full h-auto rounded-lg shadow-lg"
-          />
+
+      <ProductCarousel products={products} />
+
+
+
+      {/* Banner per le Bici in Vendita con Effetto Parallax */}
+      <section
+        className="relative w-full h-64 md:h-80 lg:h-[550px] flex items-center justify-center text-center text-white 
+        bg-cover bg-center bg-no-repeat md:bg-fixed"
+        style={{
+          backgroundImage: `url(${bannerImage})`,
+        }}
+      >
+
+        {/* Overlay per migliorare la leggibilità del testo */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+
+        {/* Contenuto del banner */}
+        <div className="relative z-10 max-w-2xl px-6">
+          <h2 className="section-title text-white font-primary">Scopri il nostro catalogo</h2>
+          <h3 className="mt-4 text-lg md:text-xl pb-2 font-secondary">
+            Una selezione di prodotti per ogni esigenza, dalla strada alla montagna.
+          </h3>
+          <Link to="/negozio">
+            <button className="btn btn-primary">Esplora</button>
+          </Link>
         </div>
       </section>
 
       {/* Carosello dei Brand */}
       <BrandCarousel />
-
-      {/* Banner per le Bici in Vendita con Effetto Parallax */}
-      <section
-        className="relative w-full h-64 md:h-80 lg:h-[550px] flex items-center justify-center text-center text-white bg-fixed bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${bannerImage})`,
-        }}
-      >
-        {/* Overlay per migliorare la leggibilità del testo */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-        {/* Contenuto del banner */}
-        <div className="relative z-10 max-w-2xl px-6">
-          <h2 className="section-title text-white">Scopri le nostre biciclette in vendita</h2>
-          <p className="mt-4 text-lg md:text-xl">
-            Una selezione di bici per ogni esigenza, dalla strada alla montagna.
-          </p>
-          <Link to="/negozio">
-            <button className="btn-primary">Esplora le Bici</button>
-          </Link>
-        </div>
-      </section>
     </main>
   );
 };

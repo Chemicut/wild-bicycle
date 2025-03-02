@@ -26,11 +26,11 @@ const Squadra = () => {
   };
 
   return (
-    <main className="w-full bg-background">
-      <div className="text-center container-padding">
+    <main className="w-full bg-background relative">
+      <div className="text-center container px-6 pb-10">
         {/* Hero Section */}
         <section
-          className="relative text-black px-6 h-[150px] md:h-[250px] lg:h-[350px] opacity-0 animate-fade-in"
+          className="relative text-black px-6 h-[150px] md:h-[250px] lg:h-[350px] animate-fade-in"
           style={{ 
               backgroundImage: "url('/images/hero-squadra.svg')",
               backgroundSize: "95%",
@@ -51,8 +51,8 @@ const Squadra = () => {
           {disciplineData.map((disciplina, index) => (
             <div
               key={disciplina.id}
-              className={`relative w-96 h-60 lg:w-[30rem] lg:h-[20rem] cursor-pointer rounded-lg shadow-2xl transition-transform duration-500 transform-style-3d perspective-1000 hover:scale-105
-              ${index % 2 === 0 ? "rotate-[-2deg]" : "rotate-[2deg]"}`}
+              className={`relative w-96 h-60 lg:w-[30rem] lg:h-[20rem] cursor-pointer rounded-lg shadow-2xl transition-transform duration-500 transform-style-3d perspective-1000
+              ${index % 2 === 0 ? "rotate-[-3deg]" : "rotate-[3deg]"}`}
               onClick={() => handleFlip(disciplina.id)}
             >
               <div
@@ -89,7 +89,7 @@ const Squadra = () => {
           <h2 className="section-title text-white">Unisciti alla Wild Race Team!</h2>
           <p className="mt-4">Vuoi entrare a far parte della nostra squadra? Contattaci per maggiori informazioni.</p>
           <button
-            className="btn-secondary"
+            className="mt-6 bg-secondary text-white py-2 px-4 rounded-lg shadow-md "
             onClick={() => window.location.href = "/contatti"}
           >
             Contattaci

@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import { defineConfig } from 'tailwindcss';
+
+export default defineConfig({
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -15,7 +16,7 @@ module.exports = {
         light: "#f8f9fa", // Colore chiaro per contrasto con dark mode
       },
       animation: {
-        marquee: "marquee 20s linear infinite",
+        marquee: "marquee 40s linear infinite",
         "fade-in": "fade-in 2.5s ease-out forwards",
       },
       keyframes: {
@@ -30,5 +31,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-};
+});

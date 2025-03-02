@@ -3,7 +3,7 @@ import ProductCard from "../components/shop/ProductCard";
 import FilterBar from "../components/shop/FilterBar";
 import productsData from "../data/products.json";
 
-const Shop = () => {
+const Products = () => {
   const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState({
     category: null,
@@ -44,4 +44,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Products;

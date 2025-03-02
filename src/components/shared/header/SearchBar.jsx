@@ -1,17 +1,16 @@
 import React from "react";
+import { Search } from "lucide-react";
 
 const SearchBar = () => {
   return (
-    <div className="relative">
+    <div className="relative flex">
       <input
         type="text"
         placeholder="Cerca..."
-        className="input-field border bg-background focus:ring-accent"
+        className="w-full h-10 pl-4 pr-9 bg-background border-primary/50 focus:border-accent border-2 rounded-full overflow-hidden"
       />
-      <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-800">
-        <span className="material-symbols-outlined">
-          search
-        </span>
+      <button className="absolute right-4 top-2 transform text-primary/50">
+        <Search size={20} color="currentColor" className="cursor-pointer" />
       </button>
     </div>
   );

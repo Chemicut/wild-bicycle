@@ -41,14 +41,14 @@ const BrandCarousel = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden w-full py-6 relative bg-background">
+    <div className="overflow-hidden w-full py-2 relative bg-background">
       <div ref={carouselRef} className="flex items-center gap-6 whitespace-nowrap">
         {[...brands, ...brands].map((brand, index) => (
           <img
             key={index}
             src={brand}
             alt={`Brand ${index + 1}`}
-            className="h-16 md:h-20 object-contain"
+            className="h-16 md:h-20 lg:h-24 object-contain"
           />
         ))}
       </div>

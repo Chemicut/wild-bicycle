@@ -10,13 +10,13 @@ const FilterBar = ({ filters, setFilters }) => {
   };
 
   return (
-    <div className="card flex flex-wrap gap-4 justify-center mb-6">
+    <div className="card flex flex-wrap gap-4 justify-center mb-6 z-10">
       {/* Filtro Categoria */}
       <select
         name="category"
         value={filters.category || ""}
         onChange={handleFilterChange}
-        className="input-field bg-gray-50 hover:bg-gray-100 transition"
+        className="input-field bg-gray-50 md:hover:bg-gray-100 transition"
       >
         <option value="">Tutte le categorie</option>
         <option value="MTB">MTB</option>

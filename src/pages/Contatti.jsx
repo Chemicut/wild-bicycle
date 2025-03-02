@@ -4,15 +4,14 @@ import ContactForm from "../components/contact/ContactForm";
 const Contatti = () => {
   return (
     <main className="w-full bg-background">
-    <div className="container mx-auto container-padding bg-background">
-      <h1 className="section-title">Contattaci</h1>
+    <div className="container bg-background px-4 pb-6">
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Box Sinistro: Form Contatti */}
           <ContactForm />
 
         {/* Box Destro: Mappa + Info */}
-        <div className="card flex flex-col items-center hover:scale-100">
+        <div className="flex flex-col items-center">
           <h2 className="text-xl font-semibold mb-4">Dove siamo</h2>
           <iframe
             title="Mappa Wild Bicycle"
@@ -25,10 +24,10 @@ const Contatti = () => {
 
           <div className="mt-4 text-center">
             <p className="text-lg font-semibold">Wild Bicycle</p>
-            <p>Via Nome, 123</p>
-            <p>00100, Città, Italia</p>
-            <p className="mt-2 font-semibold">Telefono: <a href="tel:+39123456789" className="hover:text-accent">+39 123 456 789</a></p>
-            <p className="mt-2 font-semibold">Email: <a href="mailto:info@wildbicycle.com" className="hover:text-accent">info@wildbicycle.com</a></p>
+            <p>Via Giovanni Amendola 1</p>
+            <p>00065, Fiano Romano (RM), Italia</p>
+            <p className="mt-2 font-semibold">Telefono: <a href="tel:+0765 422 652">+0765 422 652</a></p>
+            <p className="mt-2 font-semibold">Email: <a href="mailto:vastanodaniele@gmail.com" >vastanodaniele@gmail.com</a></p>
           </div>
         </div>
       </div>

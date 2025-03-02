@@ -7,6 +7,7 @@ const FooterContact = () => {
       <p>Via Giovanni Amendola 1, 00065 Fiano Romano (RM)</p>
       <p>Email: <a href="mailto:vastanodaniele@gmail.com" className="hover:text-accent">vastanodaniele@gmail.com</a></p>
       <p>Telefono: <a href="tel:+390765422652" className="hover:text-accent">+39 0765 422 652</a></p>
+      <p>P. IVA IT 12121331008 </p>
     </address>
   );
 };
