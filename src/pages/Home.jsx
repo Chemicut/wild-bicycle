@@ -21,7 +21,7 @@ const Home = () => {
       <HeroSection />
 
       {/* Sezione introduttiva del negozio */}
-        <div className="w-full md:w-[90%] lg:w-[85%] mx-auto text-center my-4 px-4">
+        <div className="w-full md:w-[90%] lg:w-[85%] mx-auto text-center my-4 px-4 py-8">
           <h3 className="text-secondary font-secondary text-xl lg:text-2xl xl:text-3xl">
             Dal 2013 <b className="text-primary">Wild Bicycle</b> è una realtà di Roma Nord che spazia dal ciclismo su strada fino al gravity. <br className="hidden xl:block" />
             Da anni offriamo le migliori biciclette e accessori per ciclisti di tutti i livelli.<br className="hidden xl:block" /> Il nostro team è sempre pronto ad aiutarti con riparazioni, consigli e nuove attrezzature
@@ -41,15 +41,16 @@ const Home = () => {
           backgroundImage: `url(${bannerImage})`,
         }}
       >
-
         {/* Overlay per migliorare la leggibilità del testo */}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-60"></div>
 
         {/* Contenuto del banner */}
         <div className="relative z-10 max-w-2xl px-6">
-          <h2 className="section-title text-white font-primary">Scopri il nostro catalogo</h2>
-          <h3 className="mt-4 text-lg md:text-xl pb-2 font-secondary">
-            Una selezione di prodotti per ogni esigenza, dalla strada alla montagna.
+          <h2 className="section-title text-white font-primary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            Scopri il nostro catalogo
+          </h2>
+          <h3 className="my-4 text-base sm:text-lg md:text-xl lg:text-2xl pb-2 font-secondary">
+            Una selezione di prodotti per ogni esigenza,<br /> dalla strada alla montagna.
           </h3>
           <Link to="/negozio">
             <button className="btn btn-primary">Esplora</button>

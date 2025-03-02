@@ -4,17 +4,20 @@ const disciplineData = [
   {
     id: "strada",
     title: "Strada",
-    description: "Velocità pura sulle strade più impegnative. Gare su lunghe distanze e sprint adrenalinici.",
+    description:
+      "Velocità pura sulle strade più impegnative. Gare su lunghe distanze e sprint adrenalinici.",
   },
   {
     id: "xc",
     title: "Cross Country",
-    description: "Potenza e resistenza nei tracciati più tecnici. Gare su circuiti con salite e discese veloci.",
+    description:
+      "Potenza e resistenza nei tracciati più tecnici. Gare su circuiti con salite e discese veloci.",
   },
   {
     id: "enduro",
     title: "Enduro",
-    description: "Discese mozzafiato e adrenalina pura. Sfide contro il tempo in terreni accidentati.",
+    description:
+      "Discese mozzafiato e adrenalina pura. Sfide contro il tempo in terreni accidentati.",
   },
 ];
 
@@ -27,23 +30,31 @@ const Squadra = () => {
 
   return (
     <main className="w-full bg-background relative">
-      <div className="text-center container px-6 pb-10">
+      <div className="container mx-auto px-6 pb-10">
         {/* Hero Section */}
         <section
           className="relative text-black px-6 h-[150px] md:h-[250px] lg:h-[350px] animate-fade-in"
-          style={{ 
-              backgroundImage: "url('/images/hero-squadra.svg')",
-              backgroundSize: "95%",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat"
+          style={{
+            backgroundImage: "url('/images/hero-squadra.svg')",
+            backgroundSize: "95%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
-        >
-        </section>
-        <p className="section-title text-primary">Uniti dalla passione, guidati dalla velocità.</p>
-        <p className="text-lg mt-2 text-secondary">
-          <b className="text-primary">Wild Race Team</b> è l'insieme di appassionati che rappresenta la voglia di unirsi e mettersi in gioco. <br className="hidden md:block" />
-          Attivi in diverse discipline, uscite di gruppo, <b className="text-primary">corsi per tutti i livelli</b> e manutenzione dei trail. <br className="hidden md:block" />
-          <b className="text-primary">WRT</b> rappresenta il punto di riferimento per le persone di tutte le età che vogliono fare della bici molto più di una passione.
+        ></section>
+
+        {/* Titolo */}
+        <p className="section-title text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 text-center">
+          Uniti dalla passione, guidati dalla velocità.
+        </p>
+        {/* Descrizione */}
+        <p className="mt-2 text-secondary text-center text-base sm:text-lg md:text-xl lg:text-2xl">
+          <b className="text-primary">Wild Race Team</b> è l'insieme di appassionati che
+          rappresenta la voglia di unirsi e mettersi in gioco. <br className="hidden md:block" />
+          Attivi in diverse discipline, uscite di gruppo,{" "}
+          <b className="text-primary">corsi per tutti i livelli</b> e manutenzione dei trail.{" "}
+          <br className="hidden md:block" />
+          <b className="text-primary">WRT</b> rappresenta il punto di riferimento per le persone
+          di tutte le età che vogliono fare della bici molto più di una passione.
         </p>
 
         {/* Sezione Discipline */}
@@ -84,13 +95,42 @@ const Squadra = () => {
           ))}
         </section>
 
+        {/* Sezione Corso di Enduro */}
+        <section className="relative mt-12">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="flex-1">
+              <h3 className="text-primary text-2xl sm:text-3xl md:text-4xl mb-4">
+                Corso di Enduro
+              </h3>
+              <p className="text-secondary text-base sm:text-lg md:text-xl">
+                Partecipa al nostro corso di Enduro per approfondire tecniche di guida e migliorare
+                le tue abilità sui percorsi off-road. Impara da istruttori esperti in un ambiente sicuro
+                e stimolante, e scopri come affrontare anche le discese più impegnative.
+              </p>
+            </div>
+            <div className="flex-shrink-0 mt-4 lg:mt-0 lg:ml-6">
+              <div className="w-32 h-32 relative">
+                <img
+                  src="/images/enduro-course.jpg"
+                  alt="Corso di Enduro"
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Box di invito all’iscrizione */}
-        <section className="mt-12 bg-primary text-white py-10 px-6 rounded-lg shadow-lg">
-          <h2 className="section-title text-white">Unisciti alla Wild Race Team!</h2>
-          <p className="mt-4">Vuoi entrare a far parte della nostra squadra? Contattaci per maggiori informazioni.</p>
+        <section className="mt-12 bg-primary text-white py-10 px-6 rounded-lg shadow-lg text-center">
+          <h2 className="section-title text-white text-2xl sm:text-3xl md:text-4xl">
+            Unisciti alla Wild Race Team!
+          </h2>
+          <p className="mt-4 text-base sm:text-lg md:text-2xl">
+            Vuoi entrare a far parte della nostra squadra? Contattaci per maggiori informazioni.
+          </p>
           <button
-            className="mt-6 bg-secondary text-white py-2 px-4 rounded-lg shadow-md "
-            onClick={() => window.location.href = "/contatti"}
+            className="mt-6 bg-secondary text-white py-2 px-4 rounded-lg shadow-md"
+            onClick={() => (window.location.href = "/contatti")}
           >
             Contattaci
           </button>

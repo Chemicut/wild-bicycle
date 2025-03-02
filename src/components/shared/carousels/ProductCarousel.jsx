@@ -62,7 +62,7 @@ const ProductCarousel = ({ products }) => {
 
   return (
     <section className="w-full max-w-[80%] mx-auto py-8">
-      <h2 className="text-center font-primary text-2xl md:text-3xl  mb-6">I nostri prodotti</h2>
+      <h2 className="text-center font-primary text-primary text-2xl md:text-3xl  mb-6">I nostri prodotti</h2>
       <Slider {...settings}>
         {products.map((product) => (
           <div key={product.id} className="p-2">
