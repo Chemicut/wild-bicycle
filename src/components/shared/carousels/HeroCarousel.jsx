@@ -1,38 +1,48 @@
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import banner1 from "../../../assets/images/carousels/hero/corsi.jpg";
-import banner2 from "../../../assets/images/carousels/hero/rider.jpg";
-import banner3 from "../../../assets/images/carousels/hero/wildracingteam.jpg";
 
-// Importa gli stili di slick
+// react-slick styles
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+// images import
+import banner1 from "../../../assets/images/carousels/hero/shop.jpg";
+import banner2 from "../../../assets/images/carousels/hero/officina.jpg";
+import banner3 from "../../../assets/images/carousels/hero/wildraceteam.jpg";
+import banner4 from "../../../assets/images/carousels/hero/corsi.jpg";
+
+
 const cardsData = [
   { 
-    route: "/negozio", 
+    route: "/prodotti", 
     title: "Card 1", 
     image: banner1, 
-    text: "Negozio" 
+    text: (
+      <>
+        Biciclette, <br />
+        abbigliamento tecnico <br />
+        ed accessori
+      </>
+    )
   },
   { 
-    route: "/wildraceteam", 
+    route: "/officina", 
     title: "Card 2", 
     image: banner2, 
     text: "Officina specializzata" 
   },
   { 
-    route: "/blog", 
+    route: "/wildraceteam", 
     title: "Card 3", 
     image: banner3, 
     text: "Wild Race Team" 
   },
   { 
     route: "/blog", 
-    title: "Card 3", 
-    image: banner1, 
-    text: "Wild Race Team" 
+    title: "Card 4", 
+    image: banner4, 
+    text: "Corsi di Enduro" 
   }
 ];
 
@@ -120,12 +130,12 @@ const HeroCarousel = () => {
               {/* Overlay che scurisce l'immagine */}
               <div
                 className={`absolute inset-0 bg-black transition-opacity duration-700 ${
-                  activeSlide === index ? "opacity-50" : "opacity-0"
+                  activeSlide === index ? "opacity-60" : "opacity-0"
                 }`}
               ></div>
               {/* Testo centrato */}
               <div
-                className={`absolute inset-0 flex items-center justify-center text-accent font-primary transition-opacity duration-700 ${
+                className={`absolute inset-0 flex items-center text-center justify-center text-accent font-primary transition-opacity duration-700 ${
                   activeSlide === index ? "opacity-100" : "opacity-0"
                 }`}
               >

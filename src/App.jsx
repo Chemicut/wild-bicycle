@@ -4,7 +4,7 @@ import Header from "./components/shared/header/Header.jsx";
 import Footer from "./components/shared/footer/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import Products from "./pages/Products.jsx";
-import Squadra from "./pages/Squadra.jsx";
+import WildRaceTeam from "./pages/WildRaceTeam.jsx";
 import Contatti from "./pages/Contatti.jsx";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import AdminPanel from "./pages/AdminPanel";
@@ -26,7 +26,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/prodotti" element={<Products />} />
-            <Route path="/wildraceteam" element={<Squadra />} />
+            <Route path="/wildraceteam" element={<WildRaceTeam />} />
             <Route path="/contatti" element={<Contatti />} />
             <Route path="/admin" element={<AdminPanel />} />
 
