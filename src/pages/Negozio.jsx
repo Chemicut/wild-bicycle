@@ -3,7 +3,7 @@ import ProductCard from "../components/shop/ProductCard";
 import FilterBar from "../components/shop/FilterBar";
 import productsData from "../data/products.json";
 
-const Products = () => {
+const Negozio = () => {
   const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState({
     category: null,
@@ -38,10 +38,24 @@ const Products = () => {
             <p className="text-center col-span-full text-gray-600">Nessun prodotto trovato.</p>
           )}
         </div>
+        <section className="mt-12 bg-primary text-white py-10 px-6 rounded-lg shadow-lg text-center">
+          <h2 className="section-title text-white text-2xl sm:text-3xl md:text-4xl">
+            Non hai trovato quello che cerchi?
+          </h2>
+          <p className="mt-4 text-base sm:text-lg md:text-2xl">
+            Contattaci per richiedere un prodotto specifico o per ricevere assistenza personalizzata.       
+          </p>
+          <button
+            className="mt-6 btn btn-secondary cursor-pointer"
+            onClick={() => (window.location.href = "/contatti")}
+          >
+            Contattaci
+          </button>
+        </section>
       </div>
     </main>
 
   );
 };
 
-export default Products;
+export default Negozio;

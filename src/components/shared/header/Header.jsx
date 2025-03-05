@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Logo from "./Logo";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import SearchBar from "./SearchBar";
 import { Menu } from "lucide-react"; // Icona per aprire il menu
 
 const Header = () => {
@@ -32,7 +31,7 @@ const Header = () => {
   return (
     <>
       <header ref={headerRef} className="bg-background font-secondary lg:pt-3">
-        <div className="relative w-full px-4 py-3 lg:bg-primary lg:w-[95vw] lg:mx-auto lg:rounded-4xl lg:top-4 transform z-50">
+        <div className="relative w-full px-4 py-5 lg:py-3 lg:bg-primary lg:w-[95vw] lg:mx-auto lg:rounded-4xl lg:top-4 transform z-50">
           {/* VERSIONE MOBILE: due righe */}
           <div className="flex flex-col lg:hidden">
             <div className="flex items-center justify-between">
@@ -47,21 +46,18 @@ const Header = () => {
                 <Logo />
               </div>
             </div>
-            <div className="mt-3">
-              <SearchBar />
-            </div>
+
           </div>
 
           {/* VERSIONE DESKTOP: una singola riga */}
-          <div className="hidden lg:flex items-center justify-between">
+          <div className="hidden lg:flex items-center justify-between h-10">
             <div className="flex items-center min-w-[150px]">
               <Logo />
             </div>
-            <div className="flex items-center gap-8 ml-auto">
+            <div className="flex items-center gap-8 mr-6">
               <nav>
                 <Navbar />
               </nav>
-              <SearchBar />
             </div>
           </div>
         </div>

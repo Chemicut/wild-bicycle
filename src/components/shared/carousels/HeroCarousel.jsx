@@ -124,7 +124,7 @@ const HeroCarousel = () => {
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="w-full h-[40vw] max-h-[600px] object-cover"
+                  className="w-full h-[50vw] md:h-[40vw] max-h-[600px] object-cover"
                 />
               )}
               {/* Overlay che scurisce l'immagine */}

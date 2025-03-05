@@ -52,8 +52,8 @@ const Home = () => {
           <h3 className="my-4 text-base sm:text-lg md:text-xl lg:text-2xl pb-2 font-secondary">
             Una selezione di prodotti per ogni esigenza,<br /> dalla strada alla montagna.
           </h3>
-          <Link to="/negozio">
-            <button className="btn btn-primary">Esplora</button>
+          <Link to="/prodotti">
+            <button className="btn btn-primary cursor-pointer">Esplora</button>
           </Link>
         </div>
       </section>

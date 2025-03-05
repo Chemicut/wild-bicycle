@@ -5,7 +5,7 @@ import FooterSocial from "./FooterSocial";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white font-secondary py-8 text-md lg:text-lg xl:text-xl">
+    <footer className="bg-primary text-white font-secondary py-8 text-md xl:text-xl">
       <div className="container mx-auto px-4 grid grid-cols-1 gap-6 md:grid-cols-3">
         <FooterLinks />
         <FooterContact />

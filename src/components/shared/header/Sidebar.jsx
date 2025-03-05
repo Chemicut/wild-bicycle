@@ -34,27 +34,27 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
           <nav>
             <ul className="text-primary text-2xl/10">
               <li>
-                <Link to="/" className="hover:text-accent">
+                <Link to="/" className="">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/prodotti" className="hover:text-accent">
-                  Prodotti
+                <Link to="/negozio" className="">
+                  Negozio
                 </Link>
               </li>
               <li>
-                <Link to="/wildraceteam" className="hover:text-accent">
+                <Link to="/officina" className="">
+                  Officina
+                </Link>
+              </li>
+              <li>
+                <Link to="/wildraceteam" className="">
                   Wild Race Team
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-accent">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="/contatti" className="hover:text-accent">
+                <Link to="/contatti" className="">
                   Contatti
                 </Link>
               </li>

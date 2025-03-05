@@ -21,12 +21,7 @@ const disciplineData = [
   },
 ];
 
-const Squadra = () => {
-  const [flipped, setFlipped] = useState({});
-
-  const handleFlip = (id) => {
-    setFlipped((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
+const WildRaceTeam = () => {
 
   return (
     <main className="w-full bg-background relative">
@@ -43,7 +38,7 @@ const Squadra = () => {
         ></section>
 
         {/* Titolo */}
-        <p className="section-title text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 text-center">
+        <p className="section-title text-primary font-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 text-center">
           Uniti dalla passione, guidati dalla velocità.
         </p>
         {/* Descrizione */}
@@ -62,14 +57,11 @@ const Squadra = () => {
           {disciplineData.map((disciplina, index) => (
             <div
               key={disciplina.id}
-              className={`relative w-96 h-60 lg:w-[30rem] lg:h-[20rem] cursor-pointer rounded-lg shadow-2xl transition-transform duration-500 transform-style-3d perspective-1000
+              className={`relative w-96 h-60 lg:w-[30rem] lg:h-[20rem] rounded-lg shadow-2xl transition-transform duration-500 transform-style-3d perspective-1000
               ${index % 2 === 0 ? "rotate-[-3deg]" : "rotate-[3deg]"}`}
-              onClick={() => handleFlip(disciplina.id)}
             >
               <div
-                className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
-                  flipped[disciplina.id] ? "rotate-y-180" : ""
-                }`}
+                className="relative w-full h-full transition-transform duration-700 transform-style-3d"
               >
                 {/* Lato frontale */}
                 <div className="absolute w-full h-full flex flex-col justify-center items-center rounded-lg shadow-lg backface-hidden transition-opacity duration-300">
@@ -81,37 +73,36 @@ const Squadra = () => {
                   <h2 className="relative z-10 text-white text-2xl lg:text-4xl font-bold">
                     {disciplina.title}
                   </h2>
-                  <div className="relative z-10 text-white text-sm lg:text-xl">
-                    Clicca per informazioni
-                  </div>
+
                 </div>
 
-                {/* Lato posteriore */}
-                <div className="absolute w-full h-full flex items-center justify-center bg-primary text-white text-lg lg:text-xl p-4 rounded-lg shadow-lg transform rotate-y-180 backface-hidden">
-                  <p>{disciplina.description}</p>
-                </div>
               </div>
             </div>
           ))}
         </section>
 
-        {/* Sezione Corso di Enduro */}
-        <section className="relative mt-12">
-          <div className="flex flex-col lg:flex-row items-center">
-            <div className="flex-1">
-              <h3 className="text-primary text-2xl sm:text-3xl md:text-4xl mb-4">
+        {/* Sezione Corso di Enduro aggiornata */}
+        <section className="relative mt-24">
+          <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center">
+            {/* Testo a sinistra (occupazione 2/3 su desktop) */}
+            <div className="w-full lg:w-2/3">
+              <h3 className="text-primary font-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
                 Corso di Enduro
               </h3>
-              <p className="text-secondary text-base sm:text-lg md:text-xl">
+              <p className="text-secondary text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
                 Partecipa al nostro corso di Enduro per approfondire tecniche di guida e migliorare
                 le tue abilità sui percorsi off-road. Impara da istruttori esperti in un ambiente sicuro
-                e stimolante, e scopri come affrontare anche le discese più impegnative.
+                e stimolante, e scopri come affrontare anche le discese più impegnative.<br />
+                Il corso è aperto a <b className="text-primary">ragazzi e ragazze a partire dai 12 anni</b>, qualsiasi sia il tuo livello di esperienza.
+                Organizziamo sessioni di gruppo di diverse tipologie in base alla stagione e alle condizioni meteo.<br />
+                <b className="text-primary">Contattaci</b> per maggiori informazioni e prenotazioni.
               </p>
             </div>
-            <div className="flex-shrink-0 mt-4 lg:mt-0 lg:ml-6">
-              <div className="w-32 h-32 relative">
+            {/* Immagine a destra (occupazione 1/3 su desktop) */}
+            <div className="w-full mt-4 lg:mt-0 lg:ml-6 lg:w-1/3">
+              <div className="relative mx-auto">
                 <img
-                  src="/images/enduro-course.jpg"
+                  src="/images/corsoenduro.jpg"
                   alt="Corso di Enduro"
                   className="w-full h-full object-cover rounded-lg"
                 />
@@ -129,7 +120,7 @@ const Squadra = () => {
             Vuoi entrare a far parte della nostra squadra? Contattaci per maggiori informazioni.
           </p>
           <button
-            className="mt-6 bg-secondary text-white py-2 px-4 rounded-lg shadow-md"
+            className="mt-6 btn btn-secondary cursor-pointer"
             onClick={() => (window.location.href = "/contatti")}
           >
             Contattaci
@@ -140,4 +131,4 @@ const Squadra = () => {
   );
 };
 
-export default Squadra;
+export default WildRaceTeam;
