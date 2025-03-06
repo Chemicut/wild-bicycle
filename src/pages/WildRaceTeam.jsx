@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const disciplineData = [
   {
@@ -23,6 +24,17 @@ const disciplineData = [
 
 const WildRaceTeam = () => {
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <main className="w-full bg-background relative">
       <div className="container mx-auto px-6 pb-10">
@@ -38,11 +50,11 @@ const WildRaceTeam = () => {
         ></section>
 
         {/* Titolo */}
-        <p className="section-title text-primary font-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 text-center">
+        <p className="text-primary font-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 mb-10 text-center">
           Uniti dalla passione, guidati dalla velocità.
         </p>
         {/* Descrizione */}
-        <p className="mt-2 text-secondary text-center text-base sm:text-lg md:text-xl lg:text-2xl">
+        <p className="text-secondary text-center text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-6">
           <b className="text-primary">Wild Race Team</b> è l'insieme di appassionati che
           rappresenta la voglia di unirsi e mettersi in gioco. <br className="hidden md:block" />
           Attivi in diverse discipline, uscite di gruppo,{" "}
@@ -82,7 +94,7 @@ const WildRaceTeam = () => {
         </section>
 
         {/* Sezione Corso di Enduro aggiornata */}
-        <section className="relative mt-24">
+        <section id="corso-enduro" className="relative mt-10 lg:my-30">
           <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center">
             {/* Testo a sinistra (occupazione 2/3 su desktop) */}
             <div className="w-full lg:w-2/3">

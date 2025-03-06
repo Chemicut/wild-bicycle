@@ -15,7 +15,7 @@ import banner4 from "../../../assets/images/carousels/hero/corsi.jpg";
 
 const cardsData = [
   { 
-    route: "/prodotti", 
+    route: "/negozio", 
     title: "Card 1", 
     image: banner1, 
     text: (
@@ -39,7 +39,7 @@ const cardsData = [
     text: "Wild Race Team" 
   },
   { 
-    route: "/blog", 
+    route: "/wildraceteam#corso-enduro", 
     title: "Card 4", 
     image: banner4, 
     text: "Corsi di Enduro" 
