@@ -56,12 +56,10 @@ const WildRaceTeam = () => {
           aria-label="Descrizione Wild Race Team"
         >
           <strong className="text-primary">Wild Race Team</strong> è l'insieme
-          di appassionati che rappresenta la voglia di unirsi e mettersi in gioco.
-          <br className="hidden md:block" />
+          di appassionati che rappresenta la voglia di unirsi e mettersi in gioco. <br className="hidden md:block" />
           Attivi in diverse discipline, uscite di gruppo,{" "}
           <strong className="text-primary">corsi per tutti i livelli</strong> e
-          manutenzione dei trail.
-          <br className="hidden md:block" />
+          manutenzione dei trail. <br className="hidden md:block" />
           <strong className="text-primary">WRT</strong> è il punto di riferimento
           per chi vuole fare della bici molto più di una passione.
         </p>
