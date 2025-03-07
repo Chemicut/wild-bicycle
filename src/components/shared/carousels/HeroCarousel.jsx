@@ -141,7 +141,7 @@ const HeroCarousel = () => {
                     activeSlide === index ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <p className="text-2xl lg:text-4xl xl:text-6xl">{card.text}</p>
+                  <p className="text-center text-2xl lg:text-4xl xl:text-6xl">{card.text}</p>
                 </div>
               </div>
             </Link>
