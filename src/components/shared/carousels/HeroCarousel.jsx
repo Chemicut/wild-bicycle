@@ -12,7 +12,6 @@ import banner2 from "/images/officina.webp";
 import banner3 from "/images/wildraceteam.webp";
 import banner4 from "/images/corsi.webp";
 
-
 const cardsData = [
   { 
     route: "/negozio", 
@@ -46,6 +45,7 @@ const cardsData = [
   }
 ];
 
+// Arrow Components: semplificati per maggiore chiarezza
 const SampleNextArrow = ({ className, style, onClick }) => (
   <div
     className={className}
@@ -57,8 +57,7 @@ const SampleNextArrow = ({ className, style, onClick }) => (
       borderRadius: "50%" 
     }}
     onClick={onClick}
-  >
-  </div>
+  />
 );
 
 const SamplePrevArrow = ({ className, style, onClick }) => (
@@ -72,8 +71,7 @@ const SamplePrevArrow = ({ className, style, onClick }) => (
       borderRadius: "50%" 
     }}
     onClick={onClick}
-  >
-  </div>
+  />
 );
 
 const HeroCarousel = () => {
@@ -81,6 +79,7 @@ const HeroCarousel = () => {
   const autoScrollTimeoutRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
 
+  // Pausa e riprende l'auto-scroll in caso di interazione (swipe, click)
   const pauseAutoScroll = () => {
     if (sliderRef.current) {
       sliderRef.current.slickPause();
@@ -93,6 +92,7 @@ const HeroCarousel = () => {
     }
   };
 
+  // Disabilita le frecce su dispositivi touch
   const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
   const settings = {
@@ -116,35 +116,37 @@ const HeroCarousel = () => {
   return (
     <div className="relative slider-container px-[5%] py-[3%]">
       <Slider ref={sliderRef} {...settings}>
-      {cardsData.map((card, index) => (
-        <div key={index} className="px-[2%] py-[3%]">
-          <Link to={card.route}>
-            <div className="rounded-lg shadow overflow-hidden relative">
-              {card.image && (
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-[50vw] md:h-[40vw] max-h-[600px] object-cover"
+        {cardsData.map((card, index) => (
+          <div key={index} className="px-[2%] py-[3%]">
+            <Link to={card.route}>
+              <div className="rounded-lg shadow overflow-hidden relative">
+                {card.image && (
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    // Carica la prima slide in modo eager, le altre lazy
+                    loading={index === 0 ? "eager" : "lazy"}
+                    className="w-full h-[50vw] md:h-[40vw] max-h-[600px] object-cover"
+                  />
+                )}
+                {/* Overlay per scurire l'immagine quando la slide è attiva */}
+                <div
+                  className={`absolute inset-0 bg-black transition-opacity duration-700 ${
+                    activeSlide === index ? "opacity-60" : "opacity-0"
+                  }`}
                 />
-              )}
-              {/* Overlay che scurisce l'immagine */}
-              <div
-                className={`absolute inset-0 bg-black transition-opacity duration-700 ${
-                  activeSlide === index ? "opacity-60" : "opacity-0"
-                }`}
-              ></div>
-              {/* Testo centrato */}
-              <div
-                className={`absolute inset-0 flex items-center text-center justify-center text-accent font-primary transition-opacity duration-700 ${
-                  activeSlide === index ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                <p className="text-2xl lg:text-4xl xl:text-6xl">{card.text}</p>
+                {/* Testo centrato che appare solo quando la slide è attiva */}
+                <div
+                  className={`absolute inset-0 flex items-center justify-center text-accent font-primary transition-opacity duration-700 ${
+                    activeSlide === index ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <p className="text-2xl lg:text-4xl xl:text-6xl">{card.text}</p>
+                </div>
               </div>
-            </div>
-          </Link>
-        </div>
-      ))}
+            </Link>
+          </div>
+        ))}
       </Slider>
     </div>
   );

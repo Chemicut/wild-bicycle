@@ -1,153 +1,155 @@
+/* filepath: /c:/Users/gabri/Documents/GitHub/wild-bicycle/src/index.css */
+
+/* Import external fonts - best to use preconnect for improved performance */
 @import url("https://api.fontshare.com/v2/css?f[]=switzer@300&f[]=outfit@600&display=swap");
 @import "tailwindcss";
 
+/* Theme variables */
 @theme {
-    --font-primary: "Outfit", sans-serif;
-    --font-secondary: "Switzer", sans-serif;
+  --font-primary: "Outfit", sans-serif;
+  --font-secondary: "Switzer", sans-serif;
 
-    --color-primary: oklch(40.46% 0.0891 138.73);
-    --color-background: oklch(93.83% 0.0202 97.54);
-    --color-secondary: oklch(59.27% 0.0697 106.37);
-    --color-accent: oklch(86.06% 0.1731 91.94);
-    --color-dark: oklch(21.78% 0 0);
-    --color-light: oklch(98.16% 0.0017 247.84)
+  --color-primary: oklch(40.46% 0.0891 138.73);
+  --color-background: oklch(93.83% 0.0202 97.54);
+  --color-secondary: oklch(59.27% 0.0697 106.37);
+  --color-accent: oklch(86.06% 0.1731 91.94);
+  --color-dark: oklch(21.78% 0 0);
+  --color-light: oklch(98.16% 0.0017 247.84);
 }
 
+/* Custom Utilities */
 @layer utilities {
-    .transform-style-3d {
-        transform-style: preserve-3d;
+  /* 3D Transform Utilities */
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  /* Keyframes for fade-in animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
     }
-    .perspective-1000 {
-        perspective: 1000px;
+    to {
+      opacity: 1;
     }
-    .rotate-y-180 {
-        transform: rotateY(180deg);
+  }
+  .animate-fade-in {
+    animation: fade-in 3s ease-out forwards;
+  }
+  @keyframes fast-fade-in {
+    from {
+      opacity: 0;
     }
-    .backface-hidden {
-        backface-visibility: hidden;
+    to {
+      opacity: 1;
     }
-    @keyframes fade-in {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      
-      .animate-fade-in {
-        animation: fade-in 3s ease-out forwards;
-      }
-      
-      @keyframes fast-fade-in {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      
-      .animate-fast-fade-in {
-        animation: fade-in 1s forwards;
-      }
+  }
+  .animate-fast-fade-in {
+    animation: fade-in 1s forwards;
+  }
 }
-  
-/* 🔹 Classi riutilizzabili per layout */
+
+/* Reusable Layout Classes */
 .container-padding {
-    @apply px-6 md:px-12 py-12;
+  @apply px-6 md:px-12 py-12;
 }
 
 .section-title {
-    @apply text-2xl md:text-3xl font-bold text-center mb-6;
+  @apply text-2xl md:text-3xl font-bold text-center mb-6;
 }
 
-/* 🔹 Classi per le card */
+/* Card Styles */
 .card {
-    @apply  rounded-lg shadow-md bg-white p-4 transition-transform transform;
+  @apply rounded-lg shadow-md bg-white p-4 transition-transform transform;
 }
 
 .card-title {
-    @apply text-lg font-semibold text-gray-900;
+  @apply text-lg font-semibold text-gray-900;
 }
 
 .card-text {
-    @apply text-gray-600 font-medium;
+  @apply text-gray-600 font-medium;
 }
 
-/* 🔹 Classi per i bottoni */
+/* Button Styles */
 .btn-primary {
-    @apply bg-primary text-background font-primary px-6 py-3 rounded-lg shadow-md transition-colors;
+  @apply bg-primary text-background font-primary px-6 py-3 rounded-lg shadow-md transition-colors;
 }
 
 .btn-secondary {
-    @apply bg-accent text-primary px-6 py-2 rounded-lg text-lg font-bold transition-colors;
+  @apply bg-accent text-primary px-6 py-2 rounded-lg text-lg font-bold transition-colors;
 }
 
-/* 🔹 Classi per input e form */
+/* Input and Form Styles */
 .input-field {
-    @apply border border-gray-300 rounded-lg p-3 w-full bg-white;
+  @apply border border-gray-300 rounded-lg p-3 w-full bg-white;
 }
 
 .input-label {
-    @apply text-sm sm:text-base md:text-lg font-semibold text-primary;
+  @apply text-sm sm:text-base md:text-lg font-semibold text-primary;
 }
 
-/*Utilities*/
-
+/* Placeholder styling */
 ::placeholder {
-    color: var(--color-primary);
-    opacity: 0.5
- }
+  color: var(--color-primary);
+  opacity: 0.5;
+}
 
+/* Hide Scrollbar */
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
 .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
+/* Slick Carousel Arrow Styles */
 .slick-prev:before,
 .slick-next:before {
-    font-size: 1.7rem !important;
-    color: var(--color-primary) !important;
+  font-size: 1.7rem !important;
+  color: var(--color-primary) !important;
 }
 
-/*Shop slider's settings*/
-
+/* Shop Slider Settings */
 .rc-slider-track {
-    background-color: var(--color-primary) !important; 
-  }
-  
-  .rc-slider-handle {
-    border: solid 2px var(--color-primary) !important; 
-    background-color: #ffffff; 
-  }
-  
-  .rc-slider-rail {
-    background-color: #e0e0e0 !important;
-  }
+  background-color: var(--color-primary) !important;
+}
+.rc-slider-handle {
+  border: solid 2px var(--color-primary) !important;
+  background-color: #ffffff;
+}
+.rc-slider-rail {
+  background-color: #e0e0e0 !important;
+}
 
-  @media (hover: hover) and (pointer: fine) {
-    
-    .btn-primary:hover {
-      @apply bg-accent text-primary;
-    }
-    .btn-secondary:hover {
-      @apply bg-background/15 text-accent ring-1 ring-background;
-    }
-    .card:hover {
-      @apply scale-105 shadow-xl cursor-pointer;
-    }
-    .text-hover:hover {
-      @apply text-accent;
-    }
-    .footer-social-btn:hover {
-      @apply bg-white text-primary;
-    }
-    .footer-social-btn:hover svg {
-      @apply fill-primary;
-    }
+/* Hover Effects for Devices That Support Hover */
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    @apply bg-accent text-primary;
   }
+  .btn-secondary:hover {
+    @apply bg-background/15 text-accent ring-1 ring-background;
+  }
+  .card:hover {
+    @apply scale-105 shadow-xl cursor-pointer;
+  }
+  .text-hover:hover {
+    @apply text-accent;
+  }
+  .footer-social-btn:hover {
+    @apply bg-white text-primary;
+  }
+  .footer-social-btn:hover svg {
+    @apply fill-primary;
+  }
+}

@@ -12,7 +12,7 @@ const Footer = () => {
         <FooterSocial />
       </div>
       <div className="text-center text-white text-sm mt-6">
-        © {new Date().getFullYear()} Wild Bicycle - Tutti i diritti riservati
+        © {new Date().getFullYear()} Wild Bicycle S.R.L. - Tutti i diritti riservati
       </div>
     </footer>
   );
