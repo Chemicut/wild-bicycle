@@ -78,7 +78,7 @@ const WildRaceTeam = () => {
                 {/* Lato frontale */}
                 <div className="absolute w-full h-full flex flex-col justify-center items-center rounded-lg shadow-lg backface-hidden transition-opacity duration-300">
                   <img
-                    src={`/images/${disciplina.id}.jpg`}
+                    src={`/images/${disciplina.id}.webp`}
                     alt={disciplina.title}
                     className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
                   />
@@ -114,7 +114,7 @@ const WildRaceTeam = () => {
             <div className="w-full mt-4 lg:mt-0 lg:ml-6 lg:w-1/3">
               <div className="relative mx-auto">
                 <img
-                  src="/images/corsoenduro.jpg"
+                  src="/images/corsoenduro.webp"
                   alt="Corso di Enduro"
                   className="w-full h-full object-cover rounded-lg"
                 />

@@ -7,10 +7,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // images import
-import banner1 from "../../../assets/images/carousels/hero/shop.jpg";
-import banner2 from "../../../assets/images/carousels/hero/officina.jpg";
-import banner3 from "../../../assets/images/carousels/hero/wildraceteam.jpg";
-import banner4 from "../../../assets/images/carousels/hero/corsi.jpg";
+import banner1 from "/images/shop.webp";
+import banner2 from "/images/officina.webp";
+import banner3 from "/images/wildraceteam.webp";
+import banner4 from "/images/corsi.webp";
 
 
 const cardsData = [

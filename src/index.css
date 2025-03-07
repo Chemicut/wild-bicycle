@@ -64,7 +64,7 @@
 
 /* 🔹 Classi per le card */
 .card {
-    @apply border rounded-lg shadow-md bg-white p-4 transition-transform transform hover:scale-105 hover:shadow-xl;
+    @apply  rounded-lg shadow-md bg-white p-4 transition-transform transform;
 }
 
 .card-title {
@@ -77,11 +77,11 @@
 
 /* 🔹 Classi per i bottoni */
 .btn-primary {
-    @apply bg-primary text-background font-primary px-6 py-3 rounded-lg shadow-md ;
+    @apply bg-primary text-background font-primary px-6 py-3 rounded-lg shadow-md transition-colors;
 }
 
 .btn-secondary {
-    @apply bg-accent text-primary px-6 py-2 rounded-lg text-lg font-bold;
+    @apply bg-accent text-primary px-6 py-2 rounded-lg text-lg font-bold transition-colors;
 }
 
 /* 🔹 Classi per input e form */
@@ -114,3 +114,40 @@
     font-size: 1.7rem !important;
     color: var(--color-primary) !important;
 }
+
+/*Shop slider's settings*/
+
+.rc-slider-track {
+    background-color: var(--color-primary) !important; 
+  }
+  
+  .rc-slider-handle {
+    border: solid 2px var(--color-primary) !important; 
+    background-color: #ffffff; 
+  }
+  
+  .rc-slider-rail {
+    background-color: #e0e0e0 !important;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    
+    .btn-primary:hover {
+      @apply bg-accent text-primary;
+    }
+    .btn-secondary:hover {
+      @apply bg-background/15 text-accent ring-1 ring-background;
+    }
+    .card:hover {
+      @apply scale-105 shadow-xl cursor-pointer;
+    }
+    .text-hover:hover {
+      @apply text-accent;
+    }
+    .footer-social-btn:hover {
+      @apply bg-white text-primary;
+    }
+    .footer-social-btn:hover svg {
+      @apply fill-primary;
+    }
+  }

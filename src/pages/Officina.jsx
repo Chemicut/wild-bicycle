@@ -33,7 +33,7 @@ const FadeInSection = ({ children, className = "" }) => {
 
 const Officina = () => {
   return (
-    <main className="w-full bg-background py-8">
+    <main className="w-full bg-background py-10">
       <div className="container mx-auto px-6">
         {/* Div principale con testo responsivo e font secondary */}
         <div className="mb-8">
@@ -105,6 +105,7 @@ const Officina = () => {
             </p>
           </div>
         </FadeInSection>
+        
         <section className="mt-12 bg-primary text-white py-10 px-6 rounded-lg shadow-lg text-center">
           <h2 className="section-title text-white text-2xl sm:text-3xl md:text-4xl">
             Morale a terra come le tue ruote?

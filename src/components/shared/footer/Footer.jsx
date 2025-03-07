@@ -11,7 +11,7 @@ const Footer = () => {
         <FooterContact />
         <FooterSocial />
       </div>
-      <div className="text-center text-gray-400 text-sm mt-6">
+      <div className="text-center text-white text-sm mt-6">
         © {new Date().getFullYear()} Wild Bicycle - Tutti i diritti riservati
       </div>
     </footer>

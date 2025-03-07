@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="card hover:scale-105">
+    <div className="card">
       <img
         src={product.image}
         alt={product.name}

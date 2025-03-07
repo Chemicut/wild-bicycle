@@ -8,24 +8,25 @@ import WildRaceTeam from "./pages/WildRaceTeam.jsx";
 import Officina from "./pages/Officina.jsx";
 import Contatti from "./pages/Contatti.jsx";
 import AdminPanel from "./pages/AdminPanel";
+import ScrollToTop from "./components/shared/ScrollToTop.jsx";
 
 const App = () => {
   return (
-      <Router>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/negozio" element={<Negozio />} />
-            <Route path="/officina" element={<Officina />} />
-            <Route path="/wildraceteam" element={<WildRaceTeam />} />
-            <Route path="/contatti" element={<Contatti />} />
-            <Route path="/admin" element={<AdminPanel />} />
-
-          </Routes>
-        </main>
-        <Footer />
-      </Router>
+    <Router>
+      <ScrollToTop />
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/negozio" element={<Negozio />} />
+          <Route path="/officina" element={<Officina />} />
+          <Route path="/wildraceteam" element={<WildRaceTeam />} />
+          <Route path="/contatti" element={<Contatti />} />
+          <Route path="/admin" element={<AdminPanel />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
   );
 };
 

@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import "../src/index.css";
+import "../src/index.css"; // Global CSS styling
 
-// Seleziona il nodo root di index.html
+// Select the root DOM node from index.html
 const rootElement = document.getElementById("root");
 
-// Crea un root React
+// Create a React root using ReactDOM.createRoot
 const root = ReactDOM.createRoot(rootElement);
 
-// Monta l'app dentro il root
+// Render the App component inside StrictMode for highlighting potential issues
 root.render(
   <React.StrictMode>
     <App />
