@@ -1,33 +1,62 @@
 [
     {
       "id": 1,
-      "name": "MTB Ginetto 1000",
-      "price": 1999.99,
-      "image": "/assets/images/mtb-rockrider.jpg",
-      "category": "Mountain bike",
+      "name": "BH Expert 4.0",
+      "price": "1099.00",
+      "image": "/images/bh-expert4.webp",
+      "category": "Biciclette",
+      "subCategory": "MTB",
       "type": "Muscolare",
       "wheelSize": 29,
-      "suspension": "Full"
+      "sospensione": "Front",
+      "technicalDetails": {
+        "Telaio": "Expert 29\" Alloy Hydroformed",
+        "Forcella": "Suntour Raidon RLR 100mm",
+        "Guarnitura": "Shimano MT510 30T",
+        "Cassetta": "Shimano M6100 10-51T",
+        "Cambio": "Shimano Deore 12sp",
+        "Freni": "Shimano MT200 180/160mm",
+        "Ruote": "BH Lite 29\" Tubeless Ready",
+        "Pneumatici": "Maxxis Ikon 29x2.20",
+        "Manubrio": "BH MTB Alloy Flat 780mm",
+        "Attacco manubrio": "BH MTB Alloy 31.8mm",
+        "Reggisella": "BH Alloy 31.6mm",
+        "Sella": "BH Sport"
+      }
     },
     {
       "id": 2,
-      "name": "Bici da Corsa Scott Addict RC",
-      "price": 3499.00,
-      "image": "/assets/images/scott-addict.jpg",
-      "category": "Corsa",
+      "name": "BH RS1 4.5 Ultegra 12V",
+      "price": 4799.00,
+      "image": "/images/bh-rs1-45.webp",
+      "category": "Biciclette",
+      "subCategory": "Corsa",
       "type": "Muscolare",
       "wheelSize": 28,
-      "suspension": "Rigida"
+      "sospensione": "Rigida",
+      "technicalDetails": {
+        "Telaio": "RS1 Carbon Monocoque",
+        "Forcella": "RS1 Carbon Disc Full Integrated",
+        "Guarnitura": "Shimano Ultegra Di2 52/36",
+        "Cassetta": "Shimano Ultegra 11-34",
+        "Cambio": "Shimano Ultegra 12sp",
+        "Freni": "Shimano Ultegra",
+        "Ruote": "BH Evo 38mm",
+        "Pneumatici": "Chaoyang Speed Shark 700x28",
+        "Manubrio": "Evo Monocoque ACR",
+        "Attacco": "Evo Monocoque ACR"
+      }
     },
     {
       "id": 3,
-      "name": "E-MTB Specialized Turbo Levo",
-      "price": 6999.00,
-      "image": "/assets/images/specialized-levo.jpg",
-      "category": "MTB",
+      "name": "Flyer Uproc SL:X 8.70",
+      "price": 7499.00,
+      "image": "/images/flyeruprocslx870.webp",
+      "category": "Biciclette",
+      "subCategory": "E-MTB",
       "type": "Elettrica",
       "wheelSize": 29,
-      "suspension": "Full"
+      "sospensione": "Full"
     }
   ]
   

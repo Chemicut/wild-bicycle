@@ -36,7 +36,7 @@ const Officina = () => {
     <main className="w-full bg-background py-10">
       <div className="container mx-auto px-6">
         {/* Div principale con testo responsivo e font secondary */}
-        <div className="mb-8">
+        <div className="mb-8 text-center">
           <p className="text-secondary font-secondary text-base sm:text-lg md:text-xl lg:text-2xl">
             <b className="text-primary">Wild Bicycle</b>{" "}
             non è solo un negozio di bici, ma il punto di riferimento per la cura e l’innovazione sulle due ruote.

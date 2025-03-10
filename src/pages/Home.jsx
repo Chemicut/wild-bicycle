@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "../components/home/HeroSection";
 import BrandCarousel from "../components/shared/carousels/BrandCarousel";
+import ProductCarousel from "../components/home/ProductCarousel";
 import bannerImage from "/images/banner-shop.webp";
 
 const Home = () => {
-
-
   return (
     <main className="bg-background">
       {/* Hero section */}
@@ -27,6 +26,15 @@ const Home = () => {
       </section>
 
       {/* Carousel dei prodotti in evidenza */}
+      <section
+        className="w-full md:w-[90%] lg:w-[85%] mx-auto my-4 px-4 py-8 text-center"
+        aria-label="Vetrina dei prodotti"
+      >
+        <h3 className="text-primary font-primary text-2xl lg:text-3xl xl:text-4xl mb-4">
+          Prodotti in evidenza
+        </h3>
+        <ProductCarousel productIds={[1, 2, 3]} />
+      </section>
 
       {/* Banner del catalogo con effetto parallax */}
       <section
