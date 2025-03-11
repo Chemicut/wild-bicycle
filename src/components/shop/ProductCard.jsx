@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
           className="w-full h-56 object-cover rounded-md mb-4"
         />
         <h2 className="card-title">{product.name}</h2>
-        <p className="card-text">€{product.price}</p>
+        <p className="card-text">€ {product.price}</p>
       </div>
     </Link>
   );

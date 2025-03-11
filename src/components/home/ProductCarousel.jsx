@@ -107,7 +107,7 @@ const ProductCarousel = ({ productIds }) => {
                   />
                 )}
                 <h2 className="card-title">{product.name}</h2>
-                <p className="card-text">€{product.price.toFixed(2)}</p>
+                <p className="card-text">€ {product.price}</p>
               </div>
             </Link>
           </div>
