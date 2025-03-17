@@ -146,6 +146,9 @@
   .text-hover:hover {
     @apply text-accent;
   }
+  .text-hover-primary:hover {
+    @apply text-primary;
+  }
   .footer-social-btn:hover {
     @apply bg-white text-primary;
   }

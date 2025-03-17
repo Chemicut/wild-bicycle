@@ -84,7 +84,7 @@ const FiltersContent = ({ filters, setFilters, categories, searchBar }) => {
         <h2 className="text-lg text-primary font-bold mb-2">Prezzo</h2>
         <PriceRangeSlider
           minValue={0}
-          maxValue={8000}
+          maxValue={15000}
           value={filters.priceRange}
           onRangeChange={(range) => setFilters({ ...filters, priceRange: range })}
         />

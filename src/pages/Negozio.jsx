@@ -9,7 +9,7 @@ const Negozio = () => {
     search: "",
     mainCategory: "",
     subCategory: "",
-    priceRange: [0, 8000],
+    priceRange: [0, 15000],
     sospensione: "",
   });
   const [searchQuery, setSearchQuery] = useState("");

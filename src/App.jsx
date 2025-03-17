@@ -9,7 +9,8 @@ import Officina from "./pages/Officina.jsx";
 import Contatti from "./pages/Contatti.jsx";
 import AdminPanel from "./pages/AdminPanel";
 import ScrollToTop from "./components/shared/ScrollToTop.jsx";
-import ProductPage from "./pages/ProductPage.jsx"; // replaced Product.jsx import
+import ProductPage from "./pages/ProductPage.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
           <Route path="/wildraceteam" element={<WildRaceTeam />} />
           <Route path="/contatti" element={<Contatti />} />
           <Route path="/admin" element={<AdminPanel />} />
-          <Route path="/product/:id" element={<ProductPage />} /> {/* updated route */}
+          <Route path="/prodotti/:id" element={<ProductPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

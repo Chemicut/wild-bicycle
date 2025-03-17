@@ -18,9 +18,9 @@ const Home = () => {
       >
         <h3 className="text-secondary font-secondary text-xl lg:text-2xl xl:text-3xl">
           Dal 2013 <b className="text-primary">Wild Bicycle</b> è una realtà di Roma Nord che spazia dal ciclismo su strada fino al gravity.{" "}
-          <br className="hidden xl:block" />
+          <br />
           Da anni offriamo le migliori biciclette e accessori per ciclisti di tutti i livelli.
-          <br className="hidden xl:block" />
+          <br />
           Il nostro team è sempre pronto ad aiutarti con riparazioni, consigli e nuove attrezzature per soddisfare le tue necessità.
         </h3>
       </section>
@@ -33,7 +33,7 @@ const Home = () => {
         <h3 className="text-primary font-primary text-2xl lg:text-3xl xl:text-4xl mb-4">
           Prodotti in evidenza
         </h3>
-        <ProductCarousel productIds={[1, 2, 3]} />
+        <ProductCarousel productIds={[1, 2, 3, 4, 5, 6]} />
       </section>
 
       {/* Banner del catalogo con effetto parallax */}
