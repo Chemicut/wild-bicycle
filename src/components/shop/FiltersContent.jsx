@@ -20,7 +20,7 @@ const FiltersContent = ({ filters, setFilters, categories, searchBar }) => {
       {searchBar}
       {/* Filtro per le categorie */}
       <div>
-        <h2 className="text-lg font-bold mb-2">Categorie</h2>
+        <h2 className="text-lg font-bold mb-2 text-primary">Categorie</h2>
         {categories.map((cat) => (
           <div key={cat.name} className="mb-2">
             <button

@@ -20,7 +20,7 @@ const SearchBar = ({ searchQuery, setSearchQuery, onSearch }) => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="w-full p-2 border rounded-lg mb-4"
+          className="w-full p-2 border rounded-lg mb-4 bg-white"
         />
         <button
           className="btn btn-primary mb-4 rounded-lg"

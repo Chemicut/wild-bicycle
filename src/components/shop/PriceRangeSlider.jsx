@@ -33,7 +33,7 @@ const PriceRangeSlider = ({ minValue, maxValue, value, onRangeChange }) => {
         onChange={handleSliderChange}
         onAfterChange={handleAfterChange}
       />
-      <div className="flex justify-between text-sm mt-2">
+      <div className="flex justify-between text-base mt-2">
         <span>{sliderValue[0]}€</span>
         <span>{sliderValue[1]}€</span>
       </div>

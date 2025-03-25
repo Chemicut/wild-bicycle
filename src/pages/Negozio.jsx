@@ -87,7 +87,7 @@ const Negozio = () => {
 
   return (
     <main className="w-full bg-background">
-      <div className="px-6 md:px-12 py-12 mx-auto">
+      <div className="p-6 lg:p-12 mx-auto">
         {/* Filtro per mobile */}
         <div className="lg:hidden mb-6">
           <button
