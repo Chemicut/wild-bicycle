@@ -45,7 +45,6 @@ const cardsData = [
   }
 ];
 
-// Arrow Components: semplificati per maggiore chiarezza
 const SampleNextArrow = ({ className, style, onClick }) => (
   <div
     className={className}
@@ -78,6 +77,7 @@ const HeroCarousel = () => {
   const sliderRef = useRef(null);
   const autoScrollTimeoutRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [initialSlideLoaded, setInitialSlideLoaded] = useState(false);
 
   // Pausa e riprende l'auto-scroll in caso di interazione (swipe, click)
   const pauseAutoScroll = () => {
@@ -92,16 +92,16 @@ const HeroCarousel = () => {
     }
   };
 
-  // Disabilita le frecce su dispositivi touch
   const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
+  // Impostiamo autoplay: false inizialmente; successivamente lo avvieremo manualmente quando l'immagine sia caricata.
   const settings = {
     arrows: !isTouchDevice,
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2250,
     pauseOnHover: true,
     swipe: true,
@@ -126,16 +126,23 @@ const HeroCarousel = () => {
                     alt={card.title}
                     // Carica la prima slide in modo eager, le altre lazy
                     loading={index === 0 ? "eager" : "lazy"}
+                    // Se la slide attiva non è ancora stata caricata, gestiamo l'onLoad
+                    onLoad={() => {
+                      if (!initialSlideLoaded && activeSlide === index) {
+                        setInitialSlideLoaded(true);
+                        if (sliderRef.current) {
+                          sliderRef.current.slickPlay();
+                        }
+                      }
+                    }}
                     className="w-full h-[50vw] md:h-[40vw] max-h-[600px] object-cover"
                   />
                 )}
-                {/* Overlay per scurire l'immagine quando la slide è attiva */}
                 <div
                   className={`absolute inset-0 bg-black transition-opacity duration-700 ${
                     activeSlide === index ? "opacity-60" : "opacity-0"
                   }`}
                 />
-                {/* Testo centrato che appare solo quando la slide è attiva */}
                 <div
                   className={`absolute inset-0 flex items-center justify-center text-accent font-primary transition-opacity duration-700 ${
                     activeSlide === index ? "opacity-100" : "opacity-0"
