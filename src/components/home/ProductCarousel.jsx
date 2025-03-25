@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import products from "../../data/products.json";
+import GetDiscount from "../shared/productcards/GetDiscount";
 
 // react-slick styles
 import "slick-carousel/slick/slick.css"; 
@@ -52,7 +53,7 @@ const ProductCarousel = ({ productIds }) => {
       }
       autoScrollTimeoutRef.current = setTimeout(() => {
         sliderRef.current.slickPlay();
-      }, 5000);
+      }, 3000);
     }
   };
 
@@ -96,18 +97,34 @@ const ProductCarousel = ({ productIds }) => {
       <Slider ref={sliderRef} {...settings}>
         {selectedProducts.map((product, index) => (
           <div key={index} className="px-[2%] py-[3%]">
-            <Link to={`/prodotti/${product.id}`}>
+            <Link to={`/prodotti/${product.id}`} className="block">
               <div className="card font-primary">
-                {product.image && (
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    loading={index === 0 ? "eager" : "lazy"}
-                    className="w-full h-56 object-cover rounded-md mb-4"
-                  />
-                )}
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-56 object-cover rounded-md mb-4"
+                />
                 <h2 className="card-title">{product.name}</h2>
-                <p className="card-text">€ {product.price}</p>
+
+                
+                <div className="flex justify-between items-center py-2">
+                  {product.fullprice ? (
+                    <>
+                      <div className="flex items-center gap-4">
+                        <p className="text-gray-600 line-through">€ {product.fullprice}</p>
+                        <p className="text-black text-lg">€ {product.price}</p>
+                      </div>
+                      <div className="flex items-center">
+                        <p className="text-black text-lg">Sconto del {GetDiscount(product.fullprice, product.price)}%</p>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="flex items-center">
+                      <p className="text-black text-lg">€ {product.price}</p>
+                    </div>
+                  )}
+
+                </div>
               </div>
             </Link>
           </div>

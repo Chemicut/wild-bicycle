@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import GetDiscount from "../shared/productcards/GetDiscount";
 
 const ProductCard = ({ product }) => {
   return (
@@ -10,7 +11,26 @@ const ProductCard = ({ product }) => {
           className="w-full h-56 object-cover rounded-md mb-4"
         />
         <h2 className="card-title">{product.name}</h2>
-        <p className="card-text">€ {product.price}</p>
+
+        
+        <div className="flex justify-between items-center py-2">
+          {product.fullprice ? (
+            <>
+              <div className="flex items-center gap-4">
+                <p className="text-gray-600 text-sm line-through">€ {product.fullprice}</p>
+                <p className="text-black text-base">€ {product.price}</p>
+              </div>
+              <div className="flex items-center">
+                <p className="text-black text-base">Sconto del {GetDiscount(product.fullprice, product.price)}%</p>
+              </div>
+            </>
+          ) : (
+            <div className="flex items-center">
+              <p className="text-black text-base">€ {product.price}</p>
+            </div>
+          )}
+
+        </div>
       </div>
     </Link>
   );

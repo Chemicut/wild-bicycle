@@ -102,7 +102,7 @@ const HeroCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2250,
     pauseOnHover: true,
     swipe: true,
     draggable: isTouchDevice,

@@ -34,22 +34,30 @@ const FadeInSection = ({ children, className = "" }) => {
 const Officina = () => {
   return (
     <main className="w-full bg-background py-10">
-      <div className="container mx-auto px-6">
-        {/* Div principale con testo responsivo e font secondary */}
-        <div className="mb-8 text-center">
-          <p className="text-secondary font-secondary text-base sm:text-lg md:text-xl lg:text-2xl">
-            <b className="text-primary">Wild Bicycle</b>{" "}
-            non è solo un negozio di bici, ma il punto di riferimento per la cura e l’innovazione sulle due ruote.
-            <br /><br />
-            La nostra officina, attrezzata con strumenti all’avanguardia, è guidata da un team di esperti appassionati
-            che si dedicano con precisione e dedizione ad ogni intervento.
-            <br /><br />
-            Che si tratti di <b className="text-primary">manutenzioni</b> ordinarie, <b className="text-primary">riparazioni</b> complesse,{" "}
-            <b className="text-primary">upgrade</b> personalizzati o <b className="text-primary">preparazioni</b> da gara, 
-            offriamo soluzioni su misura per valorizzare ogni dettaglio della tua bicicletta.
-          </p>
-        </div>
+      <div className="container mx-auto px-6 my-8">
 
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex w-full lg:w-1/3" aria-label="Officina Wild Bicycle">
+                <img
+                  src="/images/officina-3.webp"
+                  alt="Officina Wild Bicycle"
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            <div className="flex w-full lg:w-2/3 lg:items-center">
+            <p className="text-secondary font-secondary text-base sm:text-lg md:text-xl lg:text-2xl">
+              <b className="text-primary">Wild Bicycle</b>{" "}
+              non è solo un negozio di bici, ma il punto di riferimento per la cura e l’innovazione sulle due ruote.
+              <br />
+              La nostra officina, attrezzata con strumenti all’avanguardia, è guidata da un team di esperti appassionati
+              che si dedicano con precisione e dedizione ad ogni intervento.
+              <br />
+              Che si tratti di <b className="text-primary">manutenzioni</b> ordinarie, <b className="text-primary">riparazioni</b> complesse,{" "}
+              <b className="text-primary">upgrade</b> personalizzati o <b className="text-primary">preparazioni</b> da gara, 
+              offriamo soluzioni su misura per valorizzare ogni dettaglio della tua bicicletta.
+            </p>
+        </div>
+      </div>
         {/* Prima riga di 3 div affiancati con effetto fade in */}
         <FadeInSection className="flex flex-col lg:flex-row gap-4">
           <div className="flex-1 p-8">

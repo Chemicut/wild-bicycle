@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import productsData from "../data/products.json";
+import GetDiscount from "../components/shared/productcards/GetDiscount";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -49,13 +50,31 @@ const ProductPage = () => {
         {/* Sezione dettagli prodotto */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
-          <p className="text-xl font-semibold mb-4">{product.price} €</p>
+
+          {/* Prezzo e sconto */}
+          <div className="w-1/2 flex justify-between items-center py-2 font-semibold">
+            {product.fullprice ? (
+              <>
+                <div className="flex items-center gap-4">
+                  <p className="text-gray-600 line-through">€ {product.fullprice}</p>
+                  <p className="text-black text-lg">€ {product.price}</p>
+                </div>
+                <div className="flex items-center">
+                  <p className="text-black text-lg">Sconto del {GetDiscount(product.fullprice, product.price)}%</p>
+                </div>
+              </>
+            ) : (
+              <div className="flex items-center">
+                <p className="text-black text-lg">€ {product.price}</p>
+              </div>
+            )}
+          </div>
           {/* Descrizione, se inserita nel JSON */}
           {product.description && (
             <p className="text-base mb-8">{product.description}</p>
           )}
           <button 
-            className="btn btn-primary w-full lg:w-1/2 px-4 py-2 rounded cursor-pointer mb-6"
+            className="btn btn-primary w-full lg:w-1/2 px-4 py-2 rounded cursor-pointer mb-6 text-xl"
             onClick={() => navigate("/contatti")}
           >
             Scopri le disponibilità
@@ -80,7 +99,6 @@ const ProductPage = () => {
           <p>Nessuna specifica tecnica disponibile.</p>
         )}
       </div>
-      {/* ...existing footer code... */}
     </main>
   );
 };

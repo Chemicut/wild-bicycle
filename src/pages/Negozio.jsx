@@ -23,7 +23,7 @@ const Negozio = () => {
   const categories = [
     {
       name: "Biciclette",
-      subCategories: ["MTB", "E-MTB", "Corsa", "Gravel", "Urban/City", "Kids"],
+      subCategories: ["MTB", "E-MTB", "Corsa", "Gravel", "Ciclocross", "Urban/City", "Kids"],
     },
     {
       name: "Abbigliamento",
@@ -119,15 +119,15 @@ const Negozio = () => {
           </aside>
           {/* Vetrina Prodotti */}
           <section className="w-full lg:w-3/4 xl:w-4/5">
-            <h1 className="section-title mb-4 font-primary text-primary">Negozio</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl mb-4 text-center font-primary text-primary">Negozio</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-6">
               {filteredProducts.length > 0 ? (
                 filteredProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))
               ) : (
-                <p className="text-center col-span-full text-gray-600">
-                  Nessun prodotto trovato.
+                <p className="text-center col-span-full text-xl sm:text-2xl md:text-3xl text-secondary">
+                  Non ci sono prodotti disponibili con i filtri selezionati.
                 </p>
               )}
             </div>

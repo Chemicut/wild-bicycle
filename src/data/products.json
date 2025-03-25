@@ -2,6 +2,7 @@
     {
       "id": "bh-expert4",
       "name": "BH Expert 4.0",
+      "fullprice": "1199.00",
       "price": "1099.00",
       "image": "/images/products-gallery/bh-expert4/bh-expert4.webp",
       "gallery": [
@@ -175,6 +176,7 @@
     {
       "id": "lapierre-xr79-2023",
       "name": "Lapierre XR 7.9 2023",
+      "fullprice": "4999.00",
       "price": "4199.00",
       "image": "/images/products-gallery/lapierre-xr79-2023/lapierre-xr79-2023.webp",
       "gallery": [
@@ -212,6 +214,7 @@
     {
       "id": "lapierre-spicycf69-2023",
       "name": "Lapierre Spicy CF 6.9 2023",
+      "fullprice": "6199.00",
       "price": "5499.00",
       "image": "/images/products-gallery/lapierre-spicycf69-2023/lapierre-spicycf69-2023.webp",
       "gallery": [
@@ -287,6 +290,7 @@
     {
       "id": "megamo-jakar20-2023",
       "name": "Megamo Jakar 20 2023",
+      "fullprice": "1899.00",
       "price": "1699.00",
       "image": "/images/products-gallery/megamo-jakar20-2023/megamo-jakar20-2023.webp",
       "description": "La versatilità della Megamo Jakar 20 permette di godersi brevi pedalate, ma anche lunghi percorsi e viaggi in bikepacking. Pedalando su strada, sentieri, foreste o paesaggi aridi... qualunque sia il percorso, ora puoi godertelo con la Megamo Jakar. Questa bici è stata progettata con un robusto telaio in alluminio in modo da poter guidare ovunque. Inoltre, ha diversi punti di fissaggio per aggiungere l'attrezzatura e le borse necessarie che ti accompagneranno nelle tue avventure. Ha una forcella in carbonio, freni a disco e un passaruota che supporta fino a 700x45.",
@@ -343,6 +347,179 @@
         "Manopole": "Lapierre grips anodized, S/M: small diameter, L/XL: large diameter",
         "Sella": "WTB Volt 142mm",
         "Reggisella": "Lapierre dropper, Ø: 31.6mm, travel 100mm (S), 150mm (M,L), 170mm (XL)",
-        "Pedali": "FPD NW-91K steel cage"      }
+        "Pedali": "FPD NW-91K steel cage"      
+      }
+    },
+    {
+      "id": "mondraker-chronocarbon-2022",
+      "name": "Mondraker Chrono Carbon 29 2022",
+      "price": "1.00",
+      "image": "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
+      "gallery": [
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-1.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-2.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-3.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-4.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-5.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-6.webp"
+      ],
+      "description": "Il Chrono Carbon combina leggerezza, agilità, trazione e comfort extra grazie al suo telaio realizzato con la tecnologia STEALTH FULL CARBON. La geometria FORWARD GEOMETRY è stata ottimizzata per l'uso CrossCountry e ha 12 velocità. Incorpora la forcella RockShox Judy Gold RL 29 con un'escursione fino a 100 mm perfetta per assorbire le irregolarità della strada.",
+      "category": "Biciclette",
+      "subCategory": "MTB",
+      "type": "Muscolare",
+      "wheelSize": "29",
+      "sospensione": "Front",
+      "technicalDetails": {
+        "Telaio": "Chrono 29 Stealth full Carbon, XC Forward Geometry, Boost 12x148mm rear axle",
+        "Forcella": "RockShox Judy Gold RL 29, 100mm",
+        "Cambio": "SRAM NX Eagle, 12s",
+        "Guarnitura": "SRAM SX Eagle, Boost, DUB axle, S size: 170mm, M/L/XL size: 175mm",
+        "Freni": "SRAM Level T, 2 piece caliper, Centerline 160mm",
+        "Cerchi": "Front: MDK-XP1 29 TLR, 25mm internal width, tubeless ready, 32 spokes / Rear: Ryde 30c, 30mm internal width, 32 spokes",
+        "Pneumatici": "Fincci 29 x 2.10 in",
+        "Manubrio": "ONOFF Sulfur 0.2, double butted 6061 alloy, rise: 4.8mm, width: 760mm, 9º backsweep, 0º upsweep, 31.8mm barbore",
+        "Attacco manubrio": "ONOFF",
+        "Manopole": "ONOFF LockOn grips",
+        "Sella": "Mondraker XC Series, steel rail",
+        "Reggisella": "ONOFF Sulfur 0-R, 6061 T6 Alloy, 3D forged, diameter 27.2mm, length 400mm",
+        "Pedali": "N/A"      
+      }
+    },
+    {
+      "id": "lapierre-spicy79-2022",
+      "name": "Lapierre Spicy CF 7.9 2022",
+      "price": "1.00",
+      "image": "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
+      "gallery": [
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-1.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-2.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-3.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-4.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-5.webp",
+        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-6.webp"
+      ],
+      "description": "Il Chrono Carbon combina leggerezza, agilità, trazione e comfort extra grazie al suo telaio realizzato con la tecnologia STEALTH FULL CARBON. La geometria FORWARD GEOMETRY è stata ottimizzata per l'uso CrossCountry e ha 12 velocità. Incorpora la forcella RockShox Judy Gold RL 29 con un'escursione fino a 100 mm perfetta per assorbire le irregolarità della strada.",
+      "category": "Biciclette",
+      "subCategory": "MTB",
+      "type": "Muscolare",
+      "wheelSize": "29",
+      "sospensione": "Full",
+      "technicalDetails": {
+        "Telaio": "Spicy Full carbon Ultimate 170mm travel (29\"), pressfit, boost, metric, thru axle",
+        "Forcella": "Fox 38 Float Performance boost 15x110 170mm (29\") 44mm offset",
+        "Ammortizzatore":"Fox DHX Performance 2-position Adjust lever Trunnion 205x62,5 spring rate: 350(S) 400(M) 450(L) 500(XL)",
+        "Cambio": "Sram Gx Lunar Eagle 12spd 11-50",
+        "Guarnitura": "SRAM Descendant 7K alloy Eagle boost 148 Dub 12s 32T 165mm (S) / 170mm (M/L) / 175mm (XL)",
+        "Freni": "Shimano XT 4 piston 203/203mm",
+        "Cerchi": "Mavic EX630 32H, tubeless ready, 30-622",
+        "Pneumatici": "Front: Maxxis Assegai 3C Maxxterra, EXO TR, 29x2.50WT, 60TPI Rear: Maxxis Minion DHR II, EXO TR, 29x2.40WT, 60TPI, TR",
+        "Manubrio": "Lapierre alloy 6061DB, Width: 760mm, Rise: 15mm (S/M), Width: 780mm, Rise: 30mm (L/XL), Ø: 31.8mm",
+        "Attacco manubrio": "Lapierre alloy CNC, 0°, L: 35mm (S) 40mm (M) 45mm (L/XL)",
+        "Manopole": "ONOFF LockOn grips",
+        "Sella": "Lapierre AM Saddle",
+        "Reggisella": "Lapierre dropper post, Ø: 31.6mm, travel 130mm (S,M), 150mm (L/XL)",
+        "Pedali": "FPD NW-91K steel cage"      
+      }
+    },
+    {
+      "id": "lapierre-drs80-2025",
+      "name": "Lapierre DRS 8.0 Ultegra Di2 2025",
+      "price": "1.00",
+      "image": "/images/products-gallery/lapierre-drs80-2025/lapierre-drs80-2025.webp",
+      "gallery": [
+        "/images/products-gallery/lapierre-drs80-2025/lapierre-drs80-2025.webp",
+        "/images/products-gallery/lapierre-drs80-2025/lapierre-drs80-2025-1.webp",
+        "/images/products-gallery/lapierre-drs80-2025/lapierre-drs80-2025-2.webp",
+        "/images/products-gallery/lapierre-drs80-2025/lapierre-drs80-2025-3.webp"
+      ],
+      "description": "Il vento, questo elemento naturale che sfida il ciclista e lo spinge al limite. Una lotta senza tregua contro una forza invisibile che ti rallenta, compromette le tue prestazioni e mina il tuo morale. Ma se riesci a domare questo soffio, sarai sospinto verso un nuovo picco di prestazioni. La nuova Xelius DRS incarna questo DNA alla perfezione. Questa bici, che combina i modelli Xelius SL e Aircode DRS, non si limita a giocare con il vento, ma lo affronta, lo sfida e lo sfrutta al massimo.",
+      "category": "Biciclette",
+      "subCategory": "Corsa",
+      "type": "Muscolare",
+      "wheelSize": "29",
+      "sospensione": "Rigida",
+      "technicalDetails": {
+        "Telaio": "Carbon UD SLI",
+        "Forcella": "Carbon UD SLI",
+        "Cambio": "Shimano Ultegra Di2 R8150, 12s, 11-34T",
+        "Guarnitura": "Shimano Ultegra R8100, 52-36T 165mm (XS),170mm (S), 172,5mm (M,L), 175mm (XL,XXL)",
+        "Freni": "Shimano RT-CL900 160mm /140mm Centerlock",
+        "Ruote": "DT Swiss ERC1600 Spline 45mm (22mm width), Centerlock, Tubeless compatible, HG Driver",
+        "Pneumatici": "Continental GP 5000S TR 25-622",
+        "Manubrio": "Lapierre Semi-integrated Combo UD carbon, -10°, 370mm/90mm (XS,S), 390mm/100mm (M), 410mm/110mm (L), 410mm/120mm (XL,XXL), Drop: 125mm, Reach: 72mm, Flare: 5°",
+        "Nastro": "Lapierre Tape",
+        "Sella": "Prologo Dimension T4.0 Rails",
+        "Reggisella": "Lapierre Carbon, Xelius DRS, 0mm Offset, L: 350mm (XS,S,M) 400mm (L,XL,XXL)",
+        "Pedali": "VP-335 Clips&Strap"      
+      }
+    },
+    {
+      "id": "bh-ultimaterccarbon-2023-custom",
+      "name": "BH Ultimate RC Carbon 2023 Custom ",
+      "price": "2099.00",
+      "image": "/images/products-gallery/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom.webp",
+      "gallery": [
+        "/images/products-gallery/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom.webp",
+        "/images/products-gallery/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-1.webp",
+        "/images/products-gallery/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-2.webp",
+        "/images/products-gallery/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-3.webp",
+        "/images/products-gallery/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-4.webp",
+        "/images/products-gallery/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-5.webp"      
+      ],
+      "description": "MTB front da XC usata in ottime condizioni con componenti scelti dal vecchio proprietario. Revisionata e pronta all'azione!",
+      "category": "Biciclette",
+      "subCategory": "MTB",
+      "type": "Muscolare",
+      "wheelSize": "29",
+      "sospensione": "Front",
+      "technicalDetails": {
+        "Telaio": "Ultimate RC Carbon",
+        "Forcella": "Fox Factory Kashima 32 100mm",
+        "Cambio": "SRAM X01 Eagle, 12s",
+        "Guarnitura": "SRAM X01 32T 170mm",
+        "Freni": "Shimano Deore XT 2 pistons 180/160",
+        "Ruote": "BH Evo Alu",
+        "Pneumatici": "Maxxis Forekaster 29x2.20",
+        "Manubrio": "BH Evo Carbon Flat 740mm",
+        "Attacco manubrio": "BH Evo",
+        "Manopole": "BH Grips",
+        "Sella": "Selle Italia Superflow Boost",
+        "Reggisella": "BH Evo Carbon 31.6mm"
+      }
+    },
+    {
+      "id": "bh-rxteam-2022",
+      "name": "BH RX Team 2022",
+      "price": "1349.00",
+      "image": "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022.webp",
+      "gallery": [
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-1.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-2.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-3.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-4.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-5.webp",     
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-6.webp"
+      ],
+      "description": "Bici da ciclocross con telaio e forcella in carbonio, taglia M, usata in ottime condizioni. La RX Team è una bici da ciclocross versatile e adatta a diverse condizioni di terreno.",
+      "category": "Biciclette",
+      "subCategory": "Ciclocross",
+      "type": "Muscolare",
+      "wheelSize": "29",
+      "sospensione": "Front",
+      "technicalDetails": {
+        "Telaio": "BH RX Team Carbon",
+        "Forcella": "BH RX Team Carbon",
+        "Cambio": "SRAM Rival 1x11",
+        "Guarnitura": "SRAM Rival",
+        "Freni": "SRAM Rival",
+        "Ruote": "Mavic Aksium Elite",
+        "Pneumatici": "Front: Challenge Limus 33, Rear: Vittoria Terreno Mix 33",
+        "Manubrio": "BH RX Team",
+        "Sella": "",
+        "Reggisella": "BH Evo Carbon 31.6mm"
+      }
     }
   ]
