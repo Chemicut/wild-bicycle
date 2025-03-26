@@ -52,7 +52,7 @@ const ProductPage = () => {
           <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
 
           {/* Prezzo e sconto */}
-          <div className="w-1/2 flex justify-between items-center py-2 font-semibold">
+          <div className="w-full xl:w-1/2 flex justify-between items-center py-4 font-semibold">
             {product.fullprice ? (
               <>
                 <div className="flex items-center gap-4">
@@ -60,7 +60,7 @@ const ProductPage = () => {
                   <p className="text-black text-lg">€ {product.price}</p>
                 </div>
                 <div className="flex items-center">
-                  <p className="text-black text-lg">Sconto del {GetDiscount(product.fullprice, product.price)}%</p>
+                  <p className="text-black text-lg underline">Sconto del {GetDiscount(product.fullprice, product.price)}%</p>
                 </div>
               </>
             ) : (
@@ -98,6 +98,9 @@ const ProductPage = () => {
         ) : (
           <p>Nessuna specifica tecnica disponibile.</p>
         )}
+      </div>
+      <div className="mt-6 text-center text-lg ">
+        Nota: I montaggi possono variare in base alla disponibilità dei fornitori e alle esigenze del cliente. Contattaci per trovare la soluzione perfetta per te.
       </div>
     </main>
   );

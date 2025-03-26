@@ -11,12 +11,13 @@ const Negozio = () => {
     subCategory: "",
     priceRange: [0, 15000],
     sospensione: "",
+    condition: "",
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState([]);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   // Stato per il sort: "asc" per crescente, "desc" per decrescente
-  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortOrder, setSortOrder] = useState("");
 
   useEffect(() => {
     setProducts(productsData);
@@ -54,22 +55,29 @@ const Negozio = () => {
     const matchesSearch =
       filters.search === "" ||
       product.name.toLowerCase().includes(filters.search.toLowerCase());
+      
     const matchesMainCategory =
       filters.mainCategory === "" || product.category === filters.mainCategory;
+      
     const matchesSubCategory =
       filters.subCategory === "" || product.subCategory === filters.subCategory;
+      
     const matchesPrice =
       product.price >= filters.priceRange[0] &&
       product.price <= filters.priceRange[1];
+      
+    // Applica il filtro "Sospensione" solo se attivo (vuoto significa ignora)
     const matchesSospensione =
       filters.mainCategory !== "Biciclette" ||
       filters.sospensione === "" ||
       product.sospensione === filters.sospensione;
+      
+    // Applica il filtro "Condizione" solo se attivo (vuoto significa ignora)
     const matchesCondition =
       filters.mainCategory !== "Biciclette" ||
       filters.condition === "" ||
       product.condition === filters.condition;
-
+      
     return (
       matchesSearch &&
       matchesMainCategory &&
@@ -81,11 +89,13 @@ const Negozio = () => {
   });
 
   // Ordino i prodotti filtrati in base al prezzo
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
-    return sortOrder === "asc"
-      ? parseFloat(a.price) - parseFloat(b.price)
-      : parseFloat(b.price) - parseFloat(a.price);
-  });
+  const sortedProducts = sortOrder
+  ? [...filteredProducts].sort((a, b) => {
+      return sortOrder === "asc"
+        ? parseFloat(a.price) - parseFloat(b.price)
+        : parseFloat(b.price) - parseFloat(a.price);
+    })
+  : filteredProducts;
 
   const handleSearch = () => {
     setFilters({ ...filters, search: searchQuery });
@@ -135,17 +145,21 @@ const Negozio = () => {
           <section className="w-full lg:w-3/4 xl:w-4/5">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl text-primary font-primary">
+                  Negozio
+                </h1>
                 <button
                   className="btn btn-primary cursor-pointer"
                   onClick={() =>
-                    setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
+                    setSortOrder((prev) => {
+                      if (prev === "") return "asc";
+                      return prev === "asc" ? "desc" : "asc";
+                    })
                   }
                 >
-                  Ordina per prezzo {sortOrder === "asc" ? "▲" : "▼"}
+                  Ordina per prezzo {sortOrder === "asc" ? "▲" : sortOrder === "desc" ? "▼" : ""}
                 </button>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl text-primary font-primary">
-                  Negozio
-                </h1>
+                
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-6">
