@@ -49,7 +49,14 @@ const ProductPage = () => {
         </div>
         {/* Sezione dettagli prodotto */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
-          <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
+          <h1 className="text-2xl font-bold mb-4">
+            {product.name}
+            {product.condition === "Usato" && (
+            <span className="ml-10 bg-primary text-white text-lg font-bold px-4 py-2 rounded">
+              Usato
+            </span>
+            )}
+          </h1>
 
           {/* Prezzo e sconto */}
           <div className="w-full xl:w-1/2 flex justify-between items-center py-4 font-semibold">

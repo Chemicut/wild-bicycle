@@ -33,7 +33,7 @@ const Home = () => {
         <h3 className="text-primary font-primary text-2xl lg:text-3xl xl:text-4xl mb-4">
           Prodotti in evidenza
         </h3>
-        <ProductCarousel productIds={["lapierre-xr79-2023", "lapierre-drs80-2025", "lapierre-spicycf69-2025", "lapierre-crosshill2-2025", "flyer-uprocslx870", "lapierre-xrm89-2025"]} />
+        <ProductCarousel productIds={["ktm-scarpmtprime", "lapierre-spicycf89-2024", "ktm-scarpeliteaxs", "lapierre-xrm89-2025", "ktm-scarpmaster", "lapierre-drs80-2025"]} />
       </section>
 
       {/* Banner del catalogo con effetto parallax */}

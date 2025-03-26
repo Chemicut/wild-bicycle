@@ -93,12 +93,12 @@ const ProductCarousel = ({ productIds }) => {
   };
 
   return (
-    <div className="relative slider-container px-[5%] py-[3%]">
+    <div className="relative slider-container lg:px-[5%] py-[3%]">
       <Slider ref={sliderRef} {...settings}>
         {selectedProducts.map((product, index) => (
           <div key={index} className="px-[2%] py-[3%]">
             <Link to={`/prodotti/${product.id}`} className="block">
-              <div className="card font-primary">
+              <div className="card font-primary text-base">
                 <img
                   src={product.image}
                   alt={product.name}
