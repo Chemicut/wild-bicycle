@@ -4,6 +4,7 @@
       "name": "BH Expert 4.0",
       "fullprice": "1199.00",
       "price": "1099.00",
+      "condition": "Nuovo",
       "image": "/images/products-gallery/bh-expert4/bh-expert4.webp",
       "gallery": [
         "/images/products-gallery/bh-expert4/bh-expert4.webp",
@@ -38,6 +39,7 @@
       "id": "bh-rs1-45",
       "name": "BH RS1 4.5 Ultegra 12V",
       "price": "4799.00",
+      "condition": "Nuovo",
       "image": "/images/products-gallery/bh-rs1-45/bh-rs1-45.webp",
       "gallery": [
         "/images/products-gallery/bh-rs1-45/bh-rs1-45.webp",
@@ -70,6 +72,7 @@
       "id": "flyer-uprocslx870",
       "name": "Flyer Uproc SL:X 8.70",
       "price": "7499.00",
+      "condition": "Nuovo",
       "image": "/images/products-gallery/flyer-uprocslx870/flyeruprocslx870.webp",
       "gallery": [
         "/images/products-gallery/flyer-uprocslx870/flyeruprocslx870.webp",
@@ -108,7 +111,9 @@
     {
       "id": "ktm-scarpmtprime",
       "name": "KTM Scarp MT Prime",
-      "price": "8599.00",
+      "fullprice": "8599.00",
+      "price": "5899.00",
+      "condition": "Nuovo",
       "image": "/images/products-gallery/ktm-scarpmtprime/ktm-scarpmtprime.webp",
       "description": "Grazie alla tecnologia STRAIGHT-LINE-LINK (SLL) e a un’escursione di 115 mm al posteriore e 120 mm all’anteriore, la SCARP MT assicura prestazioni ottimali su lunghe distanze anche su terreni accidentati. L’angolo sterzo di 67,5°, lo spazio per un secondo portaborraccia e il reggisella telescopico su alcuni modelli esaltano il concetto MT (Marathon Trail).",
       "category": "Biciclette",
@@ -140,7 +145,9 @@
     {
       "id": "lapierre-xrm89-2025",
       "name": "Lapierre XRM 8.9 2025",
-      "price": "5799.00",
+      "fullprice": "5799.00",
+      "price": "5199.00",
+      "condition": "Nuovo",
       "image": "/images/products-gallery/lapierre-xrm89-2025/lapierre-xrm89-2025.webp",
       "gallery": [
         "/images/products-gallery/lapierre-xrm89-2025/lapierre-xrm89-2025.webp",
@@ -178,6 +185,7 @@
       "name": "Lapierre XR 7.9 2023",
       "fullprice": "4999.00",
       "price": "4199.00",
+      "condition": "Nuovo",
       "image": "/images/products-gallery/lapierre-xr79-2023/lapierre-xr79-2023.webp",
       "gallery": [
         "/images/products-gallery/lapierre-xr79-2023/lapierre-xr79-2023.webp",
@@ -216,6 +224,7 @@
       "name": "Lapierre Spicy CF 6.9 2023",
       "fullprice": "6199.00",
       "price": "5499.00",
+      "condition": "Nuovo",
       "image": "/images/products-gallery/lapierre-spicycf69-2023/lapierre-spicycf69-2023.webp",
       "gallery": [
         "/images/products-gallery/lapierre-spicycf69-2023/lapierre-spicycf69-2023.webp",
@@ -254,6 +263,7 @@
       "id": "lapierre-crosshill2-2025",
       "name": "Lapierre Crosshill 2.0 2025",
       "price": "1199.00",
+      "condition": "Nuovo",
       "image": "/images/products-gallery/lapierre-crosshill2-2025/lapierre-crosshill2-2025.webp",
       "gallery": [
         "/images/products-gallery/lapierre-crosshill2-2025/lapierre-crosshill2-2025.webp",
@@ -292,6 +302,7 @@
       "name": "Megamo Jakar 20 2023",
       "fullprice": "1899.00",
       "price": "1699.00",
+      "condition":"Nuovo",
       "image": "/images/products-gallery/megamo-jakar20-2023/megamo-jakar20-2023.webp",
       "description": "La versatilità della Megamo Jakar 20 permette di godersi brevi pedalate, ma anche lunghi percorsi e viaggi in bikepacking. Pedalando su strada, sentieri, foreste o paesaggi aridi... qualunque sia il percorso, ora puoi godertelo con la Megamo Jakar. Questa bici è stata progettata con un robusto telaio in alluminio in modo da poter guidare ovunque. Inoltre, ha diversi punti di fissaggio per aggiungere l'attrezzatura e le borse necessarie che ti accompagneranno nelle tue avventure. Ha una forcella in carbonio, freni a disco e un passaruota che supporta fino a 700x45.",
       "category": "Biciclette",
@@ -317,6 +328,7 @@
       "id": "lapierre-spicycf69-2025",
       "name": "Lapierre Spicy CF 6.9 2025",
       "price": "5499.00",
+      "condition": "Nuovo",
       "image": "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
       "gallery": [
         "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
@@ -351,18 +363,19 @@
       }
     },
     {
-      "id": "mondraker-chronocarbon-2022",
+      "id": "mondraker-chronocarbon29-2022",
       "name": "Mondraker Chrono Carbon 29 2022",
-      "price": "1.00",
-      "image": "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
+      "price": "699.00",
+      "condition": "Usato",
+      "image": "/images/products-gallery/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022.webp",
       "gallery": [
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-1.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-2.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-3.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-4.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-5.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-6.webp"
+        "/images/products-gallery/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022.webp",
+        "/images/products-gallery/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-1.webp",
+        "/images/products-gallery/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-2.webp",
+        "/images/products-gallery/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-3.webp",
+        "/images/products-gallery/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-4.webp",
+        "/images/products-gallery/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-5.webp",
+        "/images/products-gallery/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-6.webp"
       ],
       "description": "Il Chrono Carbon combina leggerezza, agilità, trazione e comfort extra grazie al suo telaio realizzato con la tecnologia STEALTH FULL CARBON. La geometria FORWARD GEOMETRY è stata ottimizzata per l'uso CrossCountry e ha 12 velocità. Incorpora la forcella RockShox Judy Gold RL 29 con un'escursione fino a 100 mm perfetta per assorbire le irregolarità della strada.",
       "category": "Biciclette",
@@ -387,18 +400,19 @@
       }
     },
     {
-      "id": "lapierre-spicy79-2022",
+      "id": "lapierre-spicycf79-2022",
       "name": "Lapierre Spicy CF 7.9 2022",
       "price": "1.00",
-      "image": "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
+      "condition": "Usato",
+      "image": "/images/products-gallery/lapierre-spicycf79-2022/lapierre-spicycf79-2022.webp",
       "gallery": [
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-1.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-2.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-3.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-4.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-5.webp",
-        "/images/products-gallery/lapierre-spicycf69-2025/lapierre-spicycf69-2025-6.webp"
+        "/images/products-gallery/lapierre-spicycf79-2022/lapierre-spicycf79-2022.webp",
+        "/images/products-gallery/lapierre-spicycf79-2022/lapierre-spicycf79-2022-1.webp",
+        "/images/products-gallery/lapierre-spicycf79-2022/lapierre-spicycf79-2022-2.webp",
+        "/images/products-gallery/lapierre-spicycf79-2022/lapierre-spicycf79-2022-3.webp",
+        "/images/products-gallery/lapierre-spicycf79-2022/lapierre-spicycf79-2022-4.webp",
+        "/images/products-gallery/lapierre-spicycf79-2022/lapierre-spicycf79-2022-5.webp",
+        "/images/products-gallery/lapierre-spicycf79-2022/lapierre-spicycf79-2022-6.webp"
       ],
       "description": "Il Chrono Carbon combina leggerezza, agilità, trazione e comfort extra grazie al suo telaio realizzato con la tecnologia STEALTH FULL CARBON. La geometria FORWARD GEOMETRY è stata ottimizzata per l'uso CrossCountry e ha 12 velocità. Incorpora la forcella RockShox Judy Gold RL 29 con un'escursione fino a 100 mm perfetta per assorbire le irregolarità della strada.",
       "category": "Biciclette",
@@ -426,7 +440,8 @@
     {
       "id": "lapierre-drs80-2025",
       "name": "Lapierre DRS 8.0 Ultegra Di2 2025",
-      "price": "1.00",
+      "fullprice": "5999.00",
+      "price": "5499.00",
       "image": "/images/products-gallery/lapierre-drs80-2025/lapierre-drs80-2025.webp",
       "gallery": [
         "/images/products-gallery/lapierre-drs80-2025/lapierre-drs80-2025.webp",
@@ -459,6 +474,7 @@
       "id": "bh-ultimaterccarbon-2023-custom",
       "name": "BH Ultimate RC Carbon 2023 Custom ",
       "price": "2099.00",
+      "condition": "Usato",
       "image": "/images/products-gallery/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom.webp",
       "gallery": [
         "/images/products-gallery/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom.webp",
@@ -493,6 +509,41 @@
       "id": "bh-rxteam-2022",
       "name": "BH RX Team 2022",
       "price": "1349.00",
+      "condition": "Usato",
+      "image": "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022.webp",
+      "gallery": [
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-1.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-2.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-3.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-4.webp",
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-5.webp",     
+        "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022-6.webp"
+      ],
+      "description": "Bici da ciclocross con telaio e forcella in carbonio, taglia M, usata in ottime condizioni. La RX Team è una bici da ciclocross versatile e adatta a diverse condizioni di terreno.",
+      "category": "Biciclette",
+      "subCategory": "Ciclocross",
+      "type": "Muscolare",
+      "wheelSize": "29",
+      "sospensione": "Rigida",
+      "technicalDetails": {
+        "Telaio": "BH RX Team Carbon",
+        "Forcella": "BH RX Team Carbon",
+        "Cambio": "SRAM Rival 1x11",
+        "Guarnitura": "SRAM Rival",
+        "Freni": "SRAM Rival",
+        "Ruote": "Mavic Aksium Elite",
+        "Pneumatici": "Front: Challenge Limus 33, Rear: Vittoria Terreno Mix 33",
+        "Manubrio": "BH RX Team",
+        "Sella": "",
+        "Reggisella": "BH Evo Carbon 31.6mm"
+      }
+    },
+    {
+      "id": "ginomario",
+      "name": "BH RX Team 2022",
+      "price": "1349.00",
+      "condition": "Usato",
       "image": "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022.webp",
       "gallery": [
         "/images/products-gallery/bh-rxteam-2022/bh-rxteam-2022.webp",

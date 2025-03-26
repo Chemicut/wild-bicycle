@@ -15,6 +15,8 @@ const Negozio = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState([]);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  // Stato per il sort: "asc" per crescente, "desc" per decrescente
+  const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
     setProducts(productsData);
@@ -63,14 +65,26 @@ const Negozio = () => {
       filters.mainCategory !== "Biciclette" ||
       filters.sospensione === "" ||
       product.sospensione === filters.sospensione;
+    const matchesCondition =
+      filters.mainCategory !== "Biciclette" ||
+      filters.condition === "" ||
+      product.condition === filters.condition;
 
     return (
       matchesSearch &&
       matchesMainCategory &&
       matchesSubCategory &&
       matchesPrice &&
-      matchesSospensione
+      matchesSospensione &&
+      matchesCondition
     );
+  });
+
+  // Ordino i prodotti filtrati in base al prezzo
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
+    return sortOrder === "asc"
+      ? parseFloat(a.price) - parseFloat(b.price)
+      : parseFloat(b.price) - parseFloat(a.price);
   });
 
   const handleSearch = () => {
@@ -119,10 +133,24 @@ const Negozio = () => {
           </aside>
           {/* Vetrina Prodotti */}
           <section className="w-full lg:w-3/4 xl:w-4/5">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl mb-4 text-center font-primary text-primary">Negozio</h1>
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-4">
+                <button
+                  className="btn btn-primary cursor-pointer"
+                  onClick={() =>
+                    setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
+                  }
+                >
+                  Ordina per prezzo {sortOrder === "asc" ? "▲" : "▼"}
+                </button>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl text-primary font-primary">
+                  Negozio
+                </h1>
+              </div>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-6">
-              {filteredProducts.length > 0 ? (
-                filteredProducts.map((product) => (
+              {sortedProducts.length > 0 ? (
+                sortedProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))
               ) : (
