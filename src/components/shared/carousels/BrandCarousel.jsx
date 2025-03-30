@@ -1,17 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import brand1 from "../../../assets/images/brands/lapierre.svg";
-import brand2 from "../../../assets/images/brands/transition.svg";
-import brand3 from "../../../assets/images/brands/ktm.svg";
-import brand4 from "../../../assets/images/brands/bhbikes.svg";
-import brand5 from "../../../assets/images/brands/factor.svg";
-import brand6 from "../../../assets/images/brands/flyer.svg";
-import brand7 from "../../../assets/images/brands/argon18.svg";
-import brand8 from "../../../assets/images/brands/ridley.svg";
-import brand9 from "../../../assets/images/brands/camelbak.svg";
-import brand10 from "../../../assets/images/brands/gaerne.svg";
-import brand11 from "../../../assets/images/brands/dainese.svg";
-import brand12 from "../../../assets/images/brands/bell.svg";
-import brand13 from "../../../assets/images/brands/bryton.svg";
+import brand1 from "/images/brands/lapierre.svg";
+import brand2 from "/images/brands/transition.svg";
+import brand3 from "/images/brands/ktm.svg";
+import brand4 from "/images/brands/bhbikes.svg";
+import brand5 from "/images/brands/factor.svg";
+import brand6 from "/images/brands/flyer.svg";
+import brand7 from "/images/brands/argon18.svg";
+import brand8 from "/images/brands/ridley.svg";
+import brand9 from "/images/brands/leatt.svg";
+import brand10 from "/images/brands/dainese.svg";
+import brand11 from "/images/brands/gaerne.svg";
+import brand12 from "/images/brands/camelbak.svg";
+import brand13 from "/images/brands/bryton.svg";
 
 const brands = [brand1, brand2, brand3, brand4, brand5, brand6, 
                 brand7, brand8, brand9, brand10, brand11, brand12,
@@ -19,7 +19,7 @@ const brands = [brand1, brand2, brand3, brand4, brand5, brand6,
 
 const BrandCarousel = () => {
   const carouselRef = useRef(null);
-  const speed = 0.5; // Velocità dello scorrimento (più basso = più lento)
+  const speed = 0.5;
 
   useEffect(() => {
     let position = 0;
@@ -29,7 +29,7 @@ const BrandCarousel = () => {
       if (carouselRef.current) {
         position -= speed;
         if (position <= -carouselRef.current.scrollWidth / 2) {
-          position = 0; // Reset senza interruzioni visibili
+          position = 0;
         }
         carouselRef.current.style.transform = `translateX(${position}px)`;
       }

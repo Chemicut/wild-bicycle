@@ -3,38 +3,32 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/shared/header/Header.jsx";
 import Footer from "./components/shared/footer/Footer.jsx";
 import Home from "./pages/Home.jsx";
-import Products from "./pages/Products.jsx";
+import Negozio from "./pages/Negozio.jsx";
 import WildRaceTeam from "./pages/WildRaceTeam.jsx";
+import Officina from "./pages/Officina.jsx";
 import Contatti from "./pages/Contatti.jsx";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
-import AdminPanel from "./pages/AdminPanel";
-
-
-// 🔹 Definiamo la chiave prima di usarla nel JSX
-const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
-
-console.log("🔍 reCAPTCHA Site Key:", recaptchaKey);
-
-
+import ScrollToTop from "./components/shared/ScrollToTop.jsx";
+import ProductPage from "./pages/ProductPage.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const App = () => {
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={recaptchaKey}>
-      <Router>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/prodotti" element={<Products />} />
-            <Route path="/wildraceteam" element={<WildRaceTeam />} />
-            <Route path="/contatti" element={<Contatti />} />
-            <Route path="/admin" element={<AdminPanel />} />
-
-          </Routes>
-        </main>
-        <Footer />
-      </Router>
-    </GoogleReCaptchaProvider>
+    <Router>
+      <ScrollToTop />
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/negozio" element={<Negozio />} />
+          <Route path="/officina" element={<Officina />} />
+          <Route path="/wildraceteam" element={<WildRaceTeam />} />
+          <Route path="/contatti" element={<Contatti />} />
+          <Route path="/prodotti/:id" element={<ProductPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
   );
 };
 

@@ -16,15 +16,16 @@ const ContactForm = () => {
 
   return (
     <form
-      action="https://formspree.io/f/mrberzkv"
+      action="https://formspree.io/f/mrberzkv" // Formspree form endpoint
       method="POST"
-      className="max-w-2xl my-6"
+      className="my-6 text-base sm:text-lg md:text-xl"
     >
-      <h2 className="section-title text-primary">Contattaci</h2>
+      <h2 className="section-title text-primary text-2xl sm:text-3xl mb-6">
+        Contattaci
+      </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex flex-col">
-          <label className="input-label text-primary">Nome</label>
+          <label className="input-label mb-1">Nome</label>
           <input
             type="text"
             name="name"
@@ -32,37 +33,12 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="input-field bg-white"
-          />
-        </div>
-        <div className="flex flex-col">
-          <label className="input-label">Cognome</label>
-          <input
-            type="text"
-            name="surname"
-            placeholder="Inserisci il tuo cognome"
-            value={formData.surname}
-            onChange={handleChange}
-            required
             className="input-field"
           />
         </div>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-        <div className="flex flex-col">
-          <label className="input-label">Cellulare</label>
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Inserisci il tuo numero"
-            value={formData.phone}
-            onChange={handleChange}
-            className="input-field"
-          />
-        </div>
-        <div className="flex flex-col">
-          <label className="input-label">Email</label>
+        <div className="flex flex-col mt-4">
+          <label className="input-label mb-1">Email</label>
           <input
             type="email"
             name="email"
@@ -73,10 +49,9 @@ const ContactForm = () => {
             className="input-field"
           />
         </div>
-      </div>
 
       <div className="flex flex-col mt-4">
-        <label className="input-label">Oggetto</label>
+        <label className="input-label mb-1">Oggetto</label>
         <input
           type="text"
           name="subject"
@@ -89,7 +64,7 @@ const ContactForm = () => {
       </div>
 
       <div className="flex flex-col mt-4">
-        <label className="input-label">Messaggio</label>
+        <label className="input-label mb-1">Messaggio</label>
         <textarea
           name="message"
           placeholder="Scrivi qui il tuo messaggio"
@@ -100,7 +75,7 @@ const ContactForm = () => {
         ></textarea>
       </div>
 
-      <button type="submit" className="btn-primary w-full mt-6">
+      <button type="submit" className="btn-primary w-full mt-6 py-2 cursor-pointer">
         Invia Messaggio
       </button>
     </form>
