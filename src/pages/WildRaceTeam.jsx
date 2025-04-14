@@ -15,6 +15,10 @@ const disciplineData = [
     id: "enduro",
     title: "Enduro",
   },
+  {
+    id: "gravel",
+    title: "Gravel",
+  },
 ];
 
 const WildRaceTeam = () => {
