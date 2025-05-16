@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ProductCard from "../components/shop/ProductCard";
-import productsData from "../data/products.json";
+import productsData from "../data/Bici.json";
 import SearchBar from "../components/shop/SearchBar";
 import FiltersContent from "../components/shop/FiltersContent";
 
