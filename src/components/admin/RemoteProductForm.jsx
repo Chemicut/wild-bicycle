@@ -1,7 +1,7 @@
 import { useState } from "react";
 import generateImageUrls from "../../utils/generateImageUrls";
 
-const ProductForm = ({ onSubmit }) => {
+const RemoteProductForm = ({ onSubmit }) => {
   // Opzioni fisse
   const types = ["Muscolare", "Elettrica"];
   const wheelSizes = ["29", "28", "700c"];
@@ -78,7 +78,7 @@ const ProductForm = ({ onSubmit }) => {
     setProduct({ ...product, subCategory: e.target.value });
   };
 
-  // Gestione della quantità di immagini (serve solo per generare gli URL)
+  // Gestione della quantità di immagini (necessario per generare gli URL)
   const handleImageCountChange = (e) => {
     setProduct({ ...product, imageCount: e.target.value });
   };
@@ -86,7 +86,7 @@ const ProductForm = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Submit trigger");
-    // Genera gli URL per le immagini
+    // Genera gli URL per le immagini usando la funzione generateImageUrls
     const imageUrls = generateImageUrls(product);
     // Costruisci l'oggetto da inviare escludendo imageCount
     const { imageCount, ...productWithoutImageCount } = product;
@@ -97,9 +97,9 @@ const ProductForm = ({ onSubmit }) => {
     };
 
     try {
-      const res = await fetch('/api/addProduct', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/addProduct", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(productWithImages)
       });
       if (!res.ok) {
@@ -115,21 +115,30 @@ const ProductForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-6 border rounded-lg shadow-md bg-white max-w-2xl mx-auto mt-16 space-y-4">
+    // Aggiungiamo gli attributi per Netlify Forms
+    <form 
+      onSubmit={handleSubmit} 
+      name="remote-product" 
+      data-netlify="true" 
+      data-netlify-honeypot="bot-field"
+      className="p-6 border rounded-lg shadow-md bg-white max-w-2xl mx-auto mt-16 space-y-4"
+    >
+      {/* Campo nascosto per il honeypot */}
+      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="form-name" value="remote-product" />
       <h2 className="text-xl font-semibold">Inserisci un nuovo prodotto</h2>
       {/* ID */}
       <div className="flex flex-col">
         <label>ID Prodotto:</label>
         <input type="text" name="id" value={product.id} onChange={handleChange} required className="border p-2 rounded" />
-        <p>Formato: marca-modello-anno(se presente nel nome modello)</p>
-        <p>Esempio: Lapierre Spicy CF 8.9 2024 diventerà lapierre-spicycf89-2024 </p>
+        <p>Formato: marca-modello-anno (es. lapierre-spicycf89-2024)</p>
       </div>
       {/* Nome */}
       <div className="flex flex-col">
         <label>Nome Prodotto:</label>
         <input type="text" name="name" value={product.name} onChange={handleChange} required className="border p-2 rounded" />
       </div>
-      {/* Brand posizionato tra Nome e Fullprice */}
+      {/* Brand */}
       <div className="flex flex-col">
         <label>Brand:</label>
         <input type="text" name="brand" value={product.brand} onChange={handleChange} required className="border p-2 rounded" />
@@ -160,7 +169,9 @@ const ProductForm = ({ onSubmit }) => {
         <select value={product.category} onChange={handleCategoryChange} required className="border p-2 rounded">
           <option value="">Seleziona una categoria</option>
           {Object.keys(categories).map((cat) => (
-            <option key={cat} value={cat}>{cat}</option>
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
           ))}
         </select>
       </div>
@@ -170,10 +181,10 @@ const ProductForm = ({ onSubmit }) => {
           <label>Sottocategorie:</label>
           {categories[product.category].map((sub) => (
             <label key={sub} className="flex items-center gap-2">
-              <input 
-                type="radio" 
-                name="subCategory" 
-                value={sub} 
+              <input
+                type="radio"
+                name="subCategory"
+                value={sub}
                 checked={product.subCategory === sub}
                 onChange={handleSubcategoryChange}
               />
@@ -182,7 +193,7 @@ const ProductForm = ({ onSubmit }) => {
           ))}
         </div>
       )}
-      {/* Se la categoria è "Bici", mostra campi specifici */}
+      {/* Campi specifici per "Bici" */}
       {product.category === "Bici" && (
         <>
           <div className="flex flex-col">
@@ -190,7 +201,9 @@ const ProductForm = ({ onSubmit }) => {
             <select name="type" value={product.type} onChange={handleChange} required className="border p-2 rounded">
               <option value="">Seleziona una tipologia</option>
               {types.map((t) => (
-                <option key={t} value={t}>{t}</option>
+                <option key={t} value={t}>
+                  {t}
+                </option>
               ))}
             </select>
           </div>
@@ -199,7 +212,9 @@ const ProductForm = ({ onSubmit }) => {
             <select name="wheelSize" value={product.wheelSize} onChange={handleChange} required className="border p-2 rounded">
               <option value="">Seleziona una dimensione</option>
               {wheelSizes.map((ws) => (
-                <option key={ws} value={ws}>{ws}</option>
+                <option key={ws} value={ws}>
+                  {ws}
+                </option>
               ))}
             </select>
           </div>
@@ -208,19 +223,23 @@ const ProductForm = ({ onSubmit }) => {
             <select name="sospensione" value={product.sospensione} onChange={handleChange} required className="border p-2 rounded">
               <option value="">Seleziona una sospensione</option>
               {suspensions.map((s) => (
-                <option key={s} value={s}>{s}</option>
+                <option key={s} value={s}>
+                  {s}
+                </option>
               ))}
             </select>
           </div>
         </>
       )}
-      {/* Quantità Immagini (usato solo per generare gli URL) */}
+      {/* Quantità Immagini (necessario per generare gli URL) */}
       <div className="flex flex-col">
         <label>Quantità Immagini:</label>
         <select name="imageCount" value={product.imageCount} onChange={handleImageCountChange} required className="border p-2 rounded">
           <option value="">Seleziona la quantità</option>
           {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-            <option key={n} value={n}>{n}</option>
+            <option key={n} value={n}>
+              {n}
+            </option>
           ))}
         </select>
       </div>
@@ -240,7 +259,7 @@ const ProductForm = ({ onSubmit }) => {
             onChange={(e) =>
               setProduct({
                 ...product,
-                specifications: { ...product.specifications, [key]: e.target.value },
+                specifications: { ...product.specifications, [key]: e.target.value }
               })
             }
             className="border p-2 rounded"
@@ -252,4 +271,4 @@ const ProductForm = ({ onSubmit }) => {
   );
 };
 
-export default ProductForm;
+export default RemoteProductForm;

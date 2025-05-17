@@ -10,5 +10,12 @@ export default defineConfig({
     host: "0.0.0.0", // Forza l'esposizione sulla rete
     port: 5173, // Puoi cambiare se necessario
     strictPort: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001', // indirizzo del server backend
+        changeOrigin: true,
+        secure: false,
+      }
+    }
   },
 })
