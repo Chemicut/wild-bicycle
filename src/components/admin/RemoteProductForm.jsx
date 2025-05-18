@@ -73,20 +73,19 @@ const RemoteProductForm = ({ onSubmit }) => {
     setProduct({ ...product, category, subCategory: "", specifications: {} });
   };
 
-  // Per la sottocategoria usiamo radio button (scelta esclusiva)
   const handleSubcategoryChange = (e) => {
     setProduct({ ...product, subCategory: e.target.value });
   };
 
-  // Gestione della quantità di immagini (necessario per generare gli URL)
   const handleImageCountChange = (e) => {
     setProduct({ ...product, imageCount: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault(); // intercetta per computare i dati
+
     console.log("Submit trigger");
-    // Genera gli URL per le immagini usando la funzione generateImageUrls
+    // Genera gli URL per le immagini
     const imageUrls = generateImageUrls(product);
     // Costruisci l'oggetto da inviare escludendo imageCount
     const { imageCount, ...productWithoutImageCount } = product;
@@ -96,26 +95,17 @@ const RemoteProductForm = ({ onSubmit }) => {
       gallery: imageUrls           // il resto come galleria
     };
 
-    try {
-      const res = await fetch("/api/addProduct", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(productWithImages)
-      });
-      if (!res.ok) {
-        console.error("Errore nell'aggiunta del prodotto");
-        return;
-      }
-      const result = await res.json();
-      console.log("Prodotto aggiunto:", result);
-      if (onSubmit) onSubmit(result);
-    } catch (err) {
-      console.error("Errore:", err);
+    // Inseriamo il prodotto (stringificato) in un campo hidden che verrà inviato con il form
+    const hiddenInput = document.getElementById("productData");
+    if (hiddenInput) {
+      hiddenInput.value = JSON.stringify(productWithImages);
     }
+
+    // Lasciamo che il form venga sottomesso "naturalmente" a Netlify
+    e.target.submit();
   };
 
   return (
-    // Aggiungiamo gli attributi per Netlify Forms
     <form 
       method="POST"
       onSubmit={handleSubmit} 
@@ -127,6 +117,9 @@ const RemoteProductForm = ({ onSubmit }) => {
       {/* Campo nascosto per il honeypot */}
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="remote-product" />
+      {/* Campo hidden per inviare i dati del prodotto generato */}
+      <input type="hidden" id="productData" name="productData" />
+      
       <h2 className="text-xl font-semibold">Inserisci un nuovo prodotto</h2>
       {/* ID */}
       <div className="flex flex-col">
@@ -202,9 +195,7 @@ const RemoteProductForm = ({ onSubmit }) => {
             <select name="type" value={product.type} onChange={handleChange} required className="border p-2 rounded">
               <option value="">Seleziona una tipologia</option>
               {types.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
+                <option key={t} value={t}>{t}</option>
               ))}
             </select>
           </div>
@@ -213,9 +204,7 @@ const RemoteProductForm = ({ onSubmit }) => {
             <select name="wheelSize" value={product.wheelSize} onChange={handleChange} required className="border p-2 rounded">
               <option value="">Seleziona una dimensione</option>
               {wheelSizes.map((ws) => (
-                <option key={ws} value={ws}>
-                  {ws}
-                </option>
+                <option key={ws} value={ws}>{ws}</option>
               ))}
             </select>
           </div>
@@ -224,23 +213,19 @@ const RemoteProductForm = ({ onSubmit }) => {
             <select name="sospensione" value={product.sospensione} onChange={handleChange} required className="border p-2 rounded">
               <option value="">Seleziona una sospensione</option>
               {suspensions.map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
+                <option key={s} value={s}>{s}</option>
               ))}
             </select>
           </div>
         </>
       )}
-      {/* Quantità Immagini (necessario per generare gli URL) */}
+      {/* Quantità Immagini */}
       <div className="flex flex-col">
         <label>Quantità Immagini:</label>
         <select name="imageCount" value={product.imageCount} onChange={handleImageCountChange} required className="border p-2 rounded">
           <option value="">Seleziona la quantità</option>
           {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-            <option key={n} value={n}>
-              {n}
-            </option>
+            <option key={n} value={n}>{n}</option>
           ))}
         </select>
       </div>
