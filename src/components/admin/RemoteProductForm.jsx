@@ -106,8 +106,8 @@ const RemoteProductForm = ({ onSubmit }) => {
   };
 
   return (
+    <div className="bg-background">
     <form 
-      action="/thankyou" // URL di successo per Netlify
       method="POST"
       onSubmit={handleSubmit} 
       name="remote-product" 
@@ -255,6 +255,7 @@ const RemoteProductForm = ({ onSubmit }) => {
       ))}
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">Salva Prodotto</button>
     </form>
+    </div>
   );
 };
 
