@@ -107,6 +107,7 @@ const RemoteProductForm = ({ onSubmit }) => {
 
   return (
     <form 
+      action="/thankyou" // URL di successo per Netlify
       method="POST"
       onSubmit={handleSubmit} 
       name="remote-product" 
