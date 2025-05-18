@@ -11,6 +11,7 @@ import ProductPage from "./pages/ProductPage.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 import AdminPanel from "./pages/AdminPanel.jsx";
+import RemoteAdminPanel from "./pages/RemoteAdminPanel.jsx";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/contatti" element={<Contatti />} />
           <Route path="/prodotti/:id" element={<ProductPage />} />
           <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/remoteadmin" element={<RemoteAdminPanel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
