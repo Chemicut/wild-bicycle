@@ -117,7 +117,7 @@ const RemoteProductForm = ({ onSubmit }) => {
   return (
     // Aggiungiamo gli attributi per Netlify Forms
     <form 
-      netlify
+      method="POST"
       onSubmit={handleSubmit} 
       name="remote-product" 
       data-netlify="true" 
