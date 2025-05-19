@@ -4,7 +4,7 @@ import generateImageUrls from "../../utils/generateImageUrls";
 const RemoteProductForm = ({ onSubmit }) => {
   // Opzioni fisse
   const types = ["Muscolare", "Elettrica"];
-  const wheelSizes = ["29", "28", "700c"];
+  const wheelSizes = ["29", "28", "700c", "27.5", "26", "24", "20"];
   const suspensions = ["Front", "Full", "Rigida"];
 
   // Elenco delle chiavi per le specifiche tecniche
@@ -50,7 +50,7 @@ const RemoteProductForm = ({ onSubmit }) => {
     sospensione: "",
     imageCount: "",
     description: "",
-    specifications: {},
+    technicalDetails: {},
   });
 
   const categories = {
@@ -233,11 +233,11 @@ const RemoteProductForm = ({ onSubmit }) => {
             <label>{key}:</label>
             <input
               type="text"
-              value={product.specifications[key] || ""}
+              value={product.technicalDetails[key] || ""}
               onChange={(e) =>
                 setProduct({
                   ...product,
-                  specifications: { ...product.specifications, [key]: e.target.value }
+                  technicalDetails: { ...product.technicalDetails, [key]: e.target.value }
                 })
               }
               className="border p-2 rounded"
