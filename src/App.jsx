@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound.jsx";
 import AdminPanel from "./pages/AdminPanel.jsx";
 import RemoteAdminPanel from "./pages/RemoteAdminPanel.jsx";
 import ThankYou from "./pages/ThankYou.jsx";
+import RemoteLogin from "./pages/RemoteLogin.jsx";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/prodotti/:id" element={<ProductPage />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/remoteadmin" element={<RemoteAdminPanel />} />
+          <Route path="/remotelogin" element={<RemoteLogin />} />
           <Route path="/thankyou" element={<ThankYou />} />
           {/* Rotta per la pagina 404 */}
           <Route path="*" element={<NotFound />} />
