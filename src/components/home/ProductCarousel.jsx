@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import products from "../../data/products.json";
+import products from "../../data/Bici.json";
 import GetDiscount from "../shared/productcards/GetDiscount";
 
 // react-slick styles

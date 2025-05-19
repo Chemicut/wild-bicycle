@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import productsData from "../data/products.json";
+import productsData from "../data/Bici.json";
 import GetDiscount from "../components/shared/productcards/GetDiscount";
 
 const ProductPage = () => {
