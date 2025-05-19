@@ -109,16 +109,17 @@ const RemoteProductForm = ({ onSubmit }) => {
     <div className="bg-background">
     <form 
       method="POST"
+      action="/thankyou" // specifica la pagina di conferma dopo la submission
       onSubmit={handleSubmit} 
       name="remote-product" 
       data-netlify="true" 
       data-netlify-honeypot="bot-field"
       className="p-6 border rounded-lg shadow-md bg-white max-w-2xl mx-auto mt-16 space-y-4"
     >
-      {/* Campo nascosto per il honeypot */}
+      {/* Campo hidden per honeypot */}
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="remote-product" />
-      {/* Campo hidden per inviare i dati del prodotto generato */}
+      {/* Campo hidden per inviare il JSON */}
       <input type="hidden" id="productData" name="productData" />
       
       <h2 className="text-xl font-semibold">Inserisci un nuovo prodotto</h2>
