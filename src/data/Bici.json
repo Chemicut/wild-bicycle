@@ -36,39 +36,6 @@
     }
   },
   {
-    "id": "bh-rs1-45",
-    "name": "BH RS1 4.5 Ultegra 12V",
-    "price": "4799.00",
-    "condition": "Nuovo",
-    "image": "/images/products-gallery/Bici/bh-rs1-45/bh-rs1-45.webp",
-    "gallery": [
-      "/images/products-gallery/Bici/bh-rs1-45/bh-rs1-45.webp",
-      "/images/products-gallery/Bici/bh-rs1-45/bh-rs1-45-1.webp",
-      "/images/products-gallery/Bici/bh-rs1-45/bh-rs1-45-2.webp",
-      "/images/products-gallery/Bici/bh-rs1-45/bh-rs1-45-3.webp",
-      "/images/products-gallery/Bici/bh-rs1-45/bh-rs1-45-4.webp"
-    ],
-    "description": "La bicicletta da corsa BH RS1 4.5 è la tua bicicletta se sei alla ricerca di potenza ed efficienza. È stato utilizzato il concetto di Kamm Tail, che si traduce in tubi con una forma a goccia rifinita in un taglio perpendicolare che riduce il più possibile le turbolenze. Tutto questo applicando l'esperienza nell'analisi computerizzata e nella fluidodinamica acquisita negli ultimi anni.",
-    "category": "Biciclette",
-    "subCategory": "Corsa",
-    "brand": "BH",
-    "type": "Muscolare",
-    "wheelSize": "28",
-    "sospensione": "Rigida",
-    "technicalDetails": {
-      "Telaio": "RS1 Carbon Monocoque",
-      "Forcella": "RS1 Carbon Disc Full Integrated",
-      "Guarnitura": "Shimano Ultegra Di2 52/36",
-      "Cassetta": "Shimano Ultegra 11-34",
-      "Cambio": "Shimano Ultegra 12sp",
-      "Freni": "Shimano Ultegra",
-      "Ruote": "BH Evo 38mm",
-      "Pneumatici": "Chaoyang Speed Shark 700x28",
-      "Manubrio": "Evo Monocoque ACR",
-      "Attacco": "Evo Monocoque ACR"
-    }
-  },
-  {
     "id": "flyer-uprocslx870",
     "name": "Flyer Uproc SL:X 8.70",
     "price": "7499.00",
