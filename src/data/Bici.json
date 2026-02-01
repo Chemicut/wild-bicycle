@@ -549,7 +549,9 @@
     "price": "3549.00",
     "condition": "Nuovo",
     "image": "/images/products-gallery/Bici/ktm-scarpeliteaxs/ktm-scarpeliteaxs.webp",
-    "gallery": "/images/products-gallery/Bici/ktm-scarpeliteaxs/ktm-scarpeliteaxs.webp",
+    "gallery": [
+      "/images/products-gallery/Bici/ktm-scarpeliteaxs/ktm-scarpeliteaxs.webp"
+    ],
     "description": "TI RENDIAMO UN LEADER. Il telaio SCARP EVO II ha portato KTM fino al podio della Coppa del Mondo. Ha superato test approfonditi in tutto il mondo, anche sui circuiti più difficili. Il telaio in carbonio con triangolo posteriore in alluminio e trasmissione AXS rendono la SCARP ELITE AXS imbattibile in termini di rapporto prezzo-prestazioni. La forcella e l'ammortizzatore provengono da FOX (32 FLOAT), offrono un'escursione di 100 mm/95 mm e, insieme al concetto STRAIGHT-LINE-LINK (SLL), garantiscono una maneggevolezza ottimale. Supera qualsiasi sfida, perché sarai tra i migliori.",
     "category": "Biciclette",
     "subCategory": "MTB",
@@ -580,7 +582,9 @@
     "price": "4399.00",
     "condition": "Nuovo",
     "image": "/images/products-gallery/Bici/ktm-scarpmaster/ktm-scarpmaster.webp",
-    "gallery": "/images/products-gallery/Bici/ktm-scarpmaster/ktm-scarpmaster.webp",
+    "gallery": [
+      "/images/products-gallery/Bici/ktm-scarpmaster/ktm-scarpmaster.webp"
+    ],
     "description": "TI RENDIAMO UN LEADER. Il telaio SCARP EVO II ha portato KTM fino al podio della Coppa del Mondo. Ha superato test approfonditi in tutto il mondo, anche sui circuiti più difficili. Il telaio in carbonio con triangolo posteriore in alluminio e trasmissione AXS rendono la SCARP ELITE AXS imbattibile in termini di rapporto prezzo-prestazioni. La forcella e l'ammortizzatore provengono da FOX (32 FLOAT), offrono un'escursione di 100 mm/95 mm e, insieme al concetto STRAIGHT-LINE-LINK (SLL), garantiscono una maneggevolezza ottimale. Supera qualsiasi sfida, perché sarai tra i migliori.",
     "category": "Biciclette",
     "subCategory": "MTB",
@@ -611,7 +615,9 @@
     "price": "1199.00",
     "condition": "Nuovo",
     "image": "/images/products-gallery/Bici/ktm-xstrada30fit/ktm-xstrada30fit.webp",
-    "gallery": "/images/products-gallery/Bici/ktm-xstrada30fit/ktm-xstrada30fit.webp",
+    "gallery": [
+      "/images/products-gallery/Bici/ktm-xstrada30fit/ktm-xstrada30fit.webp"
+    ],
     "description": "GRAVEL UP YOUR LIFE. Se vuoi ottenere il meglio da ogni situazione, allora la gamma KTM X STRADA è la scelta giusta per te. Gravel non è una tendenza, è qui per restare e rende la tua corsa davvero memorabile. Abbiamo risposto all'enorme richiesta dei nostri modelli X STRADA con tutti i nuovi telai sviluppati. Inoltre, abbiamo raddoppiato il numero di modelli. Il nuovo telaio X STRADA GRAVEL ALU è utilizzato su otto modelli e mostra sia le sue qualità sportive che comode. Ancora una volta, c'è una scelta tra manubri da strada e manubri da bici FIT dritti. È stata prestata particolare attenzione alle caratteristiche chiave come parafanghi e supporti per portapacchi. Il modello LFC (LIGHT-FENDER-CARRIER) è dotato di luci, parafanghi e portapacchi già pronti all'uso. Che si tratti del tragitto quotidiano per andare in ufficio o di un tour di diversi giorni verso la costa, la X STRADA sarà sempre dalla tua parte.",
     "category": "Biciclette",
     "subCategory": "Gravel",
@@ -642,7 +648,9 @@
     "price": "1399.00",
     "condition": "Nuovo",
     "image": "/images/products-gallery/Bici/ktm-myroonprocarbon/ktm-myroonprocarbon.webp",
-    "gallery": "/images/products-gallery/Bici/ktm-myroonprocarbon/ktm-myroonprocarbon.webp",
+    "gallery": [
+      "/images/products-gallery/Bici/ktm-myroonprocarbon/ktm-myroonprocarbon.webp"
+    ],
     "description": "GRAVEL UP YOUR LIFE. Se vuoi ottenere il meglio da ogni situazione, allora la gamma KTM X STRADA è la scelta giusta per te. Gravel non è una tendenza, è qui per restare e rende la tua corsa davvero memorabile. Abbiamo risposto all'enorme richiesta dei nostri modelli X STRADA con tutti i nuovi telai sviluppati. Inoltre, abbiamo raddoppiato il numero di modelli. Il nuovo telaio X STRADA GRAVEL ALU è utilizzato su otto modelli e mostra sia le sue qualità sportive che comode. Ancora una volta, c'è una scelta tra manubri da strada e manubri da bici FIT dritti. È stata prestata particolare attenzione alle caratteristiche chiave come parafanghi e supporti per portapacchi. Il modello LFC (LIGHT-FENDER-CARRIER) è dotato di luci, parafanghi e portapacchi già pronti all'uso. Che si tratti del tragitto quotidiano per andare in ufficio o di un tour di diversi giorni verso la costa, la X STRADA sarà sempre dalla tua parte.",
     "category": "Biciclette",
     "subCategory": "MTB",
