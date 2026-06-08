@@ -331,41 +331,6 @@
     }
   },
   {
-    "id": "mondraker-chronocarbon29-2022",
-    "name": "Mondraker Chrono Carbon 29 2022",
-    "price": "699.00",
-    "condition": "Usato",
-    "image": "/images/products-gallery/Bici/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022.webp",
-    "gallery": [
-      "/images/products-gallery/Bici/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022.webp",
-      "/images/products-gallery/Bici/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-1.webp",
-      "/images/products-gallery/Bici/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-2.webp",
-      "/images/products-gallery/Bici/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-3.webp",
-      "/images/products-gallery/Bici/mondraker-chronocarbon29-2022/mondraker-chronocarbon29-2022-4.webp"
-    ],
-    "description": "Il Chrono Carbon combina leggerezza, agilità, trazione e comfort extra grazie al suo telaio realizzato con la tecnologia STEALTH FULL CARBON. La geometria FORWARD GEOMETRY è stata ottimizzata per l'uso CrossCountry e ha 12 velocità. Incorpora la forcella RockShox Judy Gold RL 29 con un'escursione fino a 100 mm perfetta per assorbire le irregolarità della strada.",
-    "category": "Biciclette",
-    "subCategory": "MTB",
-    "type": "Muscolare",
-    "wheelSize": "29",
-    "sospensione": "Front",
-    "technicalDetails": {
-      "Telaio": "Chrono 29 Stealth full Carbon, XC Forward Geometry, Boost 12x148mm rear axle",
-      "Forcella": "RockShox Judy Gold RL 29, 100mm",
-      "Cambio": "SRAM NX Eagle, 12s",
-      "Guarnitura": "SRAM SX Eagle, Boost, DUB axle, S size: 170mm, M/L/XL size: 175mm",
-      "Freni": "SRAM Level T, 2 piece caliper, Centerline 160mm",
-      "Cerchi": "Front: MDK-XP1 29 TLR, 25mm internal width, tubeless ready, 32 spokes / Rear: Ryde 30c, 30mm internal width, 32 spokes",
-      "Pneumatici": "Fincci 29 x 2.10 in",
-      "Manubrio": "ONOFF Sulfur 0.2, double butted 6061 alloy, rise: 4.8mm, width: 760mm, 9º backsweep, 0º upsweep, 31.8mm barbore",
-      "Attacco manubrio": "ONOFF",
-      "Manopole": "ONOFF LockOn grips",
-      "Sella": "Mondraker XC Series, steel rail",
-      "Reggisella": "ONOFF Sulfur 0-R, 6061 T6 Alloy, 3D forged, diameter 27.2mm, length 400mm",
-      "Pedali": "N/A"
-    }
-  },
-  {
     "id": "lapierre-spicycf79-2022",
     "name": "Lapierre Spicy CF 7.9 2022",
     "price": "2499.00",
@@ -467,40 +432,6 @@
       "Attacco manubrio": "BH Evo",
       "Manopole": "BH Grips",
       "Sella": "Selle Italia Superflow Boost",
-      "Reggisella": "BH Evo Carbon 31.6mm"
-    }
-  },
-  {
-    "id": "bh-rxteam-2022",
-    "name": "BH RX Team 2022",
-    "price": "1349.00",
-    "condition": "Usato",
-    "image": "/images/products-gallery/Bici/bh-rxteam-2022/bh-rxteam-2022.webp",
-    "gallery": [
-      "/images/products-gallery/Bici/bh-rxteam-2022/bh-rxteam-2022.webp",
-      "/images/products-gallery/Bici/bh-rxteam-2022/bh-rxteam-2022-1.webp",
-      "/images/products-gallery/Bici/bh-rxteam-2022/bh-rxteam-2022-2.webp",
-      "/images/products-gallery/Bici/bh-rxteam-2022/bh-rxteam-2022-3.webp",
-      "/images/products-gallery/Bici/bh-rxteam-2022/bh-rxteam-2022-4.webp",
-      "/images/products-gallery/Bici/bh-rxteam-2022/bh-rxteam-2022-5.webp",
-      "/images/products-gallery/Bici/bh-rxteam-2022/bh-rxteam-2022-6.webp"
-    ],
-    "description": "Bici da ciclocross con telaio e forcella in carbonio, taglia M, usata in ottime condizioni. La RX Team è una bici da ciclocross versatile e adatta a diverse condizioni di terreno.",
-    "category": "Biciclette",
-    "subCategory": "Ciclocross",
-    "type": "Muscolare",
-    "wheelSize": "29",
-    "sospensione": "Rigida",
-    "technicalDetails": {
-      "Telaio": "BH RX Team Carbon",
-      "Forcella": "BH RX Team Carbon",
-      "Cambio": "SRAM Rival 1x11",
-      "Guarnitura": "SRAM Rival",
-      "Freni": "SRAM Rival",
-      "Ruote": "Mavic Aksium Elite",
-      "Pneumatici": "Front: Challenge Limus 33, Rear: Vittoria Terreno Mix 33",
-      "Manubrio": "BH RX Team",
-      "Sella": "",
       "Reggisella": "BH Evo Carbon 31.6mm"
     }
   },
