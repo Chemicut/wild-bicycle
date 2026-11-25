@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/shared/header/Header.jsx";
 import Footer from "./components/shared/footer/Footer.jsx";
+import Grain from "./components/ui/Grain.jsx";
 import Home from "./pages/Home.jsx";
 import Negozio from "./pages/Negozio.jsx";
 import WildRaceTeam from "./pages/WildRaceTeam.jsx";
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
+      <Grain />
       <Header />
       <main>
         <Routes>

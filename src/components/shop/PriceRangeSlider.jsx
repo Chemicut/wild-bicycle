@@ -1,42 +1,41 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
+const rail = { backgroundColor: "rgba(238, 235, 220, 0.2)", height: 3 };
+const track = { backgroundColor: "#facc15", height: 3 };
+const handle = {
+  backgroundColor: "#facc15",
+  borderColor: "#13200f",
+  borderWidth: 2,
+  opacity: 1,
+  width: 16,
+  height: 16,
+  marginTop: -6.5,
+  boxShadow: "none",
+};
+
 const PriceRangeSlider = ({ minValue, maxValue, value, onRangeChange }) => {
-  // Stato interno per evitare continui re-render nel padre
   const [sliderValue, setSliderValue] = useState(value);
 
   useEffect(() => {
     setSliderValue(value);
   }, [value]);
 
-  const handleSliderChange = (val) => {
-    // Aggiorna solo lo stato locale durante il trascinamento
-    setSliderValue(val);
-  };
-
-  const handleAfterChange = (val) => {
-    // Al termine del trascinamento aggiorna il valore nel padre
-    onRangeChange(val);
-  };
-
   return (
-    <div className="w-full">
+    <div className="w-full px-1">
       <Slider
-        style={{ touchAction: "pan-x", pointerEvents: "auto", width: "100%" }}
+        style={{ touchAction: "pan-x", width: "100%" }}
         allowCross={false}
         range
         min={minValue}
         max={maxValue}
-        step={10}
+        step={50}
         value={sliderValue}
-        onChange={handleSliderChange}
-        onAfterChange={handleAfterChange}
+        onChange={setSliderValue}
+        onChangeComplete={onRangeChange}
+        styles={{ rail, track, handle }}
       />
-      <div className="flex justify-between text-base mt-2">
-        <span>{sliderValue[0]}€</span>
-        <span>{sliderValue[1]}€</span>
-      </div>
     </div>
   );
 };

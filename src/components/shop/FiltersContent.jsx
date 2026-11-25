@@ -1,119 +1,150 @@
-import React from "react";
+import formatPrice from "../../utils/formatPrice";
 import PriceRangeSlider from "./PriceRangeSlider";
 
-const FiltersContent = ({ filters, setFilters, categories, searchBar }) => {
-  // Lista opzioni per le sospensioni
-  const sospensioni = ["Rigida", "Front", "Full"];
-  // Definiamo le opzioni per il filtro condizione
-  const condizioni = ["Nuovo", "Usato"];
+const sospensioni = ["Rigida", "Front", "Full"];
+const condizioni = ["Nuovo", "Usato"];
 
-  const handleCategoryClick = (catName) => {
-    // Se la categoria selezionata non è "Biciclette", resetto anche "sospensione" e "condition"
-    setFilters({
-      ...filters,
-      mainCategory: filters.mainCategory === catName ? "" : catName,
-      subCategory: "",
-      sospensione: catName === "Biciclette" ? filters.sospensione : "",
-      condition: catName === "Biciclette" ? filters.condition : ""
-    });
-  };
+const Chip = ({ active, onClick, children }) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className={`eyebrow rounded-md px-3 py-2 transition-colors ${
+      active ? "bg-signal text-night" : "bg-cream/10 text-cream hover:bg-cream/20"
+    }`}
+  >
+    {children}
+  </button>
+);
+
+const FiltersContent = ({ filters, setFilters, categories, searchQuery, setSearchQuery }) => {
+  const selected = categories.find((cat) => cat.name === filters.mainCategory);
+  const showBikeFilters =
+    filters.mainCategory === "" || filters.mainCategory === "Biciclette";
+  // Con "Tutte" mostriamo comunque i tipi bici: oggi il catalogo è quasi solo quello
+  const tipi =
+    selected?.subCategories?.length > 0
+      ? selected.subCategories
+      : showBikeFilters
+        ? categories.find((cat) => cat.name === "Biciclette")?.subCategories || []
+        : [];
+
+  const set = (patch) => setFilters({ ...filters, ...patch });
 
   return (
-    <div>
-      {searchBar}
-      {/* Filtro per le categorie */}
+    <div className="space-y-8">
       <div>
-        <h2 className="text-lg font-bold mb-2 text-primary">Categorie</h2>
-        {categories.map((cat) => (
-          <div key={cat.name} className="mb-2">
-            <button
-              onClick={() => handleCategoryClick(cat.name)}
-              className={`w-full text-left px-2 py-1 cursor-pointer ${
-                filters.mainCategory === cat.name ? "font-bold bg-primary/15 rounded" : ""
-              }`}
+        <label htmlFor="cerca-bici" className="eyebrow opacity-60">
+          Cerca
+        </label>
+        <input
+          id="cerca-bici"
+          type="search"
+          placeholder="Nome, modello…"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="mt-2 w-full rounded-md border border-cream/25 bg-transparent px-4 py-3 text-cream placeholder:text-cream/40 focus:border-signal focus:outline-none"
+        />
+      </div>
+
+      <div>
+        <p className="eyebrow opacity-60 mb-3">Categoria</p>
+        <div className="flex flex-wrap gap-2">
+          <Chip
+            active={filters.mainCategory === ""}
+            onClick={() =>
+              set({ mainCategory: "", subCategory: "", sospensione: "", condition: "" })
+            }
+          >
+            Tutte
+          </Chip>
+          {categories.map((cat) => (
+            <Chip
+              key={cat.name}
+              active={filters.mainCategory === cat.name}
+              onClick={() =>
+                set({
+                  mainCategory: filters.mainCategory === cat.name ? "" : cat.name,
+                  subCategory: "",
+                  sospensione: cat.name === "Biciclette" ? filters.sospensione : "",
+                  condition: cat.name === "Biciclette" ? filters.condition : "",
+                })
+              }
             >
               {cat.name}
-            </button>
-            {filters.mainCategory === cat.name && cat.subCategories.length > 0 && (
-              <ul className="ml-4 mt-2 rounded">
-                {cat.subCategories.map((sub) => (
-                  <li key={sub} className="mb-1">
-                    <button
-                      onClick={() =>
-                        setFilters({
-                          ...filters,
-                          subCategory: filters.subCategory === sub ? "" : sub,
-                        })
-                      }
-                      className={`w-full text-left px-2 py-1 cursor-pointer ${
-                        filters.subCategory === sub ? "font-bold bg-primary/15 rounded" : ""
-                      }`}
-                    >
-                      {sub}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))}
+            </Chip>
+          ))}
+        </div>
       </div>
-      {/* Filtro per "Sospensione": visibile solo se categoria Biciclette è selezionata */}
-      {filters.mainCategory === "Biciclette" && (
+
+      {tipi.length > 0 && (
+        <div>
+          <p className="eyebrow opacity-60 mb-3">Tipo</p>
+          <div className="flex flex-wrap gap-2">
+            {tipi.map((sub) => (
+              <Chip
+                key={sub}
+                active={filters.subCategory === sub}
+                onClick={() =>
+                  set({ subCategory: filters.subCategory === sub ? "" : sub })
+                }
+              >
+                {sub}
+              </Chip>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {showBikeFilters && (
         <>
-          <div className="mt-4">
-            <h2 className="text-lg font-bold mb-2">Sospensione</h2>
-            <div className="flex gap-2">
-              {sospensioni.map((value) => (
-                <button
-                  key={value}
+          <div>
+            <p className="eyebrow opacity-60 mb-3">Condizione</p>
+            <div className="flex flex-wrap gap-2">
+              {condizioni.map((cond) => (
+                <Chip
+                  key={cond}
+                  active={filters.condition === cond}
                   onClick={() =>
-                    setFilters({
-                      ...filters,
-                      sospensione: filters.sospensione === value ? "" : value,
-                    })
+                    set({ condition: filters.condition === cond ? "" : cond })
                   }
-                  className={`px-2 py-1 cursor-pointer ${
-                    filters.sospensione === value ? "font-bold bg-primary/15 rounded" : ""
-                  }`}
                 >
-                  {value}
-                </button>
+                  {cond}
+                </Chip>
               ))}
             </div>
           </div>
-          {/* Nuovo filtro "Condizione" */}
-          <div className="mt-4">
-            <h2 className="text-lg font-bold mb-2">Condizione</h2>
-            <div className="flex gap-2">
-              {condizioni.map((cond) => (
-                <button
-                  key={cond}
+
+          <div>
+            <p className="eyebrow opacity-60 mb-3">Sospensione</p>
+            <div className="flex flex-wrap gap-2">
+              {sospensioni.map((value) => (
+                <Chip
+                  key={value}
+                  active={filters.sospensione === value}
                   onClick={() =>
-                    setFilters({
-                      ...filters,
-                      condition: filters.condition === cond ? "" : cond,
-                    })
+                    set({ sospensione: filters.sospensione === value ? "" : value })
                   }
-                  className={`px-2 py-1 cursor-pointer ${
-                    filters.condition === cond ? "font-bold bg-primary/15 rounded" : ""
-                  }`}
                 >
-                  {cond}
-                </button>
+                  {value}
+                </Chip>
               ))}
             </div>
           </div>
         </>
       )}
-      {/* Filtro per il range di prezzo */}
-      <div className="mt-4">
-        <h2 className="text-lg text-primary font-bold mb-2">Prezzo</h2>
+
+      <div>
+        <div className="flex items-baseline justify-between gap-4 mb-4">
+          <p className="eyebrow opacity-60">Prezzo</p>
+          <p className="text-sm tabular-nums opacity-80">
+            {formatPrice(filters.priceRange[0])} – {formatPrice(filters.priceRange[1])}
+          </p>
+        </div>
         <PriceRangeSlider
           minValue={0}
           maxValue={15000}
           value={filters.priceRange}
-          onRangeChange={(range) => setFilters({ ...filters, priceRange: range })}
+          onRangeChange={(range) => set({ priceRange: range })}
         />
       </div>
     </div>
