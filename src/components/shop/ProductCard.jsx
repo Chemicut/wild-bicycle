@@ -3,48 +3,45 @@ import GetDiscount from "../shared/productcards/GetDiscount";
 import formatPrice from "../../utils/formatPrice";
 import imageUrl from "../../utils/imageUrl";
 
-const ProductCard = ({ product }) => {
-  return (
-    <Link to={`/prodotti/${product.id}`} className="block">
-      <div className="card font-primary">
-        <div className="relative">
-          <img
-            src={imageUrl(product.images[0], 800)}
-            alt={product.name}
-            loading="lazy"
-            className="w-full h-56 object-cover rounded-md mb-4"
-          />
-          {product.condition === "Usato" && (
-            <span className="absolute top-2 right-2 bg-red-500 text-white text-base font-bold px-2 py-1 rounded">
-              Usato
-            </span>
-          )}
-        </div>
-        <h2 className="card-title">{product.name}</h2>
-        <div className="flex justify-between items-center py-2">
-          {product.fullprice ? (
-            <>
-              <div className="flex items-center gap-4">
-                <p className="text-gray-600 text-sm line-through">
-                  {formatPrice(product.fullprice)}
-                </p>
-                <p className="text-black text-base">{formatPrice(product.price)}</p>
-              </div>
-              <div className="flex items-center">
-                <p className="text-black text-base">
-                  Sconto del {GetDiscount(product.fullprice, product.price)}%
-                </p>
-              </div>
-            </>
-          ) : (
-            <div className="flex items-center">
-              <p className="text-black text-base">{formatPrice(product.price)}</p>
-            </div>
-          )}
-        </div>
+// Card bici: il numero in alto è la posizione in "griglia di partenza"
+const ProductCard = ({ product, index }) => (
+  <Link
+    to={`/prodotti/${product.id}`}
+    className="group relative flex flex-col bg-paper text-night rounded-[18px] overflow-hidden"
+  >
+    <div className="flex items-start justify-between px-5 pt-4">
+      <span className="headline text-6xl leading-none">{String(index + 1).padStart(2, "0")}</span>
+      <span
+        className={`eyebrow mt-2 ${
+          product.condition === "Usato" ? "bg-night text-paper px-2 py-1" : "opacity-60"
+        }`}
+      >
+        {product.condition}
+      </span>
+    </div>
+    <div className="aspect-[4/3] px-6 flex items-center justify-center">
+      <img
+        src={imageUrl(product.images[0], 800)}
+        alt={product.name}
+        loading="lazy"
+        className="max-h-full w-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.04] group-hover:-rotate-1"
+      />
+    </div>
+    <div className="mt-auto border-t-2 border-dashed border-night/25 px-5 py-4 flex items-end justify-between gap-3">
+      <div>
+        <h3 className="text-lg font-semibold leading-tight">{product.name}</h3>
+        {product.fullprice && (
+          <p className="text-sm line-through opacity-50 mt-1">{formatPrice(product.fullprice)}</p>
+        )}
       </div>
-    </Link>
-  );
-};
+      <p className="headline text-4xl leading-none whitespace-nowrap">{formatPrice(product.price)}</p>
+    </div>
+    {product.fullprice && (
+      <span className="headline absolute right-4 top-14 rotate-6 bg-signal px-3 pt-1.5 pb-1 text-2xl leading-none">
+        −{GetDiscount(product.fullprice, product.price)}%
+      </span>
+    )}
+  </Link>
+);
 
 export default ProductCard;

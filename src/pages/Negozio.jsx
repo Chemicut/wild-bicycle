@@ -157,8 +157,8 @@ const Negozio = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-6">
               {sortedProducts.length > 0 ? (
-                sortedProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                sortedProducts.map((product, index) => (
+                  <ProductCard key={product.id} product={product} index={index} />
                 ))
               ) : (
                 <p className="text-center col-span-full text-xl sm:text-2xl md:text-3xl text-secondary">

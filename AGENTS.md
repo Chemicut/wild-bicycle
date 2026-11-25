@@ -8,6 +8,8 @@ Sito del negozio di bici Wild Bicycle (Fiano Romano), in produzione su https://w
 
 - Lingua: interfaccia, testi del sito, commit e documentazione in italiano.
 - Non lavorare su `main`: crea un branch e apri una pull request. Netlify pubblica `main` in produzione.
+- Il restyling in corso sta sul branch `restyling`: continua lì finché il piano non dice che è stato unito a `main`.
+- Per il nuovo stile usa i token del tema (`bg-night`, `text-cream`, `bg-signal`…) e le utility `headline` ed `eyebrow`, non colori scritti a mano.
 - Le bici stanno in `src/content/bici/*.json` e si gestiscono da Pages CMS. Non creare di nuovo un JSON unico.
 - Lo schema delle bici è definito in `.pages.yml`: se cambi un campo, aggiorna anche `src/data/products.js` e i componenti che lo usano.
 - Immagini dei prodotti sempre tramite `imageUrl()` (`src/utils/imageUrl.js`), prezzi sempre tramite `formatPrice()` (`src/utils/formatPrice.js`).

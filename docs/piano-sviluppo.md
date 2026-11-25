@@ -61,11 +61,29 @@ Obiettivo: un sito moderno e ordinato che **non sembri generato da un'AI né un 
 - Dati (prezzi, specifiche, indirizzi) trattati come informazione tecnica, leggibili e precisi.
 - Ogni pagina con un `h1` e titoli in ordine.
 
-### Direzioni in valutazione
+### Direzione scelta: B, "numero di gara / poster"
 
-- **A. Scheda tecnica d'officina:** cartellini, schede tecniche, linee di griglia, sezioni numerate, font monospazio per i dati.
-- **B. Numero di gara / poster:** tabella numerata da gara di enduro, titoli grandi e stretti, foto a tutta larghezza, tono crudo.
-- Direzione consigliata: **A come struttura, con elementi di B** per Race Team e corsi.
+Titoli grandi e stretti, foto a tutta larghezza, tono crudo da manifesto di gara. Scartata la A ("scheda tecnica d'officina").
+
+**Tema (in `src/index.css`, blocco `@theme`)**
+
+| Token | Valore | Uso |
+|---|---|---|
+| `night` | `#13200f` | sfondo principale, testo su chiaro |
+| `forest` | `#2e5422` | verde del marchio |
+| `cream` | `#eeebdc` | testo su scuro, pulsanti chiari |
+| `paper` | `#f6f4ea` | fondo delle card bici |
+| `signal` | `#facc15` | accento: pulsanti principali, sconti, blocco officina |
+| `font-display` | Tanker (Fontshare) | titoli, sempre maiuscoli |
+| `font-sans` | Switzer (Fontshare) | testo |
+
+**Elementi del linguaggio**
+- Utility `headline` per i titoli (Tanker maiuscolo) ed `eyebrow` per le etichette piccole.
+- Etichette in stile gara: "Ordine di partenza", "Griglia di partenza", "Box tecnico", "Ritrovo".
+- Numerazione a due cifre (01, 02…) per elenchi e card.
+- Card bici su fondo `paper`, angoli arrotondati da tabella gara, linea tratteggiata e sconto come adesivo giallo inclinato.
+- Grana leggera su tutto il sito (`src/components/ui/Grain.jsx`).
+- Niente tabella numerata "013" nell'apertura della home (scelta di Gabriele).
 
 ---
 
@@ -84,35 +102,31 @@ Obiettivo: un sito moderno e ordinato che **non sembri generato da un'AI né un 
 - [x] Pages CMS installato e testato
 - [ ] Invitare Daniele come collaboratore in Pages CMS
 
-### Fase 1 — Bozze della direzione visiva (in corso)
+### Fase 1 — Bozze della direzione visiva ✅
 
-- [x] Bozza A, scheda tecnica d'officina: `/bozza-a` (`src/pages/bozze/BozzaA.jsx`)
-- [x] Bozza B, numero di gara: `/bozza-b` (`src/pages/bozze/BozzaB.jsx`)
-- [ ] Scelta della direzione con Daniele
-- [ ] Rimuovere le bozze dal codice dopo la scelta
+- [x] Bozza A, scheda tecnica d'officina (eliminata dal codice; resta nella storia del branch `restyling-bozze`)
+- [x] Bozza B, numero di gara: scelta, diventata la home
+- [x] Bozze rimosse dal codice
 
-Note sulle bozze:
-- Sono solo la home, con header e footer propri (in `App.jsx` il componente `SiteChrome` nasconde quelli attuali sulle rotte `/bozza*`).
-- Usano i dati veri: bici in evidenza dal CMS, foto del negozio e del team.
-- Font caricati solo nelle bozze. A: Archivo (versione condensata) e IBM Plex Mono, da Google Fonts. B: Tanker e Switzer, da Fontshare.
-- Manca il menu mobile: è previsto nella Fase 2.
-- I testi riusano contenuti già presenti sul sito; i servizi d'officina vanno confermati con Daniele.
+### Fase 2 — Fondamenta del nuovo design (in corso, branch `restyling`)
 
-### Fase 2 — Fondamenta del nuovo design
+Tutto il restyling sta sul branch `restyling` e va su `main` solo quando tutte le pagine sono rifatte, per non pubblicare un sito misto.
 
-- [ ] Token definitivi in `@theme` (colori, font, spaziature, linee)
-- [ ] Caricamento font ottimizzato (niente `@import` in cascata; rimuovere Material Symbols)
-- [ ] Componenti condivisi: pulsante, link, titolo di sezione, cartellino prodotto, blocco contatti
-- [ ] Unica `ProductCard` (oggi duplicata in `ProductCarousel.jsx`)
-- [ ] Rimuovere `react-slick` e `slick-carousel`
-- [ ] Sostituire `window.location.href` con `Link` di React Router
+- [x] Token del tema in `@theme` (vedi tabella in "Direzione scelta")
+- [x] Rimosso Material Symbols (non era usato)
+- [ ] Caricamento font senza `@import` in cascata (da fare quando non servirà più Outfit del vecchio tema)
+- [x] Componenti condivisi: `ButtonLink` e `Grain` in `src/components/ui/`, dati di contatto e voci di menu in `src/data/contatti.js`
+- [x] Unica `ProductCard` nel nuovo stile (`src/components/shop/ProductCard.jsx`)
+- [x] Rimossi `react-slick`, `slick-carousel`, `react-modern-drawer` e i componenti che li usavano
+- [ ] Sostituire `window.location.href` con `Link` di React Router (resta nelle pagine non ancora rifatte)
 - [ ] Eliminare `tailwind.config.js` (duplicato del tema in `index.css`)
-- [ ] Header e menu mobile nuovi
-- [ ] Footer nuovo
+- [x] Header nuovo: sopra la foto in home, fondo `night` altrove; menu mobile a tutto schermo
+- [x] Footer nuovo ("Ritrovo")
+- [ ] A fine Fase 3: eliminare dal CSS le classi del vecchio tema (`btn-primary`, `card`, `font-primary`…)
 
 ### Fase 3 — Restyling delle pagine
 
-- [ ] Home
+- [x] Home
 - [ ] Negozio (filtri, ordinamento, stato vuoto)
 - [ ] Pagina prodotto (galleria, scheda tecnica, contatto WhatsApp con nome della bici precompilato)
 - [ ] Officina (servizi concreti al posto delle 6 card con icone)
@@ -153,6 +167,8 @@ Note sulle bozze:
 | 25/11/2026 | Un file JSON per bici | Il CMS gestisce meglio le raccolte di file ed evita conflitti tra modifiche diverse |
 | 25/11/2026 | Prima i dati, poi il restyling | Card e pagina prodotto dipendono dai campi disponibili |
 | 25/11/2026 | Bozze della home in due direzioni prima di scegliere | Richiesta di Gabriele |
+| 25/11/2026 | Scelta la direzione B, "numero di gara", senza la tabella "013" nell'apertura | Preferenza di Gabriele |
+| 25/11/2026 | Restyling su un unico branch `restyling`, merge a fine Fase 3 | Evitare di pubblicare un sito metà vecchio e metà nuovo |
 
 ---
 
@@ -165,3 +181,4 @@ Note sulle bozze:
 | 25/11/2026 | Risolto conflitto con `main` (3 bici rimosse, prezzo Flyer, gallerie KTM) | PR #5 |
 | 25/11/2026 | Creato questo piano e `AGENTS.md` | branch `restyling-bozze` |
 | 25/11/2026 | Bozze della home A e B su `/bozza-a` e `/bozza-b`; `Logo` accetta classi personalizzate | branch `restyling-bozze` |
+| 25/11/2026 | Tema B nel CSS globale, header con menu mobile, footer, home definitiva, nuova `ProductCard`; rimossi caroselli e bozze | branch `restyling` |
