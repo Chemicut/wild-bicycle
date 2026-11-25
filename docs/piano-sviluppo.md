@@ -127,8 +127,8 @@ Tutto il restyling sta sul branch `restyling` e va su `main` solo quando tutte l
 ### Fase 3 — Restyling delle pagine
 
 - [x] Home
-- [ ] Negozio (filtri, ordinamento, stato vuoto)
-- [ ] Pagina prodotto (galleria, scheda tecnica, contatto WhatsApp con nome della bici precompilato)
+- [x] Negozio (filtri a chip, ordinamento prezzo, stato vuoto, CTA)
+- [x] Pagina prodotto (galleria, scheda tecnica, WhatsApp con nome bici precompilato)
 - [ ] Officina (servizi concreti al posto delle 6 card con icone)
 - [ ] Wild Race Team e corsi di enduro
 - [ ] Contatti (fix link telefono: oggi `tel:+0765422652`, manca `+39`)
@@ -182,3 +182,4 @@ Tutto il restyling sta sul branch `restyling` e va su `main` solo quando tutte l
 | 25/11/2026 | Creato questo piano e `AGENTS.md` | branch `restyling-bozze` |
 | 25/11/2026 | Bozze della home A e B su `/bozza-a` e `/bozza-b`; `Logo` accetta classi personalizzate | branch `restyling-bozze` |
 | 25/11/2026 | Tema B nel CSS globale, header con menu mobile, footer, home definitiva, nuova `ProductCard`; rimossi caroselli e bozze | branch `restyling` |
+| 25/11/2026 | Restyling negozio (filtri, sort, empty) e pagina prodotto (galleria, specs, WhatsApp); rimossa `SearchBar` | branch `restyling` |

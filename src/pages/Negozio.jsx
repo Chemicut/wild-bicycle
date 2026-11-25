@@ -1,78 +1,81 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "../components/shop/ProductCard";
-import { products } from "../data/products";
-import SearchBar from "../components/shop/SearchBar";
 import FiltersContent from "../components/shop/FiltersContent";
+import ButtonLink from "../components/ui/ButtonLink";
+import { products } from "../data/products";
+
+const categories = [
+  {
+    name: "Biciclette",
+    subCategories: ["MTB", "E-MTB", "Corsa", "Gravel", "Ciclocross", "Urban/City", "Kids"],
+  },
+  {
+    name: "Abbigliamento",
+    subCategories: [
+      "Giacche",
+      "Maglie",
+      "Intimo",
+      "Salopette e pantaloncini",
+      "Pantaloni",
+      "Guanti",
+      "Scarpe",
+      "Calze",
+      "Termico",
+      "Body",
+    ],
+  },
+  {
+    name: "Protezioni",
+    subCategories: ["Caschi", "Pettorine", "Ginocchia", "Gomiti"],
+  },
+  { name: "Componenti", subCategories: [] },
+  { name: "Accessori", subCategories: [] },
+];
+
+const initialFilters = {
+  mainCategory: "",
+  subCategory: "",
+  priceRange: [0, 15000],
+  sospensione: "",
+  condition: "",
+};
 
 const Negozio = () => {
-  const [filters, setFilters] = useState({
-    search: "",
-    mainCategory: "",
-    subCategory: "",
-    priceRange: [0, 15000],
-    sospensione: "",
-    condition: "",
-  });
+  const [filters, setFilters] = useState(initialFilters);
   const [searchQuery, setSearchQuery] = useState("");
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  // Stato per il sort: "asc" per crescente, "desc" per decrescente
   const [sortOrder, setSortOrder] = useState("");
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  const categories = [
-    {
-      name: "Biciclette",
-      subCategories: ["MTB", "E-MTB", "Corsa", "Gravel", "Ciclocross", "Urban/City", "Kids"],
-    },
-    {
-      name: "Abbigliamento",
-      subCategories: [
-        "Giacche",
-        "Maglie",
-        "Intimo",
-        "Salopette e pantaloncini",
-        "Pantaloni",
-        "Guanti",
-        "Scarpe",
-        "Calze",
-        "Termico",
-        "Body",
-      ],
-    },
-    {
-      name: "Protezioni",
-      subCategories: ["Caschi", "Pettorine", "Ginocchia", "Gomiti"],
-    },
-    { name: "Componenti", subCategories: [] },
-    { name: "Accessori", subCategories: [] },
-  ];
+  useEffect(() => {
+    document.body.style.overflow = mobileFiltersOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileFiltersOpen]);
+
+  const query = searchQuery.trim().toLowerCase();
 
   const filteredProducts = products.filter((product) => {
     const matchesSearch =
-      filters.search === "" ||
-      product.name.toLowerCase().includes(filters.search.toLowerCase());
-      
+      query === "" ||
+      product.name.toLowerCase().includes(query) ||
+      (product.brand && product.brand.toLowerCase().includes(query));
+
     const matchesMainCategory =
       filters.mainCategory === "" || product.category === filters.mainCategory;
-      
+
     const matchesSubCategory =
       filters.subCategory === "" || product.subCategory === filters.subCategory;
-      
+
     const matchesPrice =
-      product.price >= filters.priceRange[0] &&
-      product.price <= filters.priceRange[1];
-      
-    // Applica il filtro "Sospensione" solo se attivo (vuoto significa ignora)
+      product.price >= filters.priceRange[0] && product.price <= filters.priceRange[1];
+
     const matchesSospensione =
-      filters.mainCategory !== "Biciclette" ||
-      filters.sospensione === "" ||
-      product.sospensione === filters.sospensione;
-      
-    // Applica il filtro "Condizione" solo se attivo (vuoto significa ignora)
+      filters.sospensione === "" || product.sospensione === filters.sospensione;
+
     const matchesCondition =
-      filters.mainCategory !== "Biciclette" ||
-      filters.condition === "" ||
-      product.condition === filters.condition;
-      
+      filters.condition === "" || product.condition === filters.condition;
+
     return (
       matchesSearch &&
       matchesMainCategory &&
@@ -83,111 +86,172 @@ const Negozio = () => {
     );
   });
 
-  // Ordino i prodotti filtrati in base al prezzo
   const sortedProducts = sortOrder
-  ? [...filteredProducts].sort((a, b) => {
-      return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
-    })
-  : filteredProducts;
+    ? [...filteredProducts].sort((a, b) =>
+        sortOrder === "asc" ? a.price - b.price : b.price - a.price
+      )
+    : filteredProducts;
 
-  const handleSearch = () => {
-    setFilters({ ...filters, search: searchQuery });
+  const filtriAttivi =
+    filters.mainCategory ||
+    filters.subCategory ||
+    filters.sospensione ||
+    filters.condition ||
+    filters.priceRange[0] > 0 ||
+    filters.priceRange[1] < 15000 ||
+    query !== "";
+
+  const resetFiltri = () => {
+    setFilters(initialFilters);
+    setSearchQuery("");
+    setSortOrder("");
   };
 
-  const searchBar = (
-    <SearchBar
+  const filtersPanel = (
+    <FiltersContent
+      filters={filters}
+      setFilters={setFilters}
+      categories={categories}
       searchQuery={searchQuery}
       setSearchQuery={setSearchQuery}
-      onSearch={handleSearch}
     />
   );
 
   return (
-    <main className="w-full bg-background">
-      <div className="p-6 lg:p-12 mx-auto">
-        {/* Filtro per mobile */}
-        <div className="lg:hidden mb-6">
+    <div className="bg-night text-cream min-h-screen">
+      <div className="px-5 lg:px-10 pt-10 lg:pt-14 pb-20 lg:pb-28">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p className="eyebrow opacity-60">Griglia di partenza</p>
+            <h1 className="headline mt-3 text-[clamp(3.5rem,10vw,9rem)]">Negozio</h1>
+          </div>
+          <p className="eyebrow tabular-nums opacity-70">
+            {sortedProducts.length} di {products.length}
+          </p>
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center gap-3">
           <button
-            className="btn btn-primary"
-            onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+            type="button"
+            className="eyebrow rounded-md bg-cream text-night px-5 py-3 lg:hidden"
+            onClick={() => setMobileFiltersOpen(true)}
           >
-            {mobileFiltersOpen ? "Nascondi Filtri" : "Filtra Prodotti"}
+            Filtri{filtriAttivi ? " · attivi" : ""}
           </button>
-          {mobileFiltersOpen && (
-            <div className="mt-4">
-              <FiltersContent
-                filters={filters}
-                setFilters={setFilters}
-                categories={categories}
-                searchBar={searchBar}
-              />
-            </div>
+
+          <button
+            type="button"
+            onClick={() =>
+              setSortOrder((prev) => {
+                if (prev === "") return "asc";
+                return prev === "asc" ? "desc" : "";
+              })
+            }
+            className={`eyebrow rounded-md px-5 py-3 transition-colors ${
+              sortOrder
+                ? "bg-signal text-night"
+                : "border border-cream/30 hover:border-cream"
+            }`}
+          >
+            Prezzo{" "}
+            {sortOrder === "asc" ? "↑" : sortOrder === "desc" ? "↓" : "·"}
+          </button>
+
+          {filtriAttivi && (
+            <button
+              type="button"
+              onClick={resetFiltri}
+              className="eyebrow opacity-60 hover:opacity-100 hover:text-signal"
+            >
+              Azzera
+            </button>
           )}
         </div>
-        <div className="flex gap-8">
-          {/* Sidebar per desktop */}
-          <aside className="hidden lg:block w-full lg:w-1/4 xl:w-1/5 mb-8 font-secondary">
-            <FiltersContent
-              filters={filters}
-              setFilters={setFilters}
-              categories={categories}
-              searchBar={searchBar}
-            />
+
+        <div className="mt-10 flex gap-10 xl:gap-14">
+          <aside className="hidden lg:block w-64 xl:w-72 shrink-0">
+            <div className="sticky top-8 border border-cream/15 rounded-[18px] p-6">
+              {filtersPanel}
+            </div>
           </aside>
-          {/* Vetrina Prodotti */}
-          <section className="w-full lg:w-3/4 xl:w-4/5">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-4">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl text-primary font-primary">
-                  Negozio
-                </h1>
-                <button
-                  className="btn btn-primary cursor-pointer"
-                  onClick={() =>
-                    setSortOrder((prev) => {
-                      if (prev === "") return "asc";
-                      return prev === "asc" ? "desc" : "asc";
-                    })
-                  }
-                >
-                  Ordina per prezzo {sortOrder === "asc" ? "▲" : sortOrder === "desc" ? "▼" : ""}
-                </button>
-                
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-6">
-              {sortedProducts.length > 0 ? (
-                sortedProducts.map((product, index) => (
+
+          <section className="min-w-0 flex-1">
+            {sortedProducts.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                {sortedProducts.map((product, index) => (
                   <ProductCard key={product.id} product={product} index={index} />
-                ))
-              ) : (
-                <p className="text-center col-span-full text-xl sm:text-2xl md:text-3xl text-secondary">
-                  Non ci sono prodotti disponibili con i filtri selezionati.
+                ))}
+              </div>
+            ) : (
+              <div className="border border-dashed border-cream/30 rounded-[18px] px-6 py-16 text-center">
+                <p className="eyebrow opacity-60">Nessuna partenza</p>
+                <p className="headline mt-4 text-5xl lg:text-7xl">Nessuna bici</p>
+                <p className="mt-4 max-w-md mx-auto opacity-75 leading-relaxed">
+                  Non ci sono prodotti con i filtri selezionati. Prova ad allargare la ricerca
+                  o azzera i filtri.
                 </p>
-              )}
-            </div>
+                <button
+                  type="button"
+                  onClick={resetFiltri}
+                  className="eyebrow mt-8 rounded-md bg-signal text-night px-6 py-4"
+                >
+                  Azzera filtri
+                </button>
+              </div>
+            )}
           </section>
         </div>
       </div>
-      {/* Sezione Call-to-Action */}
-      <div className="container mx-auto container-padding">
-        <section className="mt-12 bg-primary text-white py-10 px-6 rounded-lg shadow-lg text-center">
-          <h2 className="section-title text-white text-2xl sm:text-3xl md:text-4xl">
-            Non hai trovato quello che cerchi?
-          </h2>
-          <p className="mt-4 text-base sm:text-lg md:text-2xl">
-            Contattaci per richiedere un prodotto specifico o per ricevere assistenza
-            personalizzata.
-          </p>
-          <button
-            className="mt-6 btn btn-secondary cursor-pointer"
-            onClick={() => (window.location.href = "/contatti")}
-          >
+
+      <section className="bg-signal text-night px-5 lg:px-10 py-16 lg:py-20">
+        <div className="flex flex-wrap items-end justify-between gap-8">
+          <div>
+            <p className="eyebrow">Richiesta</p>
+            <h2 className="headline mt-3 text-[clamp(2.5rem,7vw,6rem)]">
+              Non l&apos;hai trovata?
+            </h2>
+            <p className="mt-4 max-w-lg text-lg leading-relaxed">
+              Scrivici il modello che cerchi: ordiniamo, importiamo e troviamo soluzioni su
+              misura.
+            </p>
+          </div>
+          <ButtonLink to="/contatti" variant="night">
             Contattaci
-          </button>
-        </section>
-      </div>
-    </main>
+          </ButtonLink>
+        </div>
+      </section>
+
+      {mobileFiltersOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          <button
+            type="button"
+            aria-label="Chiudi filtri"
+            className="absolute inset-0 bg-night/70"
+            onClick={() => setMobileFiltersOpen(false)}
+          />
+          <div className="absolute inset-y-0 right-0 w-full max-w-md bg-night text-cream border-l border-cream/15 overflow-y-auto px-5 py-6">
+            <div className="flex items-center justify-between mb-8">
+              <p className="eyebrow">Filtri</p>
+              <button
+                type="button"
+                className="eyebrow hover:text-signal"
+                onClick={() => setMobileFiltersOpen(false)}
+              >
+                Chiudi
+              </button>
+            </div>
+            {filtersPanel}
+            <button
+              type="button"
+              className="eyebrow mt-10 w-full rounded-md bg-signal text-night px-6 py-4"
+              onClick={() => setMobileFiltersOpen(false)}
+            >
+              Mostra {sortedProducts.length} risultati
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
