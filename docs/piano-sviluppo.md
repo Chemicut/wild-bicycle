@@ -129,9 +129,9 @@ Tutto il restyling sta sul branch `restyling` e va su `main` solo quando tutte l
 - [x] Home
 - [x] Negozio (filtri a chip, ordinamento prezzo, stato vuoto, CTA)
 - [x] Pagina prodotto (galleria, scheda tecnica, WhatsApp con nome bici precompilato)
-- [ ] Officina (servizi concreti al posto delle 6 card con icone)
-- [ ] Wild Race Team e corsi di enduro
-- [ ] Contatti (fix link telefono: oggi `tel:+0765422652`, manca `+39`)
+- [x] Officina (hero foto, servizi numerati, CTA; niente card con icone)
+- [x] Wild Race Team e corsi di enduro (`#corso-enduro`)
+- [x] Contatti (dati da `contatti.js`, telefono `tel:+39…`, form restyle)
 - [ ] 404 e pagina di ringraziamento
 - [ ] Pagina Notizie: decidere se collegarla o eliminarla (oggi esiste ma non ha una rotta)
 
@@ -183,3 +183,4 @@ Tutto il restyling sta sul branch `restyling` e va su `main` solo quando tutte l
 | 25/11/2026 | Bozze della home A e B su `/bozza-a` e `/bozza-b`; `Logo` accetta classi personalizzate | branch `restyling-bozze` |
 | 25/11/2026 | Tema B nel CSS globale, header con menu mobile, footer, home definitiva, nuova `ProductCard`; rimossi caroselli e bozze | branch `restyling` |
 | 25/11/2026 | Restyling negozio (filtri, sort, empty) e pagina prodotto (galleria, specs, WhatsApp); rimossa `SearchBar` | branch `restyling` |
+| 25/11/2026 | Restyling Officina, Wild Race Team (con `#corso-enduro`) e Contatti; rimossi `lucide-react` e header morti | branch `restyling` |

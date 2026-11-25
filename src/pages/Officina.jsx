@@ -1,135 +1,104 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Wrench, Handshake, Cpu, SearchCheck, UserRoundCheck, Settings } from "lucide-react";
+import ButtonLink from "../components/ui/ButtonLink";
+import imageUrl from "../utils/imageUrl";
 
-// Component per gestire il fade in usando Intersection Observer
-const FadeInSection = ({ children, className = "" }) => {
-  const domRef = useRef();
-  const [isVisible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(domRef.current);
-        }
-      });
-    });
-    if (domRef.current) {
-      observer.observe(domRef.current);
-    }
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={domRef}
-      className={`${className} transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
-    >
-      {children}
-    </div>
-  );
-};
+const servizi = [
+  {
+    title: "Manutenzione ordinaria",
+    text: "Controlli periodici, regolazioni e tagliandi per tenere la bici pronta a ogni uscita.",
+  },
+  {
+    title: "Riparazioni complesse",
+    text: "Diagnosi e interventi su telaio, trasmissione, freni e componenti danneggiati.",
+  },
+  {
+    title: "Upgrade su misura",
+    text: "Componenti scelti sul tuo stile di guida, non sul catalogo generico.",
+  },
+  {
+    title: "Preparazione gara",
+    text: "Set-up da gara: peso, affidabilità e regolazioni fine per il giorno della partenza.",
+  },
+  {
+    title: "Tarature sospensioni",
+    text: "Sag, click e pressioni tarati su peso, percorso e sensazioni in sella.",
+  },
+  {
+    title: "Motori Bosch · Shimano · Polini",
+    text: "Centro assistenza per e-bike: diagnosi, aggiornamenti e riparazioni specialistiche.",
+  },
+];
 
 const Officina = () => {
   return (
-    <main className="w-full bg-background py-6 lg:py-12">
-      <div className="container mx-auto px-6">
-
-          <div className="flex flex-col lg:flex-row gap-14 mb-10">
-            <div className="flex w-full lg:w-1/3" aria-label="Officina Wild Bicycle">
-                <img
-                  src="/images/officina-3.webp"
-                  alt="Officina Wild Bicycle"
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-            <div className="flex w-full lg:w-2/3 lg:items-center">
-            <p className="text-secondary font-secondary text-base sm:text-lg md:text-xl lg:text-2xl">
-              <b className="text-primary">Wild Bicycle</b>{" "}
-              non è solo un negozio di bici, ma il punto di riferimento per la cura e l’innovazione sulle due ruote.
-              <br /><br />
-              La nostra officina, attrezzata con strumenti all’avanguardia, è guidata da un team di esperti appassionati
-              che si dedicano con precisione e dedizione ad ogni intervento.
-              <br /><br />
-              Che si tratti di <b className="text-primary">manutenzioni</b> ordinarie, <b className="text-primary">riparazioni</b> complesse,{" "}
-              <b className="text-primary">upgrade</b> personalizzati o <b className="text-primary">preparazioni</b> da gara, 
-              offriamo soluzioni su misura per valorizzare ogni dettaglio della tua bicicletta.
-            </p>
-        </div>
-      </div>
-        {/* Prima riga di 3 div affiancati con effetto fade in */}
-        <FadeInSection className="flex flex-col lg:flex-row gap-4 ">
-          <div className="flex-1 p-8">
-            <div className="flex justify-center mb-2 text-primary">
-              <Wrench size={48} />
-            </div>
-            <p className="text-secondary text-base sm:text-lg md:text-xl text-center mt-4">
-              La nostra officina si distingue per un’impeccabile attenzione alla qualità: ogni intervento è eseguito con precisione artigianale e l’utilizzo di componenti di prima scelta, garantendo prestazioni elevate e una lunga durata per la tua bici.
-            </p>
-          </div>
-          <div className="flex-1 p-8">
-            <div className="flex justify-center mb-2 text-primary">
-              <Handshake size={48} />
-            </div>
-            <p className="text-secondary text-base sm:text-lg md:text-xl text-center mt-4">
-              Collaboriamo con i marchi leader del settore per offrire soluzioni innovative e affidabili. Le nostre partnership ci permettono di accedere a tecnologie d’eccellenza e prodotti esclusivi, assicurando sempre il meglio per il tuo mezzo.
-            </p>
-          </div>
-          <div className="flex-1 p-8">
-            <div className="flex justify-center mb-2 text-primary">
-              <Cpu size={48} />
-            </div>
-            <p className="text-secondary text-base sm:text-lg md:text-xl text-center mt-4">
-              Il nostro Centro Assistenza è il punto di riferimento per ogni esigenza ciclistica, dalla manutenzione ordinaria alle riparazioni specialistiche. Offriamo supporto qualificato su motori Bosch, Shimano e Polini, garantendo interventi precisi e veloci per massime prestazioni e affidabilità.
-            </p>
-          </div>
-        </FadeInSection>
-
-        {/* Seconda riga di 3 div affiancati con effetto fade in */}
-        <FadeInSection className="flex flex-col lg:flex-row gap-8 mt-4">
-          <div className="flex-1 p-8">
-            <div className="flex justify-center mb-2 text-primary">
-              <SearchCheck size={48} />
-            </div>
-            <p className="text-secondary text-base sm:text-lg md:text-xl text-center mt-4">
-              Il settore ciclistico è in continua evoluzione, e il nostro team si aggiorna costantemente per integrare le più recenti innovazioni. Utilizziamo tecniche e strumenti all’avanguardia per garantire interventi precisi e soluzioni sempre affidabili.
-            </p>
-          </div>
-          <div className="flex-1 p-8">
-            <div className="flex justify-center mb-2 text-primary">
-              <UserRoundCheck size={48} />
-            </div>
-            <p className="text-secondary text-base sm:text-lg md:text-xl text-center mt-4">
-              Sappiamo che ogni ciclista e ogni bici sono unici. Per questo motivo, ogni intervento viene studiato su misura, per rispecchiare le tue esigenze specifiche e valorizzare il tuo stile di guida, con soluzioni che uniscono funzionalità ed eleganza.
-            </p>
-          </div>
-          <div className="flex-1 p-8">
-            <div className="flex justify-center mb-2 text-primary">
-              <Settings size={48} />
-            </div>
-            <p className="text-secondary text-base sm:text-lg md:text-xl text-center mt-4">
-              Una bici ben regolata fa la differenza in termini di comfort e prestazioni. Nella nostra officina effettuiamo tarature precise su sospensioni, trasmissione e impianti frenanti, ottimizzando ogni componente in base al tuo stile di guida.
-            </p>
-          </div>
-        </FadeInSection>
-        
-        <section className="mt-12 bg-primary text-white py-10 px-6 rounded-lg shadow-lg text-center">
-          <h2 className="section-title text-white text-2xl sm:text-3xl md:text-4xl">
-            Morale a terra come le tue ruote?
-          </h2>
-          <p className="mt-4 text-base sm:text-lg md:text-2xl">
-            Entra in contatto per una consulenza gratuita e scopri come possiamo aiutarti a rinnovare la tua bici (e il tuo stato d'animo).
+    <div className="bg-night text-cream">
+      <section className="relative min-h-[70svh] flex flex-col">
+        <img
+          src={imageUrl("/images/officina-3.webp", 2000)}
+          alt="Il banco di lavoro dell'officina Wild Bicycle"
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-night via-night/55 to-night/20" />
+        <div className="relative z-10 mt-auto px-5 lg:px-10 pb-12 lg:pb-16">
+          <p className="eyebrow text-signal">Box tecnico</p>
+          <h1 className="headline mt-3 text-[clamp(4rem,12vw,12rem)] leading-[0.82]">
+            Officina
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed opacity-90">
+            Dal 2013 curiamo bici muscolari ed e-bike a Fiano Romano: manutenzioni,
+            riparazioni, upgrade e set-up da gara, con componenti di prima scelta.
           </p>
-          <button
-            className="mt-6 btn btn-secondary cursor-pointer"
-            onClick={() => (window.location.href = "/contatti")}
-          >
-            Contattaci
-          </button>
-        </section>
-      </div>
-    </main>
+        </div>
+      </section>
+
+      <section className="px-5 lg:px-10 py-16 lg:py-24">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p className="eyebrow opacity-60">Interventi</p>
+            <h2 className="headline mt-3 text-[clamp(2.5rem,6vw,5rem)]">Cosa facciamo</h2>
+          </div>
+          <p className="max-w-md text-base leading-relaxed opacity-75">
+            Ogni intervento è studiato sulla bici e su come la guidi. Niente pacchetti
+            generici: diagnosi, pezzi giusti, taratura precisa.
+          </p>
+        </div>
+
+        <ul className="mt-12 grid sm:grid-cols-2 gap-px bg-cream/15 border border-cream/15">
+          {servizi.map((servizio, i) => (
+            <li
+              key={servizio.title}
+              className="bg-night p-6 lg:p-8 min-h-40 flex flex-col justify-between"
+            >
+              <span className="headline text-4xl leading-none opacity-35">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div className="mt-8">
+                <h3 className="text-xl font-semibold leading-tight">{servizio.title}</h3>
+                <p className="mt-2 text-base leading-relaxed opacity-70">{servizio.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="bg-signal text-night px-5 lg:px-10 py-16 lg:py-20">
+        <div className="flex flex-wrap items-end justify-between gap-8">
+          <div>
+            <p className="eyebrow">Prenotazione</p>
+            <h2 className="headline mt-3 text-[clamp(2.5rem,7vw,6rem)]">
+              Portala<br />in officina.
+            </h2>
+            <p className="mt-4 max-w-lg text-lg leading-relaxed">
+              Scrivici o passa in negozio: ti diciamo tempi, costi e cosa conviene fare
+              prima.
+            </p>
+          </div>
+          <ButtonLink to="/contatti" variant="night">
+            Prenota un intervento
+          </ButtonLink>
+        </div>
+      </section>
+    </div>
   );
 };
 
