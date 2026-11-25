@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
  
 const Logo = ({
-  className = "absolute left-1/2 transform -translate-x-1/2 text-primary lg:text-background lg:left-0 lg:-translate-x-0 lg:ml-8",
-  svgClassName = "fill-current w-64 h-auto",
+  className = "text-cream",
+  svgClassName = "fill-current w-44 lg:w-56 h-auto",
 }) => {
   return (
     <div className={className}>

@@ -108,23 +108,23 @@ Titoli grandi e stretti, foto a tutta larghezza, tono crudo da manifesto di gara
 - [x] Bozza B, numero di gara: scelta, diventata la home
 - [x] Bozze rimosse dal codice
 
-### Fase 2 — Fondamenta del nuovo design (in corso, branch `restyling`)
+### Fase 2 — Fondamenta del nuovo design ✅
 
-Tutto il restyling sta sul branch `restyling` e va su `main` solo quando tutte le pagine sono rifatte, per non pubblicare un sito misto.
+Tutto il restyling sta sul branch `restyling` e va su `main` solo a fine Fase 3 (anteprima Netlify via PR).
 
 - [x] Token del tema in `@theme` (vedi tabella in "Direzione scelta")
 - [x] Rimosso Material Symbols (non era usato)
-- [ ] Caricamento font senza `@import` in cascata (da fare quando non servirà più Outfit del vecchio tema)
+- [x] Font Tanker/Switzer caricati da `index.html` (niente `@import` CSS, niente Outfit)
 - [x] Componenti condivisi: `ButtonLink` e `Grain` in `src/components/ui/`, dati di contatto e voci di menu in `src/data/contatti.js`
 - [x] Unica `ProductCard` nel nuovo stile (`src/components/shop/ProductCard.jsx`)
-- [x] Rimossi `react-slick`, `slick-carousel`, `react-modern-drawer` e i componenti che li usavano
-- [ ] Sostituire `window.location.href` con `Link` di React Router (resta nelle pagine non ancora rifatte)
-- [ ] Eliminare `tailwind.config.js` (duplicato del tema in `index.css`)
+- [x] Rimossi `react-slick`, `slick-carousel`, `react-modern-drawer`, `lucide-react`, `react-google-recaptcha-v3`
+- [x] Navigazione con `Link` / `ButtonLink` (niente `window.location.href`)
+- [x] Eliminato `tailwind.config.js` (tema solo in `index.css`)
 - [x] Header nuovo: sopra la foto in home, fondo `night` altrove; menu mobile a tutto schermo
 - [x] Footer nuovo ("Ritrovo")
-- [ ] A fine Fase 3: eliminare dal CSS le classi del vecchio tema (`btn-primary`, `card`, `font-primary`…)
+- [x] CSS ripulito: solo token del tema B + utility `headline` / `eyebrow`
 
-### Fase 3 — Restyling delle pagine
+### Fase 3 — Restyling delle pagine ✅
 
 - [x] Home
 - [x] Negozio (filtri a chip, ordinamento prezzo, stato vuoto, CTA)
@@ -132,8 +132,8 @@ Tutto il restyling sta sul branch `restyling` e va su `main` solo quando tutte l
 - [x] Officina (hero foto, servizi numerati, CTA; niente card con icone)
 - [x] Wild Race Team e corsi di enduro (`#corso-enduro`)
 - [x] Contatti (dati da `contatti.js`, telefono `tel:+39…`, form restyle)
-- [ ] 404 e pagina di ringraziamento
-- [ ] Pagina Notizie: decidere se collegarla o eliminarla (oggi esiste ma non ha una rotta)
+- [x] 404 e pagina di ringraziamento (dopo form Contatti)
+- [x] Pagina Notizie: eliminata (nessuna rotta, API locale morta)
 
 ### Fase 4 — Contenuti da chiedere a Daniele
 
@@ -169,6 +169,8 @@ Tutto il restyling sta sul branch `restyling` e va su `main` solo quando tutte l
 | 25/11/2026 | Bozze della home in due direzioni prima di scegliere | Richiesta di Gabriele |
 | 25/11/2026 | Scelta la direzione B, "numero di gara", senza la tabella "013" nell'apertura | Preferenza di Gabriele |
 | 25/11/2026 | Restyling su un unico branch `restyling`, merge a fine Fase 3 | Evitare di pubblicare un sito metà vecchio e metà nuovo |
+| 25/11/2026 | Eliminata la pagina Notizie | Nessuna rotta, dipendeva da un'API `localhost` non più esistente |
+| 25/11/2026 | `/thankyou` è il ringraziamento del form Contatti (non più dell'admin prodotti) | L'admin remoto è stato sostituito da Pages CMS |
 
 ---
 
@@ -184,3 +186,4 @@ Tutto il restyling sta sul branch `restyling` e va su `main` solo quando tutte l
 | 25/11/2026 | Tema B nel CSS globale, header con menu mobile, footer, home definitiva, nuova `ProductCard`; rimossi caroselli e bozze | branch `restyling` |
 | 25/11/2026 | Restyling negozio (filtri, sort, empty) e pagina prodotto (galleria, specs, WhatsApp); rimossa `SearchBar` | branch `restyling` |
 | 25/11/2026 | Restyling Officina, Wild Race Team (con `#corso-enduro`) e Contatti; rimossi `lucide-react` e header morti | branch `restyling` |
+| 25/11/2026 | 404 e ThankYou; rimossi Notizie e `tailwind.config.js`; CSS solo tema B; font da `index.html` | branch `restyling` |
