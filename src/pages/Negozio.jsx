@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ProductCard from "../components/shop/ProductCard";
-import productsData from "../data/Bici.json";
+import { products } from "../data/products";
 import SearchBar from "../components/shop/SearchBar";
 import FiltersContent from "../components/shop/FiltersContent";
 
@@ -14,14 +14,9 @@ const Negozio = () => {
     condition: "",
   });
   const [searchQuery, setSearchQuery] = useState("");
-  const [products, setProducts] = useState([]);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   // Stato per il sort: "asc" per crescente, "desc" per decrescente
   const [sortOrder, setSortOrder] = useState("");
-
-  useEffect(() => {
-    setProducts(productsData);
-  }, []);
 
   const categories = [
     {
@@ -91,9 +86,7 @@ const Negozio = () => {
   // Ordino i prodotti filtrati in base al prezzo
   const sortedProducts = sortOrder
   ? [...filteredProducts].sort((a, b) => {
-      return sortOrder === "asc"
-        ? parseFloat(a.price) - parseFloat(b.price)
-        : parseFloat(b.price) - parseFloat(a.price);
+      return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
     })
   : filteredProducts;
 

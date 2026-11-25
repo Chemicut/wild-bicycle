@@ -33,7 +33,7 @@ const Home = () => {
         <h3 className="text-primary font-primary text-2xl lg:text-3xl xl:text-4xl mb-4">
           Prodotti in evidenza
         </h3>
-        <ProductCarousel productIds={["ktm-scarpmtprime", "lapierre-spicycf89-2024", "ktm-scarpeliteaxs", "lapierre-xrm89-2025", "ktm-scarpmaster", "lapierre-drs80-2025"]} />
+        <ProductCarousel />
       </section>
 
       {/* Banner del catalogo con effetto parallax */}
@@ -53,7 +53,7 @@ const Home = () => {
           <h3 className="my-8 lg:my-12 pb-2 text-lg md:text-xl lg:text-2xl font-secondary">
             Una selezione di prodotti per ogni esigenza, dalla strada alla montagna.
           </h3>
-          <Link to="/prodotti">
+          <Link to="/negozio">
             <button className="btn btn-primary cursor-pointer">Esplora</button>
           </Link>
         </div>

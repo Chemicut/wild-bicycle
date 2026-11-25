@@ -1,0 +1,87 @@
+{
+  "name": "Lapierre XRM 8.9 2025",
+  "published": true,
+  "featured": true,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "Lapierre",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 5199,
+  "fullprice": 5799,
+  "images": [
+    "/images/products-gallery/Bici/lapierre-xrm89-2025/lapierre-xrm89-2025.webp",
+    "/images/products-gallery/Bici/lapierre-xrm89-2025/lapierre-xrm89-2025-1.webp",
+    "/images/products-gallery/Bici/lapierre-xrm89-2025/lapierre-xrm89-2025-2.webp",
+    "/images/products-gallery/Bici/lapierre-xrm89-2025/lapierre-xrm89-2025-3.webp"
+  ],
+  "description": "La XRM è una habitué delle lunghe distanze, dei terreni scoscesi e dei paesaggi collinari. Da solo, incarna la versatilità e l'esperienza degli ingegneri Lapierre in termini di resistenza. La versatilità del telaio in carbonio riprende le caratteristiche della XR di Lapierre, con un'escursione maggiore per affrontare terreni accidentati e lunghe distanze. Con un'escursione di 120 mm, senza compromettere nulla in termini di prestazioni su percorsi ondulati, questa bicicletta esprime tutta la potenza del ciclista anche dopo 3 ore di sforzo. È meglio che il mondo del Mountain Bike Marathon faccia attenzione! ",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "XR full Carbon 110mm travel 29\", pressfit, boost, metric, Thru axle"
+    },
+    {
+      "label": "Forcella",
+      "value": "Fox 34 Float SC Factory 29\" 15x110, 120mm travel, FIT4, Push-Lock, 44mm offset + FOX 2-pos Remote"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "Fox Float Factory, 2-Pos Remote, LV Evol, 210x55mm"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "Shimano Deore XT 32T, 170mm (S), 175mm (M, L, XL)"
+    },
+    {
+      "label": "Cambio",
+      "value": "Shimano Deore XT 12s Shadow +"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano Deore XT 2 pistons 180/160"
+    },
+    {
+      "label": "Ruote",
+      "value": "DT Swiss XR 1700 SPLINE® 622x25c, Shimano 12s light Driver, Centerlock"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Front : Maxxis Ardent Race 3C MaxxSpeed EXO TR 29x2.35 120 TPI Rear : Maxxis Rekon Race 3C MaxxTerra EXO TR 29x2.35 120 TPI"
+    },
+    {
+      "label": "Manubrio",
+      "value": "RACE FACE TURBINE, Width: 760mm, Rise: 1/2”, Ø: 31.8mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "Lapierre AL6061 alloy, -6°, Ø: 31.8mm, L: 60mm (S,M), 70mm (L,XL)"
+    },
+    {
+      "label": "Manopole",
+      "value": "Lapierre grips anodized, S/M: small diameter, L/XL: large diameter"
+    },
+    {
+      "label": "Serie sterzo",
+      "value": "FSA Integrated 1.5ZS IS-2 /42/ACB hidden set"
+    },
+    {
+      "label": "Sella",
+      "value": "Fizik Argo Vento X 140mm"
+    },
+    {
+      "label": "Reggisella",
+      "value": "Limotec A1 Light dropper, Ø: 31.6mm, travel 100mm (S,M), 125mm (L,XL)"
+    },
+    {
+      "label": "Pedali",
+      "value": "NW 91K Steel cage"
+    },
+    {
+      "label": "Peso",
+      "value": "12.2 Kg"
+    }
+  ]
+}

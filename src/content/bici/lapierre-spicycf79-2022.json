@@ -1,0 +1,79 @@
+{
+  "name": "Lapierre Spicy CF 7.9 2022",
+  "published": true,
+  "featured": false,
+  "condition": "Usato",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "Lapierre",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 2499,
+  "images": [
+    "/images/products-gallery/Bici/lapierre-spicycf79-2022/lapierre-spicycf79-2022.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf79-2022/lapierre-spicycf79-2022-1.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf79-2022/lapierre-spicycf79-2022-2.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf79-2022/lapierre-spicycf79-2022-3.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf79-2022/lapierre-spicycf79-2022-4.webp"
+  ],
+  "description": "Bici da enduro usata in ottime condizioni, il modello in questione è una taglia L e i montaggi differiscono leggermente dalla configurazione originale. Consulta la lista in basso per i dettagli o contattaci per maggiori informazioni.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Spicy Full carbon Ultimate 170mm travel (29\"), pressfit, boost, metric, thru axle"
+    },
+    {
+      "label": "Forcella",
+      "value": "Fox 38 Float Performance boost 15x110 170mm (29\") 44mm offset"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "Fox DHX Performance 2-position Adjust lever Trunnion 205x62,5 spring rate: 350(S) 400(M) 450(L) 500(XL)"
+    },
+    {
+      "label": "Cambio",
+      "value": "Sram Gx Lunar Eagle 12spd 11-50"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "SRAM Descendant 7K alloy Eagle boost 148 Dub 12s 32T 165mm (S) / 170mm (M/L) / 175mm (XL)"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano XT 4 piston 203/203mm"
+    },
+    {
+      "label": "Cerchi",
+      "value": "Mavic EX630 32H, tubeless ready, 30-622"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Front: Maxxis Assegai 3C Maxxterra, EXO TR, 29x2.50WT, 60TPI Rear: Maxxis Minion DHR II, EXO TR, 29x2.40WT, 60TPI, TR"
+    },
+    {
+      "label": "Manubrio",
+      "value": "Lapierre alloy 6061DB, Width: 760mm, Rise: 15mm (S/M), Width: 780mm, Rise: 30mm (L/XL), Ø: 31.8mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "Lapierre alloy CNC, 0°, L: 35mm (S) 40mm (M) 45mm (L/XL)"
+    },
+    {
+      "label": "Manopole",
+      "value": "ONOFF LockOn grips"
+    },
+    {
+      "label": "Sella",
+      "value": "Lapierre AM Saddle"
+    },
+    {
+      "label": "Reggisella",
+      "value": "Lapierre dropper post, Ø: 31.6mm, travel 130mm (S,M), 150mm (L/XL)"
+    },
+    {
+      "label": "Pedali",
+      "value": "FPD NW-91K steel cage"
+    }
+  ]
+}

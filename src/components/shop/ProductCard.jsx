@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import GetDiscount from "../shared/productcards/GetDiscount";
+import formatPrice from "../../utils/formatPrice";
+import imageUrl from "../../utils/imageUrl";
 
 const ProductCard = ({ product }) => {
   return (
@@ -7,8 +9,9 @@ const ProductCard = ({ product }) => {
       <div className="card font-primary">
         <div className="relative">
           <img
-            src={product.image}
+            src={imageUrl(product.images[0], 800)}
             alt={product.name}
+            loading="lazy"
             className="w-full h-56 object-cover rounded-md mb-4"
           />
           {product.condition === "Usato" && (
@@ -23,9 +26,9 @@ const ProductCard = ({ product }) => {
             <>
               <div className="flex items-center gap-4">
                 <p className="text-gray-600 text-sm line-through">
-                  € {product.fullprice}
+                  {formatPrice(product.fullprice)}
                 </p>
-                <p className="text-black text-base">€ {product.price}</p>
+                <p className="text-black text-base">{formatPrice(product.price)}</p>
               </div>
               <div className="flex items-center">
                 <p className="text-black text-base">
@@ -35,7 +38,7 @@ const ProductCard = ({ product }) => {
             </>
           ) : (
             <div className="flex items-center">
-              <p className="text-black text-base">€ {product.price}</p>
+              <p className="text-black text-base">{formatPrice(product.price)}</p>
             </div>
           )}
         </div>

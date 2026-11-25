@@ -1,0 +1,88 @@
+{
+  "name": "KTM Scarp MT Prime",
+  "published": true,
+  "featured": true,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "KTM",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 5899,
+  "fullprice": 8599,
+  "images": [
+    "/images/products-gallery/Bici/ktm-scarpmtprime/ktm-scarpmtprime.webp"
+  ],
+  "description": "Grazie alla tecnologia STRAIGHT-LINE-LINK (SLL) e a un’escursione di 115 mm al posteriore e 120 mm all’anteriore, la SCARP MT assicura prestazioni ottimali su lunghe distanze anche su terreni accidentati. L’angolo sterzo di 67,5°, lo spazio per un secondo portaborraccia e il reggisella telescopico su alcuni modelli esaltano il concetto MT (Marathon Trail).",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Scarp 29\" Premium Carbon SLL115mm UDH / M-2926"
+    },
+    {
+      "label": "Forcella",
+      "value": "FOX 34 Float SC 29\" Factory 120mm remote 15x110"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "FOX Float DPS Factory remote 190x45"
+    },
+    {
+      "label": "Cambio",
+      "value": "SRAM XX Eagle SL T-Type 12speed"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "SRAM XX Eagle SL Carbon T-Type 32T"
+    },
+    {
+      "label": "Cassetta",
+      "value": "SRAM GX Eagle T-Type XS-1275 / 10-52"
+    },
+    {
+      "label": "Catena",
+      "value": "SRAM GX Eagle T-Type 12s"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano Deore XT M8100 / M8100 2-Piston 160/160"
+    },
+    {
+      "label": "Ruota anteriore",
+      "value": "KTM Prime Carbon Trail 29 CL 110/15TA /622x30TSS made by DT Swiss"
+    },
+    {
+      "label": "Ruota posteriore",
+      "value": "KTM Prime Carbon Trail 29 CL 148/12TA /622x30TSS made by DT Swiss"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Maxxis Rekon EXO/TR 62-622"
+    },
+    {
+      "label": "Manubrio",
+      "value": "KTM Prime Carbon flat 740mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "KTM Prime MTB 6°"
+    },
+    {
+      "label": "Manopole",
+      "value": "KTM Team silicone"
+    },
+    {
+      "label": "Sella",
+      "value": "Selle San Marco Aspide Short Open Fit Narrow"
+    },
+    {
+      "label": "Reggisella",
+      "value": "KTM Prime Carbon zero 30.9/400"
+    },
+    {
+      "label": "Peso",
+      "value": "10,80 kg"
+    }
+  ]
+}

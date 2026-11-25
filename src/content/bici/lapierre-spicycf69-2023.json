@@ -1,0 +1,86 @@
+{
+  "name": "Lapierre Spicy CF 6.9 2023",
+  "published": true,
+  "featured": false,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "Lapierre",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 5499,
+  "fullprice": 6199,
+  "images": [
+    "/images/products-gallery/Bici/lapierre-spicycf69-2023/lapierre-spicycf69-2023.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2023/lapierre-spicycf69-2023-1.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2023/lapierre-spicycf69-2023-2.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2023/lapierre-spicycf69-2023-3.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2023/lapierre-spicycf69-2023-4.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2023/lapierre-spicycf69-2023-5.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2023/lapierre-spicycf69-2023-6.webp"
+  ],
+  "description": "La Spicy CF è la MTB Enduro più veloce della gamma. Utilizzata dal Team Lapierre Zipp Collective, questa bicicletta ha dato prova di se in quasi tutte le prove del circuito Enduro World Series. Il suo telaio in carbonio, i suoi 170 mm di escursione e la sua geometria aggressiva fanno di questo mezzo un arma temibile, anche sui terreni più impegnativi. Fai come i più grandi piloti del Team Lapierre Zipp Collective, scegli la Spicy CF.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Spicy Full carbon Ultimate 170mm travel (29''), pressfit, boost, metric, thru axle"
+    },
+    {
+      "label": "Forcella",
+      "value": "Fox 38 Float Performance boost 15x110 170mm (29\") 44mm offset"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "Fox DHX Performance 2-position Adjust lever Trunnion 205x62,5 spring rate: 350(S) 400(M) 450(L) 500(XL)"
+    },
+    {
+      "label": "Cambio",
+      "value": "Sram Gx Lunar Eagle 12spd"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "SRAM Descendant 7K alloy Eagle boost 148 Dub 12s 32T 165mm (S) / 170mm (M/L) / 175mm (XL)"
+    },
+    {
+      "label": "Freni",
+      "value": "SRAM Code R Diffusion Black 4 pistons"
+    },
+    {
+      "label": "Ruote",
+      "value": "Mavic EX630 32H, tubeless ready, 30-622"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Front: Maxxis Assegai 3C Maxxterra, EXO TR, 29x2.50WT, 60TPI, TR / Rear: Maxxis Minion DHR II, EXO TR, 29x2.40WT, 60TPI, TR"
+    },
+    {
+      "label": "Manubrio",
+      "value": "Lapierre alloy 6061DB, Width: 760mm, Rise: 15mm (S/M), Width: 780mm, Rise: 30mm (L/XL), Ø: 31.8mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "Lapierre alloy CNC, 0°, L: 35mm (S) 40mm (M) 45mm (L/XL)"
+    },
+    {
+      "label": "Manopole",
+      "value": "Lapierre grips anodized, S/M: small diameter, L/XL: large diameter"
+    },
+    {
+      "label": "Sella",
+      "value": "Lapierre AM Saddle"
+    },
+    {
+      "label": "Reggisella",
+      "value": "Lapierre dropper post, Ø: 31.6mm, travel 130mm (S,M), 150mm (L/XL)"
+    },
+    {
+      "label": "Pedali",
+      "value": "FPD NW-91K steel cage"
+    },
+    {
+      "label": "Peso",
+      "value": "15.66 kg"
+    }
+  ]
+}

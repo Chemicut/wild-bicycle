@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import products from "../../data/Bici.json";
+import { featuredProducts } from "../../data/products";
 import GetDiscount from "../shared/productcards/GetDiscount";
+import formatPrice from "../../utils/formatPrice";
+import imageUrl from "../../utils/imageUrl";
 
 // react-slick styles
 import "slick-carousel/slick/slick.css"; 
@@ -37,12 +39,10 @@ const SamplePrevArrow = ({ className, style, onClick }) => (
   />
 );
 
-const ProductCarousel = ({ productIds }) => {
+const ProductCarousel = () => {
   const sliderRef = useRef(null);
   const autoScrollTimeoutRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
-
-  const selectedProducts = products.filter(product => productIds.includes(product.id));
 
   // Pausa e riprende l'auto-scroll in caso di interazione (swipe, click)
   const pauseAutoScroll = () => {
@@ -95,12 +95,12 @@ const ProductCarousel = ({ productIds }) => {
   return (
     <div className="relative slider-container lg:px-[5%] py-[3%]">
       <Slider ref={sliderRef} {...settings}>
-        {selectedProducts.map((product, index) => (
-          <div key={index} className="px-[2%] py-[3%]">
+        {featuredProducts.map((product) => (
+          <div key={product.id} className="px-[2%] py-[3%]">
             <Link to={`/prodotti/${product.id}`} className="block">
               <div className="card font-primary text-base">
                 <img
-                  src={product.image}
+                  src={imageUrl(product.images[0], 800)}
                   alt={product.name}
                   className="w-full h-56 object-cover rounded-md mb-4"
                 />
@@ -111,8 +111,8 @@ const ProductCarousel = ({ productIds }) => {
                   {product.fullprice ? (
                     <>
                       <div className="flex items-center gap-4">
-                        <p className="text-gray-600 line-through">€ {product.fullprice}</p>
-                        <p className="text-black text-lg">€ {product.price}</p>
+                        <p className="text-gray-600 line-through">{formatPrice(product.fullprice)}</p>
+                        <p className="text-black text-lg">{formatPrice(product.price)}</p>
                       </div>
                       <div className="flex items-center">
                         <p className="text-black text-lg">Sconto del {GetDiscount(product.fullprice, product.price)}%</p>
@@ -120,7 +120,7 @@ const ProductCarousel = ({ productIds }) => {
                     </>
                   ) : (
                     <div className="flex items-center">
-                      <p className="text-black text-lg">€ {product.price}</p>
+                      <p className="text-black text-lg">{formatPrice(product.price)}</p>
                     </div>
                   )}
 

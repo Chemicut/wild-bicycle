@@ -9,9 +9,6 @@ import Contatti from "./pages/Contatti.jsx";
 import ScrollToTop from "./components/shared/ScrollToTop.jsx";
 import ProductPage from "./pages/ProductPage.jsx";
 import NotFound from "./pages/NotFound.jsx";
-
-import AdminPanel from "./pages/AdminPanel.jsx";
-import RemoteAdminPanel from "./pages/RemoteAdminPanel.jsx";
 import ThankYou from "./pages/ThankYou.jsx";
 
 const App = () => {
@@ -27,8 +24,6 @@ const App = () => {
           <Route path="/wildraceteam" element={<WildRaceTeam />} />
           <Route path="/contatti" element={<Contatti />} />
           <Route path="/prodotti/:id" element={<ProductPage />} />
-          <Route path="/admin" element={<AdminPanel />} />
-          <Route path="/remoteadmin" element={<RemoteAdminPanel />} />
           <Route path="/thankyou" element={<ThankYou />} />
           {/* Rotta per la pagina 404 */}
           <Route path="*" element={<NotFound />} />

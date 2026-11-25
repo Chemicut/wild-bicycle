@@ -1,0 +1,81 @@
+{
+  "name": "Lapierre Spicy CF 6.9 2025",
+  "published": true,
+  "featured": false,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "Lapierre",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 5499,
+  "images": [
+    "/images/products-gallery/Bici/lapierre-spicycf69-2025/lapierre-spicycf69-2025.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2025/lapierre-spicycf69-2025-1.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2025/lapierre-spicycf69-2025-2.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2025/lapierre-spicycf69-2025-3.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2025/lapierre-spicycf69-2025-4.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2025/lapierre-spicycf69-2025-5.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf69-2025/lapierre-spicycf69-2025-6.webp"
+  ],
+  "description": "Questa bicicletta offre ora due configurazioni su un'unica piattaforma: una versione con punto di articolazione alto (High Pivot) dedicata alla pratica nel bike park e un'altra con punto di articolazione basso (Low Pivot), dalla pedalata più versatile e divertente. Oltre alle due tipologie di montaggio possibili, questa bicicletta si adatta alle tue esigenze consentendo il montaggio da 29 pollici o Mullet. Effettivamente, sono disponibili quattro configurazioni! Dotato di componenti progettati per la competizione e/o le uscite impegnative, l'Enduro non è mai stato così accessibile.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Spicy Full Carbon 180mm travel (29\"), pressfit, boost, metric, Thru axle"
+    },
+    {
+      "label": "Forcella",
+      "value": "RockShox ZEB Select Charger RC 29” 15x110 DebonAir™ 180mm (29”) 44mm offset"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "RockShox Vivid Base"
+    },
+    {
+      "label": "Cambio",
+      "value": "Shimano SLX 12s Shadow +"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "Shimano MT612 32T 165mm (XS,S,M), 170mm (L,XL)"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano M4100 4 pistons 203/203"
+    },
+    {
+      "label": "Ruote",
+      "value": "Rodi Tryp30 EVO 30x622 32H Tubeless Ready"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Front: Schwalbe MAGIC MARY Evo, Super Trail, TLE, ADDIX Ultra Soft, 62-622, 67TPI Rear: Schwalbe BIG BETTY, Super Trail, TLE, ADDIX Soft, 65-584, 67TPI”"
+    },
+    {
+      "label": "Manubrio",
+      "value": "Lapierre Thirty Five 6061DB, Width: 800mm, Rise: 30mm, Ø: 35mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "Lapierre Thirty One alloy, 0°, Ø: 31.8mm, L: 35mm (S), 45mm (M,L,XL)"
+    },
+    {
+      "label": "Manopole",
+      "value": "Lapierre grips anodized, S/M: small diameter, L/XL: large diameter"
+    },
+    {
+      "label": "Sella",
+      "value": "WTB Volt 142mm"
+    },
+    {
+      "label": "Reggisella",
+      "value": "Lapierre dropper, Ø: 31.6mm, travel 100mm (S), 150mm (M,L), 170mm (XL)"
+    },
+    {
+      "label": "Pedali",
+      "value": "FPD NW-91K steel cage"
+    }
+  ]
+}

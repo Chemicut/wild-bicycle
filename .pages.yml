@@ -1,0 +1,158 @@
+media:
+  - name: bici
+    label: Foto bici
+    input: public/images/products-gallery
+    output: /images/products-gallery
+    rename: safe
+    categories: [image]
+
+settings:
+  commit:
+    identity: user
+    templates:
+      create: "Aggiunta bici {filename} (Pages CMS, {userName})"
+      update: "Modificata bici {filename} (Pages CMS, {userName})"
+      delete: "Rimossa bici {filename} (Pages CMS, {userName})"
+      rename: "Rinominata bici {oldFilename} in {newFilename} (Pages CMS, {userName})"
+
+content:
+  - name: bici
+    label: Bici
+    type: collection
+    path: src/content/bici
+    format: json
+    filename:
+      template: "{primary}.json"
+      field: create
+    view:
+      primary: name
+      fields: [name, price, condition, published, featured]
+      search: [name, brand]
+      sort: [name, price]
+      default:
+        sort: name
+        order: asc
+    fields:
+      - name: name
+        label: Nome
+        type: string
+        required: true
+        description: "Es. Lapierre Spicy CF 8.9 2024. Il nome del file (e quindi l'indirizzo della pagina) viene creato da qui e non cambia più."
+
+      - name: published
+        label: Visibile nel negozio
+        type: boolean
+        default: true
+        description: Spegnilo per nascondere la bici (per esempio quando è venduta) senza cancellarla.
+
+      - name: featured
+        label: In evidenza in home
+        type: boolean
+        default: false
+
+      - name: price
+        label: Prezzo (€)
+        type: number
+        required: true
+        description: Solo il numero, senza punti né simbolo dell'euro. Es. 4999
+
+      - name: fullprice
+        label: Prezzo di listino (€)
+        type: number
+        description: Facoltativo. Se lo compili appare barrato, con la percentuale di sconto.
+
+      - name: condition
+        label: Condizione
+        type: select
+        required: true
+        default: Nuovo
+        options:
+          values: [Nuovo, Usato]
+
+      - name: category
+        label: Categoria
+        type: select
+        required: true
+        default: Biciclette
+        options:
+          values: [Biciclette, Abbigliamento, Protezioni, Componenti, Accessori]
+
+      - name: subCategory
+        label: Sottocategoria
+        type: select
+        options:
+          values:
+            - MTB
+            - E-MTB
+            - Corsa
+            - Gravel
+            - Ciclocross
+            - Urban/City
+            - Kids
+            - Giacche
+            - Maglie
+            - Intimo
+            - Salopette e pantaloncini
+            - Pantaloni
+            - Guanti
+            - Scarpe
+            - Calze
+            - Termico
+            - Body
+            - Caschi
+            - Pettorine
+            - Ginocchia
+            - Gomiti
+
+      - name: brand
+        label: Marca
+        type: string
+
+      - name: type
+        label: Tipo
+        type: select
+        default: Muscolare
+        options:
+          values: [Muscolare, Elettrica]
+
+      - name: sospensione
+        label: Sospensione
+        type: select
+        options:
+          values: [Rigida, Front, Full]
+
+      - name: wheelSize
+        label: Misura ruote
+        type: select
+        options:
+          values: ["29", "27.5", "26", "Mullet 29/27.5", "28", "700c", "24", "20", "16"]
+
+      - name: images
+        label: Foto
+        type: image
+        description: La prima foto è la copertina. Puoi caricare direttamente le foto del telefono, il sito le alleggerisce da solo.
+        options:
+          media: bici
+          multiple:
+            max: 12
+          unique: true
+
+      - name: description
+        label: Descrizione
+        type: text
+
+      - name: specs
+        label: Specifiche tecniche
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}: {value}"
+        fields:
+          - name: label
+            label: Voce
+            type: string
+            description: "Es. Telaio, Forcella, Ammortizzatore, Cambio, Freni, Ruote, Pneumatici, Peso"
+          - name: value
+            label: Valore
+            type: string

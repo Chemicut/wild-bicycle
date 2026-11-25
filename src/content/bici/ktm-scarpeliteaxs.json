@@ -1,0 +1,99 @@
+{
+  "name": "KTM Scarp Elite AXS",
+  "published": true,
+  "featured": true,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "KTM",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 3549,
+  "fullprice": 5099,
+  "images": [
+    "/images/products-gallery/Bici/ktm-scarpeliteaxs/ktm-scarpeliteaxs.webp",
+    "/",
+    "i",
+    "m",
+    "a",
+    "g",
+    "e",
+    "s",
+    "p",
+    "r",
+    "o",
+    "d",
+    "u",
+    "c",
+    "t",
+    "-",
+    "l",
+    "y",
+    "B",
+    "k",
+    "x",
+    ".",
+    "w",
+    "b"
+  ],
+  "description": "TI RENDIAMO UN LEADER. Il telaio SCARP EVO II ha portato KTM fino al podio della Coppa del Mondo. Ha superato test approfonditi in tutto il mondo, anche sui circuiti più difficili. Il telaio in carbonio con triangolo posteriore in alluminio e trasmissione AXS rendono la SCARP ELITE AXS imbattibile in termini di rapporto prezzo-prestazioni. La forcella e l'ammortizzatore provengono da FOX (32 FLOAT), offrono un'escursione di 100 mm/95 mm e, insieme al concetto STRAIGHT-LINE-LINK (SLL), garantiscono una maneggevolezza ottimale. Supera qualsiasi sfida, perché sarai tra i migliori.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Scarp 29\" Premium Carbon-Alloy rear SLL95mm / M-0916"
+    },
+    {
+      "label": "Forcella",
+      "value": "FOX 32 Float 29\" Rhythm 100mm remote 15x110"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "FOX Float DPS PerformanceElite remote 190x37.5"
+    },
+    {
+      "label": "Cambio",
+      "value": "SRAM GX Eagle AXS 12speed 10-52"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "SRAM GX Eagle DUB 34T"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano M4100 / MT410 2-Piston"
+    },
+    {
+      "label": "Ruote",
+      "value": "KTM Line - Mavic MX801 CL 32H / Ryde Rival26 32H 622x26C / DT Champion 2.0 black"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Maxxis Rekon Race EXO/TR 57-622"
+    },
+    {
+      "label": "Manubrio",
+      "value": "KTM Team flat 2X 720mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "KTM Team MTB 7°"
+    },
+    {
+      "label": "Manopole",
+      "value": "KTM Team silicone"
+    },
+    {
+      "label": "Sella",
+      "value": "Selle San Marco RND Manganese Rails"
+    },
+    {
+      "label": "Reggisella",
+      "value": "KTM Team 30.9/400"
+    },
+    {
+      "label": "Peso",
+      "value": "12.7 kg"
+    }
+  ]
+}

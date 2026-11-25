@@ -1,0 +1,71 @@
+{
+  "name": "Lapierre DRS 8.0 Ultegra Di2 2025",
+  "published": true,
+  "featured": true,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "Corsa",
+  "brand": "Lapierre",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Rigida",
+  "price": 5499,
+  "fullprice": 5999,
+  "images": [
+    "/images/products-gallery/Bici/lapierre-drs80-2025/lapierre-drs80-2025.webp",
+    "/images/products-gallery/Bici/lapierre-drs80-2025/lapierre-drs80-2025-1.webp",
+    "/images/products-gallery/Bici/lapierre-drs80-2025/lapierre-drs80-2025-2.webp",
+    "/images/products-gallery/Bici/lapierre-drs80-2025/lapierre-drs80-2025-3.webp"
+  ],
+  "description": "Il vento, questo elemento naturale che sfida il ciclista e lo spinge al limite. Una lotta senza tregua contro una forza invisibile che ti rallenta, compromette le tue prestazioni e mina il tuo morale. Ma se riesci a domare questo soffio, sarai sospinto verso un nuovo picco di prestazioni. La nuova Xelius DRS incarna questo DNA alla perfezione. Questa bici, che combina i modelli Xelius SL e Aircode DRS, non si limita a giocare con il vento, ma lo affronta, lo sfida e lo sfrutta al massimo.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Carbon UD SLI"
+    },
+    {
+      "label": "Forcella",
+      "value": "Carbon UD SLI"
+    },
+    {
+      "label": "Cambio",
+      "value": "Shimano Ultegra Di2 R8150, 12s, 11-34T"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "Shimano Ultegra R8100, 52-36T 165mm (XS),170mm (S), 172,5mm (M,L), 175mm (XL,XXL)"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano RT-CL900 160mm /140mm Centerlock"
+    },
+    {
+      "label": "Ruote",
+      "value": "DT Swiss ERC1600 Spline 45mm (22mm width), Centerlock, Tubeless compatible, HG Driver"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Continental GP 5000S TR 25-622"
+    },
+    {
+      "label": "Manubrio",
+      "value": "Lapierre Semi-integrated Combo UD carbon, -10°, 370mm/90mm (XS,S), 390mm/100mm (M), 410mm/110mm (L), 410mm/120mm (XL,XXL), Drop: 125mm, Reach: 72mm, Flare: 5°"
+    },
+    {
+      "label": "Nastro",
+      "value": "Lapierre Tape"
+    },
+    {
+      "label": "Sella",
+      "value": "Prologo Dimension T4.0 Rails"
+    },
+    {
+      "label": "Reggisella",
+      "value": "Lapierre Carbon, Xelius DRS, 0mm Offset, L: 350mm (XS,S,M) 400mm (L,XL,XXL)"
+    },
+    {
+      "label": "Pedali",
+      "value": "VP-335 Clips&Strap"
+    }
+  ]
+}

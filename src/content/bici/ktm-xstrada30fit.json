@@ -1,0 +1,102 @@
+{
+  "name": "KTM X-Strada 30 Fit",
+  "published": true,
+  "featured": false,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "Gravel",
+  "brand": "KTM",
+  "type": "Muscolare",
+  "wheelSize": "28",
+  "sospensione": "Rigida",
+  "price": 1199,
+  "fullprice": 1799,
+  "images": [
+    "/images/products-gallery/Bici/ktm-xstrada30fit/ktm-xstrada30fit.webp",
+    "/",
+    "i",
+    "m",
+    "a",
+    "g",
+    "e",
+    "s",
+    "p",
+    "r",
+    "o",
+    "d",
+    "u",
+    "c",
+    "t",
+    "-",
+    "l",
+    "y",
+    "B",
+    "k",
+    "x",
+    "3",
+    "0",
+    "f",
+    ".",
+    "w",
+    "b"
+  ],
+  "description": "GRAVEL UP YOUR LIFE. Se vuoi ottenere il meglio da ogni situazione, allora la gamma KTM X STRADA è la scelta giusta per te. Gravel non è una tendenza, è qui per restare e rende la tua corsa davvero memorabile. Abbiamo risposto all'enorme richiesta dei nostri modelli X STRADA con tutti i nuovi telai sviluppati. Inoltre, abbiamo raddoppiato il numero di modelli. Il nuovo telaio X STRADA GRAVEL ALU è utilizzato su otto modelli e mostra sia le sue qualità sportive che comode. Ancora una volta, c'è una scelta tra manubri da strada e manubri da bici FIT dritti. È stata prestata particolare attenzione alle caratteristiche chiave come parafanghi e supporti per portapacchi. Il modello LFC (LIGHT-FENDER-CARRIER) è dotato di luci, parafanghi e portapacchi già pronti all'uso. Che si tratti del tragitto quotidiano per andare in ufficio o di un tour di diversi giorni verso la costa, la X STRADA sarà sempre dalla tua parte.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "28\" Alloy 6061 GRAVEL / R-2070"
+    },
+    {
+      "label": "Forcella",
+      "value": "Rigid Alloy Gravel"
+    },
+    {
+      "label": "Cambio",
+      "value": "SRAM Rival1 11speed 11-42"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "SRAM S650 Eagle 38T"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano MT200 / MT200 2-Piston"
+    },
+    {
+      "label": "Ruota anteriore",
+      "value": "KTM Line - Shimano HB-TX505 CL 32H 100 QR / KTM 28\" Sport 32H; 622x20 / Pillar 2.0 INOX, black"
+    },
+    {
+      "label": "Ruota posteriore",
+      "value": "KTM Line - Shimano FH-TX505-8 CL 32H 135 QR / KTM 28\" Sport 32H; 622x20 / Pillar 2.0 INOX, black"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Maxxis Rambler 45-622"
+    },
+    {
+      "label": "Manubrio",
+      "value": "KTM Comp rizer12 700mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "KTM Comp 7°"
+    },
+    {
+      "label": "Manopole",
+      "value": "KTM Comp MTB"
+    },
+    {
+      "label": "Sella",
+      "value": "KTM Line Sport"
+    },
+    {
+      "label": "Reggisella",
+      "value": "KTM Comp 27.2"
+    },
+    {
+      "label": "Peso",
+      "value": "11.1 kg"
+    }
+  ]
+}

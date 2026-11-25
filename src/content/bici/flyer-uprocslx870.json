@@ -1,0 +1,94 @@
+{
+  "name": "Flyer Uproc SL:X 8.70",
+  "published": true,
+  "featured": false,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "E-MTB",
+  "brand": "Flyer",
+  "type": "Elettrica",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 7499,
+  "images": [
+    "/images/products-gallery/Bici/flyer-uprocslx870/flyeruprocslx870.webp",
+    "/images/products-gallery/Bici/flyer-uprocslx870/flyeruprocslx870-1.webp",
+    "/images/products-gallery/Bici/flyer-uprocslx870/flyeruprocslx870-2.webp",
+    "/images/products-gallery/Bici/flyer-uprocslx870/flyeruprocslx870-3.webp"
+  ],
+  "description": "La Flyer Uproc SL:X 8.70 2024 è un’ebike leggera e incredibilmente agile che vi permetterà di affrontare curve strette con facilità, offrendovi un’esperienza di guida naturale e senza sforzo. Sviluppata per affrontare trail di lunga durata e adatta a ogni tipo di Uphill-Flow, la Uproc SL:X unisce la maneggevolezza di una mountain-bike tradizionale alla potenza del motore Bosch Performance Line SX.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Flyer Carbon. 130mm, 12 x 148mm, UDH"
+    },
+    {
+      "label": "Forcella",
+      "value": "Fox 34 Float Performance 130mm"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "Fox Float Performance 130mm"
+    },
+    {
+      "label": "Motore",
+      "value": "Bosch Smart System Performance Line SX 55Nm"
+    },
+    {
+      "label": "Batteria",
+      "value": "Bosch CompactTube 400 (400 Wh / 11.00 Ah / 36 V)"
+    },
+    {
+      "label": "Batteria aggiuntiva",
+      "value": "Bosch PowerMore 250 (250 Wh / 6.7 Ah / 36 V)"
+    },
+    {
+      "label": "Cambio",
+      "value": "Shimano XT 12sp"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano XT 4 piston 203/203mm"
+    },
+    {
+      "label": "Ruote",
+      "value": "DT Swiss HX1700 LS, 30mm"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Schwalbe Wicked Will EVO Super Ground, 29 x 2.40, 62-622"
+    },
+    {
+      "label": "Manubrio",
+      "value": "Hayes ProTaper Carbon, 8°, 25mm, 810 mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "Satori Ursa, 35 x 35 mm, 0°"
+    },
+    {
+      "label": "Manopole",
+      "value": "Ergon GXR"
+    },
+    {
+      "label": "Sella",
+      "value": "Fizik Ridon"
+    },
+    {
+      "label": "Reggisella",
+      "value": "OneUp Components V3, 150 mm , 31.6 mm"
+    },
+    {
+      "label": "Pedali",
+      "value": "VP Components VP-532"
+    },
+    {
+      "label": "Peso",
+      "value": "18.5 kg"
+    },
+    {
+      "label": "Peso batteria",
+      "value": "2.1 kg"
+    }
+  ]
+}
