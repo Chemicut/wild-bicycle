@@ -2,15 +2,15 @@
   "name": "BH Expert 4.0",
   "published": true,
   "featured": false,
+  "price": 1099,
+  "fullprice": 1199,
   "condition": "Nuovo",
   "category": "Biciclette",
   "subCategory": "MTB",
   "brand": "BH",
   "type": "Muscolare",
-  "wheelSize": "29",
   "sospensione": "Front",
-  "price": 1099,
-  "fullprice": 1199,
+  "wheelSize": "29",
   "images": [
     "/images/products-gallery/Bici/bh-expert4/bh-expert4.webp",
     "/images/products-gallery/Bici/bh-expert4/bh-expert4-1.webp",
@@ -18,7 +18,7 @@
     "/images/products-gallery/Bici/bh-expert4/bh-expert4-3.webp",
     "/images/products-gallery/Bici/bh-expert4/bh-expert4-4.webp"
   ],
-  "description": "La nuova Expert condivide design e linee con la Ultimate e la Ultimate RC. Angolo di direzione lanciato, foderi corti e un tubo superiore più lungo: gli elementi perfetti di una XC tecnica nelle discese, rapida ed efficace nella pedalata.",
+  "description": "La nuova Expert condivide design e linee con la Ultimate e la Ultimate RC. Angolo di direzione lanciato, foderi corti e un tubo superiore più lungo. Gli elementi perfetti di una XC tecnica nelle discese, rapida ed efficace nella pedalata.",
   "specs": [
     {
       "label": "Telaio",
@@ -67,6 +67,7 @@
     {
       "label": "Sella",
       "value": "BH Sport"
-    }
+    },
+    {}
   ]
 }
