@@ -15,24 +15,22 @@ const Contatti = () => {
 
         <div className="mt-12 lg:mt-16 grid lg:grid-cols-12 gap-12 lg:gap-16">
           <section className="lg:col-span-5" aria-label="Modulo di contatto">
-            <p className="eyebrow opacity-60 mb-6">Messaggio</p>
             <ContactForm />
           </section>
 
           <section className="lg:col-span-7 space-y-10" aria-label="Dove siamo">
             <div>
-              <p className="eyebrow opacity-60">Indirizzo</p>
               <a
                 href={contatti.mappa}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="headline mt-3 block text-[clamp(2rem,5vw,4.5rem)] leading-[0.9] hover:text-signal"
+                className="block text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight hover:text-signal"
               >
                 {contatti.indirizzo}
+                <span className="block mt-1 text-lg sm:text-xl font-normal opacity-75">
+                  {contatti.cap} {contatti.citta}
+                </span>
               </a>
-              <p className="mt-3 text-lg opacity-75">
-                {contatti.cap} {contatti.citta}
-              </p>
             </div>
 
             <div className="flex flex-wrap gap-3">

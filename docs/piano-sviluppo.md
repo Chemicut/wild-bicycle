@@ -78,12 +78,11 @@ Titoli grandi e stretti, foto a tutta larghezza, tono crudo da manifesto di gara
 | `font-sans` | Switzer (Fontshare) | testo |
 
 **Elementi del linguaggio**
-- Utility `headline` per i titoli (Tanker maiuscolo) ed `eyebrow` per le etichette piccole.
-- Etichette in stile gara: "Ordine di partenza", "Griglia di partenza", "Box tecnico", "Ritrovo".
-- Numerazione a due cifre (01, 02…) per elenchi e card.
-- Card bici su fondo `paper`, angoli arrotondati da tabella gara, linea tratteggiata e sconto come adesivo giallo inclinato.
+- Utility `headline` per i titoli (Tanker maiuscolo). `eyebrow` solo sulle hero di pagina (e come stile tipografico di pulsanti/nav), non come etichetta sopra ogni sezione.
+- Card bici su fondo `paper`, angoli arrotondati, linea tratteggiata e sconto come adesivo giallo inclinato. Niente numeri di griglia sulle card.
 - Grana leggera su tutto il sito (`src/components/ui/Grain.jsx`).
-- Niente tabella numerata "013" nell'apertura della home (scelta di Gabriele).
+- Niente tabella "013" in home; niente sezione "Ordine di partenza" in home (duplicava Race Team).
+- Footer: indirizzo leggibile (non mega-titolo), colonne "Dove siamo" / "Contatti".
 
 ---
 
@@ -171,6 +170,7 @@ Tutto il restyling sta sul branch `restyling` e va su `main` solo a fine Fase 3 
 | 25/11/2026 | Restyling su un unico branch `restyling`, merge a fine Fase 3 | Evitare di pubblicare un sito metà vecchio e metà nuovo |
 | 25/11/2026 | Eliminata la pagina Notizie | Nessuna rotta, dipendeva da un'API `localhost` non più esistente |
 | 25/11/2026 | `/thankyou` è il ringraziamento del form Contatti (non più dell'admin prodotti) | L'admin remoto è stato sostituito da Pages CMS |
+| 25/11/2026 | Eyebrow solo in hero di pagina; niente numeri sulle card; niente "Ordine di partenza" in home | Feedback estetico di Gabriele |
 
 ---
 
@@ -187,3 +187,4 @@ Tutto il restyling sta sul branch `restyling` e va su `main` solo a fine Fase 3 
 | 25/11/2026 | Restyling negozio (filtri, sort, empty) e pagina prodotto (galleria, specs, WhatsApp); rimossa `SearchBar` | branch `restyling` |
 | 25/11/2026 | Restyling Officina, Wild Race Team (con `#corso-enduro`) e Contatti; rimossi `lucide-react` e header morti | branch `restyling` |
 | 25/11/2026 | 404 e ThankYou; rimossi Notizie e `tailwind.config.js`; CSS solo tema B; font da `index.html` | branch `restyling` |
+| 25/11/2026 | Affinamento estetico: via sezione discipline in home, numeri card, eyebrow di sezione; footer indirizzo ridimensionato | branch `restyling` |

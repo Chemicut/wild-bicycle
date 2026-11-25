@@ -4,10 +4,10 @@ import ButtonLink from "../components/ui/ButtonLink";
 import imageUrl from "../utils/imageUrl";
 
 const discipline = [
-  { n: "01", title: "Strada", image: "/images/strada.webp" },
-  { n: "02", title: "Cross country", image: "/images/xc.webp" },
-  { n: "03", title: "Enduro", image: "/images/enduro.webp" },
-  { n: "04", title: "Gravel", image: "/images/gravel.webp" },
+  { title: "Strada", image: "/images/strada.webp" },
+  { title: "Cross country", image: "/images/xc.webp" },
+  { title: "Enduro", image: "/images/enduro.webp" },
+  { title: "Gravel", image: "/images/gravel.webp" },
 ];
 
 const WildRaceTeam = () => {
@@ -44,12 +44,10 @@ const WildRaceTeam = () => {
       </section>
 
       <section className="px-5 lg:px-10 py-20 lg:py-28">
-        <p className="eyebrow opacity-60">Ordine di partenza</p>
-        <ul className="mt-8">
+        <ul>
           {discipline.map((d) => (
-            <li key={d.n}>
+            <li key={d.title}>
               <div className="group relative flex items-center gap-6 border-t border-cream/20 py-3 lg:py-4">
-                <span className="eyebrow w-10 opacity-60">{d.n}</span>
                 <span className="headline text-[clamp(3.5rem,10vw,10rem)] leading-[0.9]">
                   {d.title}
                 </span>
@@ -79,13 +77,13 @@ const WildRaceTeam = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-night via-night/55 to-night/15" />
         <div className="relative z-10 w-full px-5 lg:px-10 py-14 flex flex-wrap items-end justify-between gap-8">
           <div>
-            <p className="eyebrow text-signal">Corsi di enduro</p>
-            <h2 className="headline mt-3 text-[clamp(3.5rem,9vw,9rem)]">
-              Si parte<br />dai 12 anni.
+            <h2 className="headline text-[clamp(3.5rem,9vw,9rem)]">
+              Corsi di<br />enduro
             </h2>
             <p className="mt-6 max-w-lg text-lg leading-relaxed">
-              Tecnica di guida, sicurezza e discese impegnative con istruttori esperti.
-              Sessioni di gruppo in base a stagione e meteo, per ogni livello.
+              Si parte dai 12 anni. Tecnica di guida, sicurezza e discese impegnative con
+              istruttori esperti. Sessioni di gruppo in base a stagione e meteo, per ogni
+              livello.
             </p>
           </div>
           <ButtonLink to="/contatti" variant="signal">
@@ -97,8 +95,7 @@ const WildRaceTeam = () => {
       <section className="bg-signal text-night px-5 lg:px-10 py-16 lg:py-20">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div>
-            <p className="eyebrow">Iscrizioni</p>
-            <h2 className="headline mt-3 text-[clamp(2.5rem,7vw,6rem)]">
+            <h2 className="headline text-[clamp(2.5rem,7vw,6rem)]">
               Entra<br />in squadra.
             </h2>
             <p className="mt-4 max-w-lg text-lg leading-relaxed">

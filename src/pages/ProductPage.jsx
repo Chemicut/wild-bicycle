@@ -131,8 +131,7 @@ const ProductPage = () => {
 
       {/* Scheda tecnica */}
       <section className="border-t border-cream/15 px-5 lg:px-10 py-16 lg:py-20">
-        <p className="eyebrow opacity-60">Scheda tecnica</p>
-        <h2 className="headline mt-3 text-[clamp(2.5rem,6vw,5rem)]">Specifiche</h2>
+        <h2 className="headline text-[clamp(2.5rem,6vw,5rem)]">Specifiche</h2>
 
         {techSpecs.length > 0 ? (
           <dl className="mt-10 max-w-3xl">

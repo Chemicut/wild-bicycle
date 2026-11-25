@@ -121,11 +121,8 @@ const Negozio = () => {
     <div className="bg-night text-cream min-h-screen">
       <div className="px-5 lg:px-10 pt-10 lg:pt-14 pb-20 lg:pb-28">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <p className="eyebrow opacity-60">Griglia di partenza</p>
-            <h1 className="headline mt-3 text-[clamp(3.5rem,10vw,9rem)]">Negozio</h1>
-          </div>
-          <p className="eyebrow tabular-nums opacity-70">
+          <h1 className="headline text-[clamp(3.5rem,10vw,9rem)]">Negozio</h1>
+          <p className="text-sm font-semibold tracking-[0.14em] uppercase tabular-nums opacity-70">
             {sortedProducts.length} di {products.length}
           </p>
         </div>
@@ -178,14 +175,13 @@ const Negozio = () => {
           <section className="min-w-0 flex-1">
             {sortedProducts.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                {sortedProducts.map((product, index) => (
-                  <ProductCard key={product.id} product={product} index={index} />
+                {sortedProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
                 ))}
               </div>
             ) : (
               <div className="border border-dashed border-cream/30 rounded-[18px] px-6 py-16 text-center">
-                <p className="eyebrow opacity-60">Nessuna partenza</p>
-                <p className="headline mt-4 text-5xl lg:text-7xl">Nessuna bici</p>
+                <p className="headline text-5xl lg:text-7xl">Nessuna bici</p>
                 <p className="mt-4 max-w-md mx-auto opacity-75 leading-relaxed">
                   Non ci sono prodotti con i filtri selezionati. Prova ad allargare la ricerca
                   o azzera i filtri.
@@ -206,8 +202,7 @@ const Negozio = () => {
       <section className="bg-signal text-night px-5 lg:px-10 py-16 lg:py-20">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div>
-            <p className="eyebrow">Richiesta</p>
-            <h2 className="headline mt-3 text-[clamp(2.5rem,7vw,6rem)]">
+            <h2 className="headline text-[clamp(2.5rem,7vw,6rem)]">
               Non l&apos;hai trovata?
             </h2>
             <p className="mt-4 max-w-lg text-lg leading-relaxed">

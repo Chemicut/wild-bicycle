@@ -53,10 +53,7 @@ const Officina = () => {
 
       <section className="px-5 lg:px-10 py-16 lg:py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <p className="eyebrow opacity-60">Interventi</p>
-            <h2 className="headline mt-3 text-[clamp(2.5rem,6vw,5rem)]">Cosa facciamo</h2>
-          </div>
+          <h2 className="headline text-[clamp(2.5rem,6vw,5rem)]">Cosa facciamo</h2>
           <p className="max-w-md text-base leading-relaxed opacity-75">
             Ogni intervento è studiato sulla bici e su come la guidi. Niente pacchetti
             generici: diagnosi, pezzi giusti, taratura precisa.
@@ -64,18 +61,10 @@ const Officina = () => {
         </div>
 
         <ul className="mt-12 grid sm:grid-cols-2 gap-px bg-cream/15 border border-cream/15">
-          {servizi.map((servizio, i) => (
-            <li
-              key={servizio.title}
-              className="bg-night p-6 lg:p-8 min-h-40 flex flex-col justify-between"
-            >
-              <span className="headline text-4xl leading-none opacity-35">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div className="mt-8">
-                <h3 className="text-xl font-semibold leading-tight">{servizio.title}</h3>
-                <p className="mt-2 text-base leading-relaxed opacity-70">{servizio.text}</p>
-              </div>
+          {servizi.map((servizio) => (
+            <li key={servizio.title} className="bg-night p-6 lg:p-8 min-h-36 flex flex-col justify-end">
+              <h3 className="text-xl font-semibold leading-tight">{servizio.title}</h3>
+              <p className="mt-2 text-base leading-relaxed opacity-70">{servizio.text}</p>
             </li>
           ))}
         </ul>
@@ -84,8 +73,7 @@ const Officina = () => {
       <section className="bg-signal text-night px-5 lg:px-10 py-16 lg:py-20">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div>
-            <p className="eyebrow">Prenotazione</p>
-            <h2 className="headline mt-3 text-[clamp(2.5rem,7vw,6rem)]">
+            <h2 className="headline text-[clamp(2.5rem,7vw,6rem)]">
               Portala<br />in officina.
             </h2>
             <p className="mt-4 max-w-lg text-lg leading-relaxed">

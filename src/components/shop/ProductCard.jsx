@@ -3,16 +3,14 @@ import GetDiscount from "../shared/productcards/GetDiscount";
 import formatPrice from "../../utils/formatPrice";
 import imageUrl from "../../utils/imageUrl";
 
-// Card bici: il numero in alto è la posizione in "griglia di partenza"
-const ProductCard = ({ product, index }) => (
+const ProductCard = ({ product }) => (
   <Link
     to={`/prodotti/${product.id}`}
     className="group relative flex flex-col bg-paper text-night rounded-[18px] overflow-hidden"
   >
-    <div className="flex items-start justify-between px-5 pt-4">
-      <span className="headline text-6xl leading-none">{String(index + 1).padStart(2, "0")}</span>
+    <div className="flex justify-end px-5 pt-4">
       <span
-        className={`eyebrow mt-2 ${
+        className={`text-xs font-semibold tracking-[0.14em] uppercase ${
           product.condition === "Usato" ? "bg-night text-paper px-2 py-1" : "opacity-60"
         }`}
       >
@@ -37,7 +35,7 @@ const ProductCard = ({ product, index }) => (
       <p className="headline text-4xl leading-none whitespace-nowrap">{formatPrice(product.price)}</p>
     </div>
     {product.fullprice && (
-      <span className="headline absolute right-4 top-14 rotate-6 bg-signal px-3 pt-1.5 pb-1 text-2xl leading-none">
+      <span className="headline absolute right-4 top-12 rotate-6 bg-signal px-3 pt-1.5 pb-1 text-2xl leading-none">
         −{GetDiscount(product.fullprice, product.price)}%
       </span>
     )}
