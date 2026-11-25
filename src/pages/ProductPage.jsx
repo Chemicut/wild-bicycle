@@ -1,25 +1,22 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import productsData from "../data/Bici.json";
+import { getProductById } from "../data/products";
 import GetDiscount from "../components/shared/productcards/GetDiscount";
+import formatPrice from "../utils/formatPrice";
+import imageUrl from "../utils/imageUrl";
 
 const ProductPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const product = productsData.find((p) => p.id.toString() === id);
+  const product = getProductById(id);
+  const [activeImage, setActiveImage] = useState(product?.images[0]);
 
   if (!product) {
     return <div>Prodotto non trovato</div>;
   }
 
-  // Gestione immagine attiva e galleria
-  const [activeImage, setActiveImage] = useState(product.image);
-  const gallery = product.gallery && product.gallery.length > 0 ? product.gallery : [product.image];
-
-  // Filtra le specifiche tecniche
-  const techSpecs = product.technicalDetails
-    ? Object.entries(product.technicalDetails).filter(([key, value]) => value)
-    : [];
+  const gallery = product.images;
+  const techSpecs = product.specs.filter((spec) => spec.label && spec.value);
 
   return (
     <main className="bg-background px-4 py-10 md:px-20">
@@ -30,7 +27,7 @@ const ProductPage = () => {
           {/* Contenitore con dimensione fissa e aspect ratio: */}
           <div className="relative w-full h-96 md:h-[500px] ">
             <img
-              src={activeImage}
+              src={imageUrl(activeImage, 1400)}
               alt={product.name}
               className="absolute inset-0 w-full max-h-full object-contain transition-transform duration-300 bg-white"
             />
@@ -38,8 +35,8 @@ const ProductPage = () => {
           <div className="flex mt-4 space-x-2 overflow-x-auto lg:justify-center">
             {gallery.map((img, index) => (
               <img
-                key={index}
-                src={img}
+                key={img}
+                src={imageUrl(img, 160)}
                 alt={`${product.name} thumbnail ${index + 1}`}
                 className={`flex-shrink-0 w-16 h-16 object-cover border ${activeImage === img ? "border-primary" : "border-gray-300"} cursor-pointer`}
                 onClick={() => setActiveImage(img)}
@@ -63,8 +60,8 @@ const ProductPage = () => {
             {product.fullprice ? (
               <>
                 <div className="flex items-center gap-4">
-                  <p className="text-gray-600 line-through">€ {product.fullprice}</p>
-                  <p className="text-black text-lg">€ {product.price}</p>
+                  <p className="text-gray-600 line-through">{formatPrice(product.fullprice)}</p>
+                  <p className="text-black text-lg">{formatPrice(product.price)}</p>
                 </div>
                 <div className="flex items-center">
                   <p className="text-black text-lg underline">Sconto del {GetDiscount(product.fullprice, product.price)}%</p>
@@ -72,7 +69,7 @@ const ProductPage = () => {
               </>
             ) : (
               <div className="flex items-center">
-                <p className="text-black text-lg">€ {product.price}</p>
+                <p className="text-black text-lg">{formatPrice(product.price)}</p>
               </div>
             )}
           </div>
@@ -94,9 +91,9 @@ const ProductPage = () => {
         {techSpecs.length > 0 ? (
           <table className="w-full">
             <tbody>
-              {techSpecs.map(([key, value]) => (
-                <tr key={key}>
-                  <td className="py-2 font-medium">{key}</td>
+              {techSpecs.map(({ label, value }) => (
+                <tr key={label}>
+                  <td className="py-2 font-medium">{label}</td>
                   <td className="py-2">{value}</td>
                 </tr>
               ))}

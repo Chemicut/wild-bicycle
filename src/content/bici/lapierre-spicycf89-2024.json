@@ -1,0 +1,81 @@
+{
+  "name": "Lapierre Spicy CF 8.9 2024",
+  "published": true,
+  "featured": true,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "Lapierre",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 4999,
+  "fullprice": 6999,
+  "images": [
+    "/images/products-gallery/Bici/lapierre-spicycf89-2024/lapierre-spicycf89-2024.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf89-2024/lapierre-spicycf89-2024-1.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf89-2024/lapierre-spicycf89-2024-2.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf89-2024/lapierre-spicycf89-2024-3.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf89-2024/lapierre-spicycf89-2024-4.webp",
+    "/images/products-gallery/Bici/lapierre-spicycf89-2024/lapierre-spicycf89-2024-5.webp"
+  ],
+  "description": "Questa bicicletta offre ora due configurazioni su un'unica piattaforma: una versione con punto di articolazione alto (High Pivot) dedicata alla pratica nel bike park e un'altra con punto di articolazione basso (Low Pivot), dalla pedalata più versatile e divertente. Oltre alle due tipologie di montaggio possibili, questa bicicletta si adatta alle tue esigenze consentendo il montaggio da 29 pollici o Mullet. Effettivamente, sono disponibili quattro configurazioni! Dotato di componenti progettati per la competizione e/o le uscite impegnative, l'Enduro non è mai stato così accessibile.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Spicy Full Carbon 180mm travel (29’’), pressfit, boost, metric, Thru axle"
+    },
+    {
+      "label": "Forcella",
+      "value": "Fox Float 38 Factory GRIP2 29’’ 15x110, 180mm travel, 44mm offset / HSC,LSC,HSR,LSR"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "Fox Float X2 Factory 205x62.5, HSC, LSC, HSR, LSR, 0.3 spacer"
+    },
+    {
+      "label": "Cambio",
+      "value": "Shimano Deore XT 12s Shadow + 10-51T"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "Shimano Deore XT 32T 165mm (XS,S,M), 170mm (L,XL)"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano Deore XT M8100 4 pistons"
+    },
+    {
+      "label": "Ruote",
+      "value": "DT Swiss EX1700 SPLINE® 622x30c"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Front: Schwalbe MAGIC MARY Evo, Super Trail, TLE, ADDIX Ultra Soft, 62-622, 67TPI Rear: Schwalbe BIG BETTY, Super Trail, TLE, ADDIX Soft, 62-584, 67TPI"
+    },
+    {
+      "label": "Manubrio",
+      "value": "Lapierre Thirty Five 6061DB, Width: 800mm, Rise: 30mm, Ø: 35mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "Lapierre Thirty Five alloy, 0°, Ø: 31.8mm, L: 35mm (XS,S), 45mm (M,L,XL)"
+    },
+    {
+      "label": "Manopole",
+      "value": "Lapierre grips anodized, S/M: small diameter, L/XL: large diameter"
+    },
+    {
+      "label": "Sella",
+      "value": "WTB Volt 142mm"
+    },
+    {
+      "label": "Reggisella",
+      "value": "TranzX RAD+ dropper, Ø: 31.6mm, travel 125mm (XS,S), 150mm (M), 170mm (L), 200mm (XL)"
+    },
+    {
+      "label": "Pedali",
+      "value": "NW-91K steel cage"
+    }
+  ]
+}

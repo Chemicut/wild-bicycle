@@ -1,0 +1,81 @@
+{
+  "name": "Lapierre Crosshill 2.0 2025",
+  "published": true,
+  "featured": false,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "Gravel",
+  "brand": "Lapierre",
+  "type": "Muscolare",
+  "wheelSize": "700c",
+  "sospensione": "Rigida",
+  "price": 1199,
+  "images": [
+    "/images/products-gallery/Bici/lapierre-crosshill2-2025/lapierre-crosshill2-2025.webp",
+    "/images/products-gallery/Bici/lapierre-crosshill2-2025/lapierre-crosshill2-2025-1.webp",
+    "/images/products-gallery/Bici/lapierre-crosshill2-2025/lapierre-crosshill2-2025-2.webp",
+    "/images/products-gallery/Bici/lapierre-crosshill2-2025/lapierre-crosshill2-2025-3.webp",
+    "/images/products-gallery/Bici/lapierre-crosshill2-2025/lapierre-crosshill2-2025-4.webp",
+    "/images/products-gallery/Bici/lapierre-crosshill2-2025/lapierre-crosshill2-2025-5.webp",
+    "/images/products-gallery/Bici/lapierre-crosshill2-2025/lapierre-crosshill2-2025-6.webp"
+  ],
+  "description": "Un sentiero sterrato in primavera e la voglia improvvisa di scoprire vallate inesplorate. La gravel bike Crosshill è molto di più del semplice telaio della bici: è un fedele luogotenente per escursioni in bici, circuiti in bicibikepacking o vacanze su due ruote. Infatti, dove cominciano i sentieri, inizia il suo terreno d’espressione e con questo le sue molteplici sfaccettature:  precisa sui terreni ghiaiosi, furtiva sulla strada, esprime sempre la sua agilità. Grazie al telaio in alluminio tipo endurance e le sue dotazioni adatte a macinare chilometri, la Crosshill conosce il percorso dell’avventura. Sapresti riconoscere la sua polivalenza?",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Crosshill gravel Supreme 5 Alloy Internal Routing"
+    },
+    {
+      "label": "Forcella",
+      "value": "Lapierre Carbon Blades, Alloy Steerer, 12mm Thru Axle"
+    },
+    {
+      "label": "Cambio",
+      "value": "Shimano Sora R3000, 9s"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "FSA Tempo Adventure JIS, 46-30T 170mm (XS,S), 172.5mm (M), 175mm (L,XL)"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano RT30 160mm/160mm"
+    },
+    {
+      "label": "Ruote",
+      "value": "WTB STi23 TCS 2.0 700c 32H"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "WTB Raddler 700x40C Tan Wall"
+    },
+    {
+      "label": "Manubrio",
+      "value": "Lapierre alloy gravel bar, Width: 420mm (XS/S), 440mm (M), 460mm (L/XL), Flare: 16°"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "Lapierre alloy, Ø: 31.8mm, 80mm (S) 90mm (M) 100mm (L) 110mm (XL)"
+    },
+    {
+      "label": "Nastro",
+      "value": "Fizik Terra Microtex 3mm"
+    },
+    {
+      "label": "Sella",
+      "value": "Fizik Terra Argo X7 150mm"
+    },
+    {
+      "label": "Reggisella",
+      "value": "Lapierre alloy, Ø: 27.2mm, L: 350mm, offset: 12mm"
+    },
+    {
+      "label": "Pedali",
+      "value": "FPD NW-91K steel cage"
+    },
+    {
+      "label": "Peso",
+      "value": "11.3 kg"
+    }
+  ]
+}

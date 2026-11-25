@@ -1,0 +1,72 @@
+{
+  "name": "BH Ultimate RC Carbon 2023 Custom ",
+  "published": true,
+  "featured": false,
+  "condition": "Usato",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "BH",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Front",
+  "price": 2099,
+  "images": [
+    "/images/products-gallery/Bici/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom.webp",
+    "/images/products-gallery/Bici/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-1.webp",
+    "/images/products-gallery/Bici/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-2.webp",
+    "/images/products-gallery/Bici/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-3.webp",
+    "/images/products-gallery/Bici/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-4.webp",
+    "/images/products-gallery/Bici/bh-ultimaterccarbon-2023-custom/bh-ultimaterccarbon-2023-custom-5.webp"
+  ],
+  "description": "MTB front da XC usata in ottime condizioni con componenti scelti dal vecchio proprietario. Revisionata e pronta all'azione!",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Ultimate RC Carbon"
+    },
+    {
+      "label": "Forcella",
+      "value": "Fox Factory Kashima 32 100mm"
+    },
+    {
+      "label": "Cambio",
+      "value": "SRAM X01 Eagle, 12s"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "SRAM X01 32T 170mm"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano Deore XT 2 pistons 180/160"
+    },
+    {
+      "label": "Ruote",
+      "value": "BH Evo Alu"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Maxxis Forekaster 29x2.20"
+    },
+    {
+      "label": "Manubrio",
+      "value": "BH Evo Carbon Flat 740mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "BH Evo"
+    },
+    {
+      "label": "Manopole",
+      "value": "BH Grips"
+    },
+    {
+      "label": "Sella",
+      "value": "Selle Italia Superflow Boost"
+    },
+    {
+      "label": "Reggisella",
+      "value": "BH Evo Carbon 31.6mm"
+    }
+  ]
+}

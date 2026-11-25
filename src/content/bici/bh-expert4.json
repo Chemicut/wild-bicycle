@@ -1,0 +1,72 @@
+{
+  "name": "BH Expert 4.0",
+  "published": true,
+  "featured": false,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "BH",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Front",
+  "price": 1099,
+  "fullprice": 1199,
+  "images": [
+    "/images/products-gallery/Bici/bh-expert4/bh-expert4.webp",
+    "/images/products-gallery/Bici/bh-expert4/bh-expert4-1.webp",
+    "/images/products-gallery/Bici/bh-expert4/bh-expert4-2.webp",
+    "/images/products-gallery/Bici/bh-expert4/bh-expert4-3.webp",
+    "/images/products-gallery/Bici/bh-expert4/bh-expert4-4.webp"
+  ],
+  "description": "La nuova Expert condivide design e linee con la Ultimate e la Ultimate RC. Angolo di direzione lanciato, foderi corti e un tubo superiore più lungo: gli elementi perfetti di una XC tecnica nelle discese, rapida ed efficace nella pedalata.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Expert 29\" Alloy Hydroformed"
+    },
+    {
+      "label": "Forcella",
+      "value": "Suntour Raidon RLR 100mm"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "Shimano MT510 30T"
+    },
+    {
+      "label": "Cassetta",
+      "value": "Shimano M6100 10-51T"
+    },
+    {
+      "label": "Cambio",
+      "value": "Shimano Deore 12sp"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano MT200 180/160mm"
+    },
+    {
+      "label": "Ruote",
+      "value": "BH Lite 29\" Tubeless Ready"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Maxxis Ikon 29x2.20"
+    },
+    {
+      "label": "Manubrio",
+      "value": "BH MTB Alloy Flat 780mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "BH MTB Alloy 31.8mm"
+    },
+    {
+      "label": "Reggisella",
+      "value": "BH Alloy 31.6mm"
+    },
+    {
+      "label": "Sella",
+      "value": "BH Sport"
+    }
+  ]
+}

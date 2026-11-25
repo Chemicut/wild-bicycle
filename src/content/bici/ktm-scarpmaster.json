@@ -1,0 +1,76 @@
+{
+  "name": "KTM Scarp Master",
+  "published": true,
+  "featured": true,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "KTM",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 4399,
+  "fullprice": 5599,
+  "images": [
+    "/images/products-gallery/Bici/ktm-scarpmaster/ktm-scarpmaster.webp"
+  ],
+  "description": "TI RENDIAMO UN LEADER. Il telaio SCARP EVO II ha portato KTM fino al podio della Coppa del Mondo. Ha superato test approfonditi in tutto il mondo, anche sui circuiti più difficili. Il telaio in carbonio con triangolo posteriore in alluminio e trasmissione AXS rendono la SCARP ELITE AXS imbattibile in termini di rapporto prezzo-prestazioni. La forcella e l'ammortizzatore provengono da FOX (32 FLOAT), offrono un'escursione di 100 mm/95 mm e, insieme al concetto STRAIGHT-LINE-LINK (SLL), garantiscono una maneggevolezza ottimale. Supera qualsiasi sfida, perché sarai tra i migliori.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Scarp 29\" Premium Carbon SLL95mm UDH / M-2926"
+    },
+    {
+      "label": "Forcella",
+      "value": "FOX 32 Float SC 29\" Factory 100mm remote 15x110"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "FOX Float DPS Factory remote 190x37.5"
+    },
+    {
+      "label": "Cambio",
+      "value": "Shimano Deore XT M8100-12 SGS shadow+ 10-51"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "Shimano Deore XT M8120 34T"
+    },
+    {
+      "label": "Freni",
+      "value": "Shimano Deore XT M8100 / M8100 2-Piston"
+    },
+    {
+      "label": "Ruote",
+      "value": "KTM Comp Trail 29 CL / 622x30TC made by DT Swiss"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Front: Schwalbe Racing Ray Evo SuperRace TLE 57-622 Rear: Schwalbe Racing Ralph Evo SuperRace TLE 57-622"
+    },
+    {
+      "label": "Manubrio",
+      "value": "KTM Team flat 2X 720mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "KTM Team MTB 7°"
+    },
+    {
+      "label": "Manopole",
+      "value": "KTM Team silicone"
+    },
+    {
+      "label": "Sella",
+      "value": "Selle San Marco Shortfit Open Fit Wide"
+    },
+    {
+      "label": "Reggisella",
+      "value": "KTM Team 30.9/400"
+    },
+    {
+      "label": "Peso",
+      "value": "10.9 kg"
+    }
+  ]
+}

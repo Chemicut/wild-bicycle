@@ -1,0 +1,85 @@
+{
+  "name": "Lapierre XR 7.9 2023",
+  "published": true,
+  "featured": false,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "MTB",
+  "brand": "Lapierre",
+  "type": "Muscolare",
+  "wheelSize": "29",
+  "sospensione": "Full",
+  "price": 4199,
+  "fullprice": 4999,
+  "images": [
+    "/images/products-gallery/Bici/lapierre-xr79-2023/lapierre-xr79-2023.webp",
+    "/images/products-gallery/Bici/lapierre-xr79-2023/lapierre-xr79-2023-1.webp",
+    "/images/products-gallery/Bici/lapierre-xr79-2023/lapierre-xr79-2023-2.webp",
+    "/images/products-gallery/Bici/lapierre-xr79-2023/lapierre-xr79-2023-3.webp",
+    "/images/products-gallery/Bici/lapierre-xr79-2023/lapierre-xr79-2023-4.webp",
+    "/images/products-gallery/Bici/lapierre-xr79-2023/lapierre-xr79-2023-5.webp"
+  ],
+  "description": "La XR segna il ritorno di Lapierre ai più alti livelli nell'universo dell'XC. Il suo telaio è stato alleggerito e totalmente ridisegnato attorno ad una nuova ciclistica in cui il carro posteriore è sprovvisto di snodi tra i foderi alti e quelli bassi. L'escursione di 100mm e la flessibilità verticale dei foderi assicurano il confort migliorando sia il grip che il rendimento. Una bicicletta che si troverà a proprio agio su tutti i terreni.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "XR Full Carbon Ultimate 100mm travel Pressfit, Boost, Metric, Thru Axle"
+    },
+    {
+      "label": "Forcella",
+      "value": "Fox 32 SC Perf-Series Float 3 Pos /remote boost, 100mm travel (29''), 44mm rake"
+    },
+    {
+      "label": "Ammortizzatore",
+      "value": "FOX FLOAT DPS, Perf-Series Remote up, Evol LV, 210x50 (Std/Std)"
+    },
+    {
+      "label": "Cambio",
+      "value": "SRAM X01 Eagle, 12s"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "Sram GX Lunar EAGLE BOOST148 DUB BLACK 34T 170mm (S) /175mm (M/L/XL)"
+    },
+    {
+      "label": "Freni",
+      "value": "Sram LEVEL T 2 pistons"
+    },
+    {
+      "label": "Ruote",
+      "value": "DT Swiss HX1700 LS, 30mm"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "Maxxis Rekon Race EXO TR 29x2.35"
+    },
+    {
+      "label": "Manubrio",
+      "value": "Progress Carbon UD Flat, Width: 740mm, Ø: 31.8mm"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "Lapierre alloy, 7°, L: 60mm (S/M) / 70mm (L/XL)"
+    },
+    {
+      "label": "Manopole",
+      "value": "Lapierre \"Fit\" grips, M: small size, L/XL: large size"
+    },
+    {
+      "label": "Sella",
+      "value": "Fizik Taiga Black"
+    },
+    {
+      "label": "Reggisella",
+      "value": "Lapierre alloy forged, Ø: 31,6mm, L: 400mm"
+    },
+    {
+      "label": "Pedali",
+      "value": "FPD NW-91K steel cage"
+    },
+    {
+      "label": "Peso",
+      "value": "11.7 kg"
+    }
+  ]
+}

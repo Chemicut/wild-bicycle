@@ -1,0 +1,64 @@
+{
+  "name": "Megamo Jakar 20 2023",
+  "published": true,
+  "featured": false,
+  "condition": "Nuovo",
+  "category": "Biciclette",
+  "subCategory": "Gravel",
+  "brand": "Megamo",
+  "type": "Muscolare",
+  "wheelSize": "700c",
+  "sospensione": "Rigida",
+  "price": 1699,
+  "fullprice": 1899,
+  "images": [
+    "/images/products-gallery/Bici/megamo-jakar20-2023/megamo-jakar20-2023.webp"
+  ],
+  "description": "La versatilità della Megamo Jakar 20 permette di godersi brevi pedalate, ma anche lunghi percorsi e viaggi in bikepacking. Pedalando su strada, sentieri, foreste o paesaggi aridi... qualunque sia il percorso, ora puoi godertelo con la Megamo Jakar. Questa bici è stata progettata con un robusto telaio in alluminio in modo da poter guidare ovunque. Inoltre, ha diversi punti di fissaggio per aggiungere l'attrezzatura e le borse necessarie che ti accompagneranno nelle tue avventure. Ha una forcella in carbonio, freni a disco e un passaruota che supporta fino a 700x45.",
+  "specs": [
+    {
+      "label": "Telaio",
+      "value": "Gravel AL 6061 Triple Butted, Hydroformed Technology, Internal Cable Routing, Flat Mount Disc 12x142"
+    },
+    {
+      "label": "Forcella",
+      "value": "Carbon Disc Fork, Internal Cable Routing, Flat Mount Disc 12x100"
+    },
+    {
+      "label": "Cambio",
+      "value": "Sram Apex 1-11s"
+    },
+    {
+      "label": "Guarnitura",
+      "value": "Sram Apex 1 XSYNC 40t"
+    },
+    {
+      "label": "Freni",
+      "value": "Sram Apex 1 Hydraulic Disc"
+    },
+    {
+      "label": "Ruote",
+      "value": "Megamo Gravel GR 700 - TLR"
+    },
+    {
+      "label": "Pneumatici",
+      "value": "WTB Riddler 700 x 45c Tan Sidewall"
+    },
+    {
+      "label": "Manubrio",
+      "value": "Megamo Specific Gravel HB FOV Compact"
+    },
+    {
+      "label": "Attacco manubrio",
+      "value": "Megamo FOV"
+    },
+    {
+      "label": "Sella",
+      "value": "Selle Italia Model X Superflow"
+    },
+    {
+      "label": "Reggisella",
+      "value": "Megamo 27,2mm"
+    }
+  ]
+}
